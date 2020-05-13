@@ -1386,6 +1386,9 @@ textarea {
 	opacity: 0;
 	visibility: hidden;
 	transition: 0.25s ease-in-out;
+	position: absolute;
+	top: 100%;
+	left: 0;
 }
 
 .absoluteHeading {
@@ -1601,6 +1604,7 @@ nav ul {
 nav li {
 	display: inline-block;
 	font-size: 15px;
+	position: relative;
 }
 
 nav a {
