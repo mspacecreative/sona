@@ -1722,12 +1722,29 @@ p ~ .button {
 	height: 100%;
 }
 
+.dark_gradient_img_overlay.bgImgRight:after, .light_gradient_img_overlay.bgImgRight:after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+}
+
 .dark_gradient_img_overlay.bgImgRight:before {
 	background-color: #000;
 }
 
 .light_gradient_img_overlay.bgImgRight:before {
 	background-color: #fff;
+}
+
+.dark_gradient_img_overlay.bgImgRight:after {
+	background: linear-gradient(90deg, black, rgba(0, 0, 0, 0.75), transparent);
+}
+
+.light_gradient_img_overlay.bgImgRight:after {
+	background: linear-gradient(90deg, white, rgba(255, 255, 255, 0.75), transparent);
 }
 
 .relativePositioning {
@@ -1876,14 +1893,12 @@ p ~ .button {
 	.hide_on_desktop {
 		display: none;
 	}
-	
-	.bgImgRight .col_with_img {
-		background: linear-gradient(90deg, black, transparent);
-	}
-	
-	.light_gradient_img_overlay.bgImgRight .col_with_img {
-		background: linear-gradient(90deg, white, transparent);
-	}
+	  /*.bgImgRight .col_with_img {
+			background: linear-gradient(90deg, black, transparent);
+		}
+		.light_gradient_img_overlay.bgImgRight .col_with_img {
+			background: linear-gradient(90deg, white, transparent);
+		}*/
 	
 	.absolute_img {
 		position: absolute;
