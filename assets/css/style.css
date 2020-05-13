@@ -1387,8 +1387,25 @@ textarea {
 	visibility: hidden;
 	transition: 0.25s ease-in-out;
 	position: absolute;
-	top: 100%;
+	top: 83px;
 	left: 0;
+	width: 1280px;
+	background-color: #000;
+	padding: 40px;
+}
+
+.sub-menu ul {
+	text-align: left;
+}
+
+.sub-menu li a {
+	color: #fff;
+}
+
+.menu-item-has-children:hover > .sub-menu {
+	opacity: 1;
+	visibility: visible;
+	transition: 0.25s ease-in-out;
 }
 
 .absoluteHeading {
@@ -1604,7 +1621,6 @@ nav ul {
 nav li {
 	display: inline-block;
 	font-size: 15px;
-	position: relative;
 }
 
 nav a {
