@@ -1727,7 +1727,7 @@ p ~ .button {
 	content: "";
 	top: 0;
 	left: 50%;
-	width: 50%;
+	width: 30%;
 	height: 100%;
 }
 
