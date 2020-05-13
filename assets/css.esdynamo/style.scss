@@ -383,25 +383,11 @@ p ~ .button {
     width: 50%;
     height: 100%;
 }
-.dark_gradient_img_overlay.bgImgRight:after, .light_gradient_img_overlay.bgImgRight:after {
-	position: absolute;
-	content: "";
-    top: 0;
-    left: 50%;
-    width: 30%;
-    height: 100%;
-}
 .dark_gradient_img_overlay.bgImgRight:before {
 	background-color: $black;
 }
 .light_gradient_img_overlay.bgImgRight:before {
 	background-color: #fff;
-}
-.dark_gradient_img_overlay.bgImgRight:after {
-	background: linear-gradient(90deg, black, rgba(0,0,0,.75), transparent);
-}
-.light_gradient_img_overlay.bgImgRight:after {
-	background: linear-gradient(90deg, white, rgba(255,255,255,.75), transparent);
 }
 
 // POSITIONING
@@ -498,6 +484,20 @@ $lightGold: gold;
 		background-repeat: no-repeat;
 	    background-position: center right;
 	    background-size: 75%;
+	}
+	.dark_gradient_img_overlay.bgImgRight:after, .light_gradient_img_overlay.bgImgRight:after {
+		position: absolute;
+		content: "";
+	    top: 0;
+	    left: 50%;
+	    width: 30%;
+	    height: 100%;
+	}
+	.dark_gradient_img_overlay.bgImgRight:after {
+		background: linear-gradient(90deg, black, rgba(0,0,0,.75), transparent);
+	}
+	.light_gradient_img_overlay.bgImgRight:after {
+		background: linear-gradient(90deg, white, rgba(255,255,255,.75), transparent);
 	}
 	.bgImgRight .col_text {
 		padding-left: 2em;
