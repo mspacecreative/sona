@@ -1,0 +1,25 @@
+#featured-products .productAbsoluteImg {
+	max-height: 100%;
+	max-width: 35%;
+    position: absolute;
+    bottom: -45%;
+    right: 0;
+}
+// ABSOLUTE IMAGE
+.absolute_img_container {
+	position: relative;
+	height: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.full-width {
+	width: 100%;
+}
+/*@media (max-width: 1200px) {
+	#featured-products .productAbsoluteImg {
+		max-height: 80%;
+	    bottom: -40%;
+	}
+}*/

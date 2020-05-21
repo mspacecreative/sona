@@ -1,0 +1,51 @@
+.enews-form {
+	font-size: 0;
+}
+.enews-form input {
+	font-size: 13px;
+	padding: 1em;
+	border: none;
+}
+input[type=text], input[type=email] {
+	display: inline-block;
+	margin-right: 4%;
+	width: 48%;
+	margin-bottom: 2%;
+}
+input[type=text]:nth-child(2n), input[type=email]:nth-child(2n) {
+	margin-right: 0;
+}
+input[type=submit].button {
+	margin-top: 0;
+}
+textarea {
+	margin-bottom: 2%;
+	padding: 1em;
+	border: none;
+}
+.darkForm input, .darkForm textarea {
+	font-size: 16px;
+	border-bottom: 1px solid #000;
+	color: #999;
+}
+.darkForm ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #999;
+}
+.darkForm input[type=submit] {
+	float: right;
+}
+.darkForm ::-moz-placeholder { /* Firefox 19+ */
+  color: #999;
+}
+.darkForm :-ms-input-placeholder { /* IE 10+ */
+  color: #999;
+}
+.darkForm :-moz-placeholder { /* Firefox 18- */
+  color: #999;
+}
+textarea {
+	width: 100%;
+}
+textarea:focus, input:focus {
+	outline: none;
+}

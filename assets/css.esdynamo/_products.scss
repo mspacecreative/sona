@@ -1,0 +1,17 @@
+#featured-products img {
+	max-height: 100px;
+	margin-bottom: 2em;
+}
+.boxed.dark {
+	background-color: #333;
+	background-image: url(../img/backgrounds/dark-honeycomb.png);
+    box-shadow: 0 0 15px #000;
+}
+.roundedCorners {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+.light .boxed.dark {
+	border-color: #444;
+}

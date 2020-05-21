@@ -1,3 +1,10 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}\.html -f
+	RewriteRule ^(.*)$ $1.html [NC,L]
+</IfModule>
+
 # Apache Server Configs v1.1.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
 
