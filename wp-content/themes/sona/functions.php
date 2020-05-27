@@ -93,23 +93,23 @@ function add_slug_to_body_class($classes)
 // If Dynamic Sidebar Exists
 if (function_exists('register_sidebar'))
 {
-    // Define Sidebar Widget Area 1
+    // Define Blog Sidebar
     register_sidebar(array(
-        'name' => __('Footer Area #1', 'sona'),
-        'description' => __('Content for first footer area', 'sona'),
+        'name' => __('Blog Sidebar', 'sona'),
+        'description' => __('Content for blog sidebar', 'sona'),
         'id' => 'widget-area-1',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
 
-    // Define Sidebar Widget Area 2
+    // Define News Sidebar
     register_sidebar(array(
-        'name' => __('Footer Area #1', 'sona'),
-        'description' => __('Content for second footer area', 'sona'),
-        'id' => 'widget-area-2',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'name' => __('News Sidebar', 'sona'),
+        'description' => __('Content for news sidebar', 'sona'),
+        'id' => 'sidebar-news',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>'
@@ -172,13 +172,7 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 function html5_blank_view_article($more)
 {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'sona') . '</a>';
-}
-
-// Remove Admin bar
-function remove_admin_bar()
-{
-    return false;
+    return '... <p class="view-article-container"><a class="view-article button dark" href="' . get_permalink($post->ID) . '">' . __('Read more', 'sona') . '</a></p>';
 }
 
 // Remove 'text/css' from our enqueued stylesheet
@@ -289,7 +283,6 @@ add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove 
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
 add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
-add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
@@ -301,3 +294,4 @@ include 'functions/sona-styles-scripts.php';
 include 'functions/sona-menus.php';
 include 'functions/acf.php';
 include 'functions/gutenberg.php';
+include 'functions/shortcodes.php';

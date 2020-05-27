@@ -7,21 +7,24 @@
 		<div class="inner">
 			<div class="maxWidth800 text-align-center top-bottom-padding">
 				<h1>
-					<?php _e( 'Articles written by ', 'sona' ); echo get_the_author(); ?>
+					<?php $title = get_the_title(); echo $title; ?>
 				</h1>
 			</div>
 		</div>
 		<!-- / HEADER INTRO -->
-					
-				</div>
-			</section>
-			<!-- / SPLASH SECTION -->
+		
+	</section>
+	<!-- / SPLASH SECTION -->
 	
+	<!-- LOOP THROUGH POSTS -->
 	<section>
 		
 		<div class="inner">
-			<?php get_template_part('includes/archives/loops/loop-blog'); ?>
+			<?php 
+			include 'loops/loop-news.php'; ?>
 		</div>
+		
 	</section>
+	<!-- / LOOP THROUGH POSTS -->
 
 <?php get_footer(); ?>

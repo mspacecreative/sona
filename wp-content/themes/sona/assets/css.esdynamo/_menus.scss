@@ -63,6 +63,11 @@
 	display: block;
 }
 
+// IF LOGGED IN MOVE HEADER DOWN
+.logged-in header {
+	top: 32px;
+}
+
 // SOCIAL MEDIA WINDOW
 .social-window {
 	position: fixed;

@@ -15,6 +15,52 @@
 	@extend %top-margin;
 }
 
+// GRID CONTAINER
+.gridContainer > .col {
+	padding-bottom: 2em;
+}
+.gridContainer .boxed {
+	padding: 0;
+}
+.gridContainer .boxed .boxed-inner {
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.gridContainer h2 {
+	font-size: 20px;
+}
+.gridContainer h2 a {
+	text-decoration: none;
+	color: $black;
+}
+.view-article-container {
+	display: block;
+	margin: auto 0 0;
+}
+.date-author {
+	display: block;
+	margin-bottom: 1em;
+	font-size: 13px;
+}
+.date-author a {
+	text-decoration: none;
+	color: $gold;
+}
+.pagination {
+	@extend %bottom-padding;
+	text-align: center;
+}
+.page {
+	padding: 0 5px;
+	text-decoration: none;
+	color: #999;
+}
+.active.page {
+	color: $black;
+}
+
 // PADDING
 %top-padding {
 	padding-top: 4em;
@@ -101,6 +147,25 @@
 	z-index: 1;
 }
 
+// BLOG SIDEBAR
+.related-posts {
+	padding: 0;
+}
+.widget-container {
+	margin-bottom: 2em;
+	padding-bottom: 2em;
+	border-bottom: 1px solid #c9c9c9;
+}
+.event-container {
+	margin-bottom: 2em;
+}
+.event-thumb img {
+	margin-top: 5px;
+}
+.event-container:last-of-type {
+	margin-bottom: 0;
+}
+
 // ABSOLUTE VERTICAL ALIGN CENTER
 %aligncenter {
 	position: absolute;
@@ -136,6 +201,14 @@
 .row.gutter_space_2 > .col {
 	padding-left: 2rem;
 	padding-right: 2rem;
+}
+.row.gutter_space_3 {
+	margin-left: -3rem;
+	margin-right: -3rem;
+}
+.row.gutter_space_3 > .col {
+	padding-left: 3rem;
+	padding-right: 3rem;
 }
 .dark_gradient_img_overlay .absolute_img_container:before, .light_gradient_img_overlay .absolute_img_container:before {
 	position: absolute;
