@@ -6,7 +6,7 @@ $size = 'medium';
 $content = get_sub_field('content');
 					
 if ( $heading ) {
-	echo '<h4>' . $heading . '</h4>';
+	echo '<h3 class="gold">' . $heading . '</h3>';
 }
 if ( $icon && $iconsizing && $content ) {
 	echo '<div class="icon row larger middle-lg middle-md middle-sm middle-xs" style="flex-direction: column">' . wp_get_attachment_image( $icon, $size ) '<p class="icon-text">' . $content . '</p></div>';

@@ -1,19 +1,11 @@
-<?php get_header(); ?>
+<?php get_header();
 
-	<main role="main">
-		<!-- section -->
-		<section>
+ 	get_template_part('includes/templates/page-header-category'); ?>
 
-			<h1><?php _e( 'Categories for ', 'sona' ); single_cat_title(); ?></h1>
-
-			<?php get_template_part('loop'); ?>
-
-			<?php get_template_part('pagination'); ?>
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
+	<section class="relativePositioning borderTopGoldGradient">
+		<div class="inner topPadding">
+			<?php get_template_part('includes/archives/loops/loop-news'); ?>
+		</div>
+	</section>
 
 <?php get_footer(); ?>

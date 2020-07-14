@@ -6,12 +6,12 @@ $args = array(
 'posts_per_page' => 12,
 'paged' => $paged
 );
-$wp_query = new WP_Query( $args );
- if ($wp_query->have_posts()): ?>
+$query = new WP_Query( $args );
+ if ($query->have_posts()): ?>
 
 	<div class="row gutter_space_1 gridContainer">
 	
-	<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+	<?php while ($query->have_posts()) : $query->the_post(); ?>
 	
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class('col col-lg-4 col-md-4 col-sm-6 col-xs-12'); ?>>

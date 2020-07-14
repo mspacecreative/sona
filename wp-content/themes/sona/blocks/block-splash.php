@@ -37,10 +37,15 @@
 			while ( have_rows('splash_cta') ): the_row();
 			
 			$link = get_sub_field('link');
-			$label = get_sub_field('label'); ?>
-			<a class="button dark" href="#<?php echo $link ?>"><?php echo $label ?></a>
+			$label = get_sub_field('label');
 			
-			<?php endwhile;
+			if ( $link && $label ) {
+				echo '<a class="button dark" href="#' . $link . '">' . $label . '</a>';
+			} elseif ( $link ) {
+				echo '<a class="button dark" href="#' . $link . '">' . __('Learn more') . '</a>';
+			}
+			
+			endwhile;
 			endif;
 			
 			endwhile; ?>

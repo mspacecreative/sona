@@ -2,10 +2,13 @@
 
 function sona_styles()
 {
-    wp_register_script('conditionizr', get_template_directory_uri() . '/assets/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
+    wp_register_script('jquery', 'http://code.jquery.com/jquery-1.11.2.min.js', array('jquery'), null); // Conditionizr
+    wp_enqueue_script('jquery');
+    
+    wp_register_script('conditionizr', get_template_directory_uri() . '/assets/js/lib/conditionizr-4.3.0.min.js', array('jquery'), '4.3.0'); // Conditionizr
     wp_enqueue_script('conditionizr');
 
-    wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
+    wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/lib/modernizr-2.7.1.min.js', array('jquery'), '2.7.1'); // Modernizr
     wp_enqueue_script('modernizr');
 
     wp_register_script('sona-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), null, true); // Custom scripts

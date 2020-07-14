@@ -45,6 +45,19 @@ function my_acf_init() {
 			'supports'			=> array( 'mode' => false ),
 		));
 		
+		// register product boxes
+		acf_register_block(array(
+			'name'				=> 'product-boxes',
+			'title'				=> __('Product Boxes'),
+			'description'		=> __('Repeatable product box features'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'images-alt',
+			'keywords'			=> array( 'products', 'content', 'repeatable' ),
+			'mode'				=> 'edit',
+			'supports'			=> array( 'mode' => false ),
+		));
+		
 		// register full span img text left block
 		acf_register_block(array(
 			'name'				=> 'two-third-one-third',
@@ -201,6 +214,18 @@ function my_acf_init() {
 			'supports'			=> array( 'mode' => false ),
 		));
 		
+		// register content block
+		acf_register_block(array(
+			'name'				=> 'content',
+			'title'				=> __('Content Section'),
+			'description'		=> __('Displays a WYSIWYG editor with various design options'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'images-alt',
+			'keywords'			=> array( 'layout', 'editor' ),
+			'mode'				=> 'edit',
+			'supports'			=> array( 'mode' => false ),
+		));
 	}
 }
 

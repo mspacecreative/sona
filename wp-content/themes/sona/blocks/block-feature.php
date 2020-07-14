@@ -4,6 +4,7 @@ $bgimg = get_field('background_image');
 $txtposition = get_field('text_position');
 $colortheme = get_field('theme');
 $sectionheading = get_field('section_heading');
+$sectionheadingposition = get_field('heading_position');
 
 if ( $colortheme == 'dark' ):
 
@@ -46,7 +47,7 @@ if ( $txtposition == 'left' && $bgimg ): ?>
 <?php endif;
 endif;
 		
-		if ( $sectionheading ): ?>
+		if ( $sectionheading && $sectionheadingposition == 'feature' ): ?>
 		<div class="absoluteHeading">
 			<h3><?php echo $sectionheading ?></h3>
 		</div>
@@ -86,6 +87,17 @@ endif;
 				
 					<div class="col_padding col_text">
 						
+						<?php
+						if ( $sectionheading && $sectionheadingposition == 'normal'  && $colortheme = 'light' ): ?>
+							<h1><?php echo $sectionheading ?></h1>
+						<?php 
+						elseif ( $sectionheading && $sectionheadingposition == 'normal' && $colortheme = 'dark' ): ?>
+							<h1 class="light"><?php echo $sectionheading ?></h1>
+						<?php 
+						elseif ( $sectionheading && $sectionheadingposition == 'normal' ): ?>
+							<h1><?php echo $sectionheading ?></h1>
+						<?php endif; ?>
+						
 						<?php 
 						if ( have_rows('content') ) {
 							while ( have_rows('content') ) {
@@ -96,7 +108,7 @@ endif;
 									echo '<h1 class="gold_color">' . $heading . '</h1>';
 								}
 								if ( $body ) {
-									echo $body;
+									echo '<div class="bullet-points">' . $body . '</div>';
 								}
 								if ( have_rows('call_to_action') ) {
 									while ( have_rows('call_to_action') ) { 

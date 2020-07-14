@@ -1,19 +1,27 @@
-.enews-form {
+.enews-form, .wpcf7 {
 	font-size: 0;
+	margin-top: 50px;
 }
-.enews-form input {
-	font-size: 13px;
-	padding: 1em;
-	border: none;
-}
-input[type=text], input[type=email] {
+.wpcf7 p {
 	display: inline-block;
 	margin-right: 4%;
 	width: 48%;
 	margin-bottom: 2%;
 }
-input[type=text]:nth-child(2n), input[type=email]:nth-child(2n) {
+.enews-form input, .wpcf7 input, textarea {
+	font-size: 13px;
+	padding: 1em;
+	border: none;
+	width: 100%;
+}
+.wpcf7 p:nth-child(odd) {
 	margin-right: 0;
+}
+.wpcf7 p.fullWidth {
+	width: 100%;
+}
+.wpcf7 input[type=submit] {
+	width: auto;
 }
 input[type=submit].button {
 	margin-top: 0;
@@ -23,7 +31,7 @@ textarea {
 	padding: 1em;
 	border: none;
 }
-.darkForm input, .darkForm textarea {
+.darkForm input, .darkForm textarea, .wpcf7 input, .wpcf7 textarea {
 	font-size: 16px;
 	border-bottom: 1px solid #000;
 	color: #999;
@@ -31,7 +39,7 @@ textarea {
 .darkForm ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #999;
 }
-.darkForm input[type=submit] {
+.darkForm input[type=submit], .wpcf7-submit {
 	float: right;
 }
 .darkForm ::-moz-placeholder { /* Firefox 19+ */

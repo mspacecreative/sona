@@ -1,26 +1,10 @@
-<?php get_header(); ?>
+<?php get_header();
 
-	<!-- SPLASH SECTION -->
-	<section class="relativePositioning header-container lightOverlay">
-				
-		<!-- HEADER INTRO -->
-		<div class="inner">
-			<div class="maxWidth800 text-align-center top-bottom-padding">
-				<h1>
-					<?php _e( 'Articles written by ', 'sona' ); echo get_the_author(); ?>
-				</h1>
-			</div>
-		</div>
-		<!-- / HEADER INTRO -->
-					
-				</div>
-			</section>
-			<!-- / SPLASH SECTION -->
-	
-	<section>
+	get_template_part('includes/templates/page-header-author'); ?>
 		
-		<div class="inner">
-			<?php get_template_part('includes/archives/loops/loop-blog'); ?>
+	<section class="relativePositioning borderTopGoldGradient">
+		<div class="inner topPadding">
+			<?php get_template_part('includes/loops/loop'); ?>
 		</div>
 	</section>
 

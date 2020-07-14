@@ -20,11 +20,13 @@
 	background-position: center;
 	background-repeat: no-repeat;
 }
-.products_services {
-	background-image: url(https://sonanano.com/wp-content/uploads/2018/10/production_background.jpg);
+.header-container {
 	@extend %bgImgCover;
 	padding: 10% 0;
 	z-index: 2;
+}
+.header-container.shorter {
+	padding: 5% 0;
 }
 
 // SPLASH SECTION VIDEO

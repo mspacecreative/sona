@@ -18,6 +18,8 @@ $darkGold: #ae7726;
 @import "_spacing.scss";
 @import "_hamburgers.scss";
 @import "_menus.scss";
+@import "_team.scss";
+@import "_search.scss";
 @import "_media-queries.scss";
 
 a:focus {
@@ -78,7 +80,7 @@ p:last-of-type {
 	width: 100%;
 	position: absolute;
 	top: -3px;
-	z-index: 1;
+	z-index: 10;
 	content: "";
 }
 .borderTopGoldGradient {
@@ -94,6 +96,22 @@ header {
 	top: 0;
 	left: 0;
 	z-index: 99999;
+}
+.home header {
+	background-color: transparent;
+}
+header.scroll {
+	background-color: $black;
+}
+.video-container::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	height: 50vh;
+	width: 100%;
+	background: linear-gradient(180deg, $black, transparent);
+	z-index: 2;
 }
 .logo {
 	display: table-cell;

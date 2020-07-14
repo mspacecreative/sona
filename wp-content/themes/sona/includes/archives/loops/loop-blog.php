@@ -6,12 +6,12 @@ $args = array(
 'posts_per_page' => 12,
 'paged' => $paged
 );
-$wp_query = new WP_Query( $args );
- if ($wp_query->have_posts()): ?>
+$query = new WP_Query( $args );
+ if ($query->have_posts()): ?>
 
 	<div class="row gutter_space_1 gridContainer">
 	
-	<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+	<?php while ($query->have_posts()) : $query->the_post(); ?>
 	
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class('col col-lg-4 col-md-4 col-sm-6 col-xs-12'); ?>>
@@ -19,10 +19,14 @@ $wp_query = new WP_Query( $args );
 			<div class="boxed">
 			
 				<!-- post thumbnail -->
-				<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+				<?php if ( has_post_thumbnail() ): // Check if thumbnail exists ?>
+					<a class="featureImgLink" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 						<?php the_post_thumbnail(array(600,338)); // Declare pixel size you need inside the array ?>
 					</a>
+					<?php else : ?>
+					<!--<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholders/sona-placeholder-wide.jpg">
+					</a>-->
 				<?php endif; ?>
 				<!-- /post thumbnail -->
 		

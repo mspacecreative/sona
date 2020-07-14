@@ -16,6 +16,8 @@ if (function_exists('add_theme_support'))
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size( 'sidebar', 200, 200, true );
+    add_image_size( 'card-feature', 600, 338, true );
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
@@ -114,15 +116,16 @@ if (function_exists('register_sidebar'))
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
-}
-
-// Remove wp_head() injected Recent Comment styles
-function my_remove_recent_comments_style()
-{
-    global $wp_widget_factory;
-    remove_action('wp_head', array(
-        $wp_widget_factory->widgets['WP_Widget_Recent_Comments'],
-        'recent_comments_style'
+    
+    // Define Team Sidebar
+    register_sidebar(array(
+        'name' => __('Team Sidebar', 'sona'),
+        'description' => __('Content for team sidebar', 'sona'),
+        'id' => 'sidebar-team',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
     ));
 }
 
@@ -256,7 +259,6 @@ function sonacomments($comment, $args, $depth)
 
 // Add Actions
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
-add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
 // Remove Actions
@@ -295,3 +297,6 @@ include 'functions/sona-menus.php';
 include 'functions/acf.php';
 include 'functions/gutenberg.php';
 include 'functions/shortcodes.php';
+include 'functions/block-wrap.php';
+include 'functions/sonacast.php';
+include 'functions/tinymce.php';
