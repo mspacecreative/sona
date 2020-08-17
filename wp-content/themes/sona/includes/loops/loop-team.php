@@ -22,6 +22,8 @@ $loop = new WP_Query( $args );
 if ( $loop->have_posts() ) : ?>
 <div class="row gutter_space_2 team-container clear">
 	
+	<div class="bioContainerUnderlay"></div>
+	
 	<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	
 	<div class="team-profile col col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -32,7 +34,7 @@ if ( $loop->have_posts() ) : ?>
 			</div>
 			<div class="profile-overlay"></div>
 			<?php if ( has_post_thumbnail() ) {
-				echo the_post_thumbnail( array(400,400) );
+				echo the_post_thumbnail( 'team-member' );
 			} else {
 			echo '<img src="' . get_template_directory_uri() . '/img/portrait_placeholder.jpg">';
 			} ?>

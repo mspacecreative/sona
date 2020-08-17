@@ -1,5 +1,5 @@
 			<!-- FOOTER -->
-			<footer class="top-bottom-padding">
+			<footer class="topPadding">
 				<div class="inner light">
 					<!--<ul class="footer-nav top-margin">
 						<li><a href="/products-and-services">Products &amp; Services</a></li>
@@ -25,46 +25,23 @@
 									<h3>Products &amp; Services</h3>
 									<div class="row">
 										<div class="col col-lg-6 col-md-12 col-sm-12 col-xs-12">
-											<ul class="footer-nav vertical top-margin">
-												<li><a href="#">GEMINI™ 650NM</a></li>
-												<li><a href="#">GEMINI™ 700NM</a></li>
-												<li><a href="#">GEMINI™ 750NM</a></li>
-												<li><a href="#">GEMINI™ 800NM</a></li>
-											</ul>
+											<?php dynamic_sidebar('footer-area-1'); ?>
 										</div>
 										<div class="col col-lg-6 col-md-12 col-sm-12 col-xs-12">
-											<ul class="footer-nav vertical top-margin">
-												<li><a href="#">Conjugation Service</a></li>
-												<li><a href="#">Lateral Flow Test Development</a></li>
-												<li><a href="#">Lateral Flow Test Production</a></li>
-											</ul>
+											<?php dynamic_sidebar('footer-area-2'); ?>
 										</div>
 									</div>
 								</div>
 								<div class="col col-lg-2 col-md-3 col-sm-3 col-xs-12">
-									<h3>About</h3>
-									<ul class="footer-nav vertical top-margin">
-										<li><a href="#">Team Sona</a></li>
-										<li><a href="#">Our Story</a></li>
-										<li><a href="#">Parters</a></li>
-										<li><a href="#">Investors</a></li>
-									</ul>
+									<?php dynamic_sidebar('footer-area-3'); ?>
 								</div>
 								<div class="col col-lg-2 col-md-3 col-sm-3 col-xs-12">
-									<h3>Media</h3>
-									<ul class="footer-nav vertical top-margin">
-										<li><a href="#">News</a></li>
-										<li><a href="#">Blog</a></li>
-										<li><a href="#">SonaCast</a></li>
-										<li><a href="#">Videos</a></li>
-									</ul>
+									<?php dynamic_sidebar('footer-area-4'); ?>
 								</div>
 							</div>
 						</div>
 						<div class="col col-lg-4 col-md-6 col-sm-12 col-xs-12">
-							<h3>The Sona Story</h3>
-							<p>From an idea formed in a small laboratory in a university to a globally distributed product range, the Sona story is one of people, passion, and perseverance.</p>
-							<a href="#" class="button light">Learn more</a>
+							<?php dynamic_sidebar('footer-area-5'); ?>
 						</div>
 					</div>
 				</div>

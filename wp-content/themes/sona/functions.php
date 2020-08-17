@@ -15,9 +15,9 @@ if (function_exists('add_theme_support'))
     add_image_size('large', 700, '', true); // Large Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
-    add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
     add_image_size( 'sidebar', 200, 200, true );
     add_image_size( 'card-feature', 600, 338, true );
+    add_image_size( 'team-member', 400, 400, array('center', 'top') );
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
@@ -127,6 +127,146 @@ if (function_exists('register_sidebar'))
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
+    
+    // Define Product Sidebar
+    register_sidebar(array(
+        'name' => __('Product Sidebar', 'sona'),
+        'description' => __('Content for product sidebar', 'sona'),
+        'id' => 'sidebar-product',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
+    // Define Product Sidebar
+    register_sidebar(array(
+        'name' => __('Partners Sidebar', 'sona'),
+        'description' => __('Content for partner sidebar', 'sona'),
+        'id' => 'sidebar-partners',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
+    // Define Management Team Sidebar
+    register_sidebar(array(
+        'name' => __('Management Team', 'sona'),
+        'description' => __('Content for management team sidebar', 'sona'),
+        'id' => 'sidebar-management-team',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
+    // Define Sona Board Sidebar
+    register_sidebar(array(
+        'name' => __('Sona Board', 'sona'),
+        'description' => __('Content for Sona Board sidebar', 'sona'),
+        'id' => 'sidebar-sona-board',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
+    // Define Core Team Sidebar
+    register_sidebar(array(
+        'name' => __('Core Team', 'sona'),
+        'description' => __('Content for core team sidebar', 'sona'),
+        'id' => 'sidebar-core-team',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
+    // Define Scientific Advisory Board Sidebar
+    register_sidebar(array(
+        'name' => __('Scientific Advisory Board', 'sona'),
+        'description' => __('Content for Scientific Advisory Board sidebar', 'sona'),
+        'id' => 'sidebar-scientific-advisory',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
+    // Define Footer Area 1
+    register_sidebar(array(
+        'name' => __('Footer Area 1', 'sona'),
+        'description' => __('Content for first footer area', 'sona'),
+        'id' => 'footer-area-1',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
+    // Define Footer Area 2
+    register_sidebar(array(
+        'name' => __('Footer Area 2', 'sona'),
+        'description' => __('Content for first footer area', 'sona'),
+        'id' => 'footer-area-2',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
+    // Define Footer Area 3
+    register_sidebar(array(
+        'name' => __('Footer Area 3', 'sona'),
+        'description' => __('Content for first footer area', 'sona'),
+        'id' => 'footer-area-3',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
+    // Define Footer Area 4
+    register_sidebar(array(
+        'name' => __('Footer Area 4', 'sona'),
+        'description' => __('Content for first footer area', 'sona'),
+        'id' => 'footer-area-4',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+    
+    // Define Footer Area 5
+    register_sidebar(array(
+        'name' => __('Footer Area 5', 'sona'),
+        'description' => __('Content for first footer area', 'sona'),
+        'id' => 'footer-area-5',
+        'before_widget' => '<div id="%1$s" class="%2$s widget-container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+}
+
+// EXCLUDE POST CATEGORIES
+add_filter('get_the_terms', 'hide_categories_terms', 10, 3);
+
+function hide_categories_terms($terms, $post_id, $taxonomy){
+
+    // list of category slug to exclude, 
+    $exclude = array('breaking-news', 'blog', 'articles', 'featured', 'meet-the-board');
+
+    if (!is_admin()) {
+        foreach($terms as $key => $term){
+            if($term->taxonomy == "category"){
+                if(in_array($term->slug, $exclude)) unset($terms[$key]);
+            }
+        }
+    }
+
+    return $terms;
 }
 
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
@@ -138,9 +278,48 @@ function html5wp_pagination()
         'base' => str_replace($big, '%#%', get_pagenum_link($big)),
         'format' => '?paged=%#%',
         'current' => max(1, get_query_var('paged')),
+        'prev_text' => __('&laquo;'),
+    	'next_text' => __('&raquo;'),
         'total' => $wp_query->max_num_pages
     ));
 }
+
+function custom_pagination($pages = '', $range = 2)
+{  
+ $showitems = ($range * 2)+1;  
+
+ global $paged;
+ if(empty($paged)) $paged = 1;
+
+ if($pages == '')
+ {
+     global $wp_query;
+     $pages = $wp_query->max_num_pages;
+     if(!$pages)
+     {
+         $pages = 1;
+     }
+ }   
+
+ if(1 != $pages)
+ {
+     echo "<div class='pagination'>";
+     if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a class='arrows' href='".get_pagenum_link(1)."'>&laquo;</a>";
+     if($paged > 1 && $showitems < $pages) echo "<a class='arrows' href='".get_pagenum_link($paged - 1)."'>&lsaquo;</a>";
+
+     for ($i=1; $i <= $pages; $i++)
+     {
+         if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+         {
+             echo ($paged == $i)? "<span class='current'>".$i."</span>":"<a href='".get_pagenum_link($i)."' class='inactive' >".$i."</a>";
+         }
+     }
+
+     if ($paged < $pages && $showitems < $pages) echo "<a class='arrows' href='".get_pagenum_link($paged + 1)."'>&rsaquo;</a>";  
+     if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a class='arrows' href='".get_pagenum_link($pages)."'>&raquo;</a>";
+     echo "</div>\n";
+ }
+ }
 
 // Custom Excerpts
 function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
@@ -300,3 +479,5 @@ include 'functions/shortcodes.php';
 include 'functions/block-wrap.php';
 include 'functions/sonacast.php';
 include 'functions/tinymce.php';
+include 'functions/remove-ptag.php';
+include 'functions/remove-brand-slug.php';

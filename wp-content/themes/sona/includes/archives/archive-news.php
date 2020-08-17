@@ -1,5 +1,5 @@
 <!-- LOOP THROUGH POSTS -->
-<section class="relativePositioning borderTopGoldGradient">
+<section class="relativePositioning">
 		
 	<div class="inner topPadding">
 		<?php include 'loops/loop-news.php'; ?>

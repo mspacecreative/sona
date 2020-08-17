@@ -40,6 +40,9 @@
 	background-color: $gold;
 	opacity: .5;
 }
+.video-container:before {
+	z-index: 1;
+}
 .splash video {
 	position: absolute;
 	min-height: 100%;
@@ -55,6 +58,42 @@
 .lightOverlay:before {
 	@extend %pseudo;
 	background-color: rgba(255, 255, 255, .75);
+}
+.lightOverlay:before {
+	z-index: -1;
+}
+
+// BACKGROUND IMAGES SECTION
+.dark-overlay:before {
+	background-color: rgba(0, 0, 0, .75);
+}
+.light-overlay:before {
+	background-color: rgba(255, 255, 255, .85);
+}
+.light-overlay:before, .dark-overlay:before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.dark-overlay p,
+.dark-overlay h1,
+.dark-overlay h2,
+.dark-overlay h3,
+.dark-overlay h4,
+.dark-overlay h5,
+.dark-overlay h6,
+.dark-overlay li {
+	color: #fff;
+}
+.bg-img-cover {
+	position: relative;
+	background-size: cover;
+}
+.dark-overlay > .inner, .light-overlay > .inner {
+	position: relative;
 }
 
 @media (max-width: 980px) {

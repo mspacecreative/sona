@@ -20,7 +20,7 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 <?php elseif ( $bgcolor == 'light' ): ?>
 <div class="section lightbg">
 <?php elseif ( $bgcolor == 'dark' ): ?>
-<div class="section darkbg">
+<div class="section darkbg light">
 <?php elseif ( $blockanchor ): ?>
 <div id="<?php echo $blockanchor ?>" class="section lightbg">
 <?php else : ?>
@@ -37,26 +37,26 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 			echo '
 				<div class="text-align-center">
 					<h1>' . $rowheading . '</h1>
-					<h4>' . $rowsubheading . '</h4>
+					<h4 class="bottom-margin">' . $rowsubheading . '</h4>
 				</div>
 				';
 		} elseif ( $rowheading && $rowsubheading ) {
 			echo '
 				<h1>' . $rowheading . '</h1>
-				<h4>' . $rowsubheading . '</h4>
+				<h4 class="bottom-padding">' . $rowsubheading . '</h4>
 				';
 		} elseif ( $rowheading && $centeredheading ) {
-			echo '<h1 class="text-align-center">' . $rowheading . '</h1>';
+			echo '<h1 class="text-align-center bottom-margin"">' . $rowheading . '</h1>';
 		} elseif ( $rowheading ) {
-			echo '<h1>' . $rowheading . '</h1>';
+			echo '<h1 class="bottom-margin">' . $rowheading . '</h1>';
 		}
 		
 		if( have_rows('columns_grid') ): ?>
 		
 		<?php if ( $centeredtext ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs icons-visible topPadding extra-col-spacing">
+		<div class="row gutter_space_2 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php else : ?>
-		<div class="row gutter_space_2 topPadding extra-col-spacing">
+		<div class="row gutter_space_2 bullet-points extra-col-spacing">
 		<?php endif; ?>
 			
 			<?php while( have_rows('columns_grid') ): the_row();
@@ -103,7 +103,7 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 			
 			if ( $boxedcontent && $roundedcorners && $bgcolor == 'dark' ): ?>
 			<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12 bottomMarginMobile">
-				<div class="boxed light roundedCorners">
+				<div class="boxed light dark roundedCorners">
 					<?php include 'includes/content-stacked.php'; ?>
 				</div>
 			</div>
@@ -150,13 +150,13 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 elseif ( $columns == 'three' ):
 
 if ( $blockanchor && $bgcolor == 'dark' ): ?>
-<div id="<?php echo $blockanchor ?>" class="section darkGreyBg light">
+<div id="<?php echo $blockanchor ?>" class="section darkbg light">
 <?php elseif ( $blockanchor && $bgcolor == 'light' ): ?>
 <div id="<?php echo $blockanchor ?>" class="section lightbg">
 <?php elseif ( $bgcolor == 'light' ): ?>
 <div class="section lightbg">
 <?php elseif ( $bgcolor == 'dark' ): ?>
-<div class="section darkGreyBg light">
+<div class="section darkbg light">
 <?php elseif ( $blockanchor ): ?>
 <div id="<?php echo $blockanchor ?>" class="section lightbg">
 <?php else : ?>
@@ -173,26 +173,26 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 			echo '
 				<div class="text-align-center">
 					<h1>' . $rowheading . '</h1>
-					<h4>' . $rowsubheading . '</h4>
+					<h4 class="bottom-padding">' . $rowsubheading . '</h4>
 				</div>
 				';
 		} elseif ( $rowheading && $rowsubheading ) {
 			echo '
 				<h1>' . $rowheading . '</h1>
-				<h4>' . $rowsubheading . '</h4>
+				<h4 class="bottom-padding">' . $rowsubheading . '</h4>
 				';
 		} elseif ( $rowheading && $centeredheading ) {
-			echo '<h1 class="text-align-center">' . $rowheading . '</h1>';
+			echo '<h1 class="text-align-center bottom-margin"">' . $rowheading . '</h1>';
 		} elseif ( $rowheading ) {
-			echo '<h1>' . $rowheading . '</h1>';
+			echo '<h1 class="bottom-margin">' . $rowheading . '</h1>';
 		}
 		
 		if( have_rows('columns_grid') ): ?>
 		
 		<?php if ( $centeredtext ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs icons-visible topPadding extra-col-spacing">
+		<div class="row gutter_space_2 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php else : ?>
-		<div class="row gutter_space_2 bottom-margin topPadding extra-col-spacing">
+		<div class="row gutter_space_2 bullet-points extra-col-spacing">
 		<?php endif; ?>
 			
 			<?php while( have_rows('columns_grid') ): the_row();
@@ -286,13 +286,13 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 elseif ( $columns == 'four' ):
 
 if ( $blockanchor && $bgcolor == 'dark' ): ?>
-<div id="<?php echo $blockanchor ?>" class="section darkGreyBg light">
+<div id="<?php echo $blockanchor ?>" class="section darkbg light">
 <?php elseif ( $blockanchor && $bgcolor == 'light' ): ?>
 <div id="<?php echo $blockanchor ?>" class="section lightbg">
 <?php elseif ( $bgcolor == 'light' ): ?>
 <div class="section lightbg">
 <?php elseif ( $bgcolor == 'dark' ): ?>
-<div class="section darkGreyBg light">
+<div class="section darkbg light">
 <?php elseif ( $blockanchor ): ?>
 <div id="<?php echo $blockanchor ?>" class="section lightbg">
 <?php else : ?>
@@ -309,26 +309,26 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 			echo '
 				<div class="text-align-center">
 					<h1>' . $rowheading . '</h1>
-					<h4>' . $rowsubheading . '</h4>
+					<h4 class="bottom-padding">' . $rowsubheading . '</h4>
 				</div>
 				';
 		} elseif ( $rowheading && $rowsubheading ) {
 			echo '
 				<h1>' . $rowheading . '</h1>
-				<h4>' . $rowsubheading . '</h4>
+				<h4 class="bottom-padding">' . $rowsubheading . '</h4>
 				';
 		} elseif ( $rowheading && $centeredheading ) {
-			echo '<h1 class="text-align-center">' . $rowheading . '</h1>';
+			echo '<h1 class="text-align-center bottom-margin"">' . $rowheading . '</h1>';
 		} elseif ( $rowheading ) {
-			echo '<h1>' . $rowheading . '</h1>';
+			echo '<h1 class="bottom-margin">' . $rowheading . '</h1>';
 		}
 		
 		if( have_rows('columns_grid') ): ?>
 		
 		<?php if ( $centeredtext ): ?>
-		<div class="row gutter_space_2 center-lg center-md center-sm center-xs icons-visible topPadding extra-col-spacing">
+		<div class="row gutter_space_2 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
 		<?php else : ?>
-		<div class="row gutter_space_2 bottom-margin topPadding extra-col-spacing">
+		<div class="row gutter_space_2 bullet-points extra-col-spacing">
 		<?php endif; ?>
 			
 			<?php while( have_rows('columns_grid') ): the_row();

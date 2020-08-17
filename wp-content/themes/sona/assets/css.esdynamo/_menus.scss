@@ -68,6 +68,15 @@
 	top: 32px;
 }
 
+// HIDE MENU ON SCROLL
+header.nav-up {
+	transform: translateY(-83px);
+	transition: 0.25s ease-in-out;
+}
+header {
+	transition: 0.25s ease-in-out;
+}
+
 // SOCIAL MEDIA WINDOW
 .social-window {
 	position: fixed;
@@ -77,6 +86,7 @@
     left: 0;
     background-color: rgba(0,0,0,.95);
 	display: none;
+	z-index: 99;
 }
 .socialWindowToggle {
 	float: right;
@@ -84,7 +94,12 @@
 	margin-top: -10px;
 	right: 2em;
 	position: absolute;
-	z-index: 1;
+	z-index: 999;
+}
+@media (min-width: 1280px) {
+	.socialWindowToggle {
+		right: calc(50% - 640px + 2em);
+	}
 }
 .social-window .social-media {
 	text-align: center;
@@ -156,13 +171,32 @@ footer {
 	padding-bottom: 0;
 	padding-top: 0;
 }
-.footer-nav a:before, .bullet-points li:before {
+footer .widget-container ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+footer .widget-container li {
+	margin-bottom: 15px;
+}
+footer .widget-container a {
+	position: relative;
+	text-decoration: none;
+	color: #fff;
+	padding-left: 15px;
+}
+.footer-nav a:before, .bullet-points ul li:before, footer .widget-container li a:before {
 	font-family: fontAwesome;
 	position: absolute;
 	top: 1px;
 	left: 0;
 	content: "\f0da";
 	color: $gold;
+}
+.bullet-points li li:before {
+	content: "–";
+	top: -1px;
+	font-weight: bold;
 }
 footer .light h3 {
 	color: $gold;

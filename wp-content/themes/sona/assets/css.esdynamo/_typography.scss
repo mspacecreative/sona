@@ -46,9 +46,35 @@ ul {
 p {
 	line-height: 1.5em;
 }
+p a {
+	color: $gold;
+}
+h1 ~ .button {
+	margin-top: 0;
+}
+h1 ~ div ~ .button {
+	margin-top: 30px;
+}
 .bullet-points ul {
 	padding-left: 0;
+}
+.bullet-points ul:last-of-type, .bullet-points li:last-of-type {
+	margin-bottom: 0;
 	margin-top: 0;
+}
+.bullet-points li > ul:last-of-type, .bullet-points ul ~ p {
+	margin-top: 15px;
+}
+.bullet-points p ~ ul:last-of-type {
+	margin-top: 15px;
+}
+.productNameSuper {
+	font-size: 14px;
+	top: -1em;
+}
+.single .para-block-wrap > p {
+	padding-left: 0;
+	padding-right: 0;
 }
 .boxed > ul:first-of-type {
 	margin-top: 0;
@@ -68,7 +94,7 @@ p {
 blockquote {
 	font-style: italic;
 }
-.team-social-media a {
+.team-social-media a, .wrap .team-social-media a {
 	color: #fff;
 	margin-right: 15px;
 	font-size: 15px;
@@ -90,11 +116,16 @@ blockquote {
   padding-left: 0;
   margin-left: 2px;
 }
-.bullet-points li {
-  list-style: none;
+.bullet-points ul {
+	list-style: none;
+}
+.bullet-points ul li {
   position: relative;
   margin-bottom: 15px;
   padding-left: 20px;
+}
+.bullet-points.removeSpacing li {
+	margin-bottom: 0;
 }
 .boxed.relativePositioning .bullet-points {
   max-width: 65%;
@@ -112,10 +143,44 @@ blockquote {
   margin-right: auto;
 }
 
+.author {
+	font-weight: bold;
+	margin-bottom: 0;
+	margin-top: auto;
+	
+}
+.position {
+	font-size: 14px;
+}
+.testimonial .boxed > p:first-of-type {
+	font-style: italic;
+	font-size: 18px;
+}
+
+// ORDERED LISTS
+ol > li {
+	padding-left: 10px;
+	margin-bottom: 15px;
+}
+// CENTER ALIGN
+.aligncenter {
+	text-align: center;
+}
+
+// BUTTONS
+.search .button {
+	margin-top: 15px;
+	font-size: 12px;
+	padding: 5px 15px;
+}
+.search article {
+	margin-bottom: 3em;
+}
+
 // SPLASH
 .splash h1 {
   color: #fff;
-  font-size: 2.5em;
+  font-size: 2.25em;
   margin: 0 0 30px;
   text-shadow: 0 0 10px #666;
 }
@@ -124,6 +189,29 @@ blockquote {
 }
 .text-align-right {
 	text-align: right;
+}
+
+// DETAIL BOX
+.detailBox_light {
+	margin-top: 2em;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 15px #d9d9d9;
+    border-style: none;
+    display: inline-block;
+	border-color: #fff;
+}
+.light .boxed.detailBox_dark {
+	display: inline-block;
+    margin-top: 2em;
+    background-image: url(../img/backgrounds/dark-honeycomb.png);
+    box-shadow: 0 0 15px #000;
+    border-color: #444;
+}
+.boxed.light.dark {
+	border-color: #444;
+}
+.boxed.detailBox_light, .boxed.detailBox_dark {
+	height: auto;
 }
 
 // FONT FAMILIES
@@ -160,7 +248,7 @@ blockquote {
 .button,
 input[type="submit"] {
   display: inline-block;
-  margin-top: 15px;
+  margin-top: 30px;
   padding: 12px 20px;
   text-transform: uppercase;
   text-decoration: none;
@@ -194,4 +282,13 @@ p ~ .button {
 
 .header-container h1 {
   font-size: 2.5em;
+}
+
+body h1 {
+	margin-bottom: 30px;
+}
+
+// LINKS
+.wrap a {
+	color: $gold;
 }

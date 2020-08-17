@@ -9,6 +9,9 @@ $blockanchor = get_field('block_anchor');
 $reverse = get_field('reverse_columns');
 $goldBorder = get_field('gold_border');
 $narrow = get_field('narrow_row');
+$colratio = get_field('column_ratio');
+$removeBulletSpacing = get_field('remove_spacing_between_bullet_points');
+$furtherbox = get_field('detail_box');
 
 if ( $blockanchor && $bgcolor == 'light' && $goldBorder ): ?>
 <div id="<?php echo $blockanchor ?>" class="section lightbg borderTopGoldGradient">
@@ -57,35 +60,94 @@ if ( $blockanchor && $bgcolor == 'light' && $goldBorder ): ?>
 		}
 		
 		if ( $aligncolumns == 'top' && $reverse ): ?>
-		<div class="row gutter_1 top-lg top-md reverse">
+		<div data-aos="fade-up" class="row relativePositioning gutter_space_1 top-lg top-md reverse">
 		<?php elseif ( $aligncolumns == 'middle' && $reverse ): ?>
-		<div class="row gutter_1 middle-lg middle-md reverse">
+		<div data-aos="fade-up" class="row relativePositioning gutter_space_1 middle-lg middle-md reverse">
 		<?php elseif ( $aligncolumns == 'bottom' && $reverse ): ?>
-		<div class="row gutter_1 bottom-lg bottom-md reverse">
+		<div data-aos="fade-up" class="row relativePositioning gutter_space_1 bottom-lg bottom-md reverse">
 		<?php elseif ( $aligncolumns == 'top' && $reverse ): ?>
-		<div class="row gutter_1 top-lg top-md reverse">
+		<div data-aos="fade-up" class="row relativePositioning gutter_space_1 top-lg top-md reverse">
 		<?php elseif ( $aligncolumns == 'top' ): ?>
-		<div class="row gutter_1 top-lg top-md">
+		<div data-aos="fade-up" class="row relativePositioning gutter_space_1 top-lg top-md">
 		<?php elseif ( $aligncolumns == 'middle' ): ?>
-		<div class="row gutter_1 middle-lg middle-md">
+		<div data-aos="fade-up" class="row relativePositioning gutter_space_1 middle-lg middle-md">
 		<?php elseif ( $aligncolumns == 'bottom' ): ?>
-		<div class="row gutter_1 bottom-lg bottom-md">
+		<div data-aos="fade-up" class="row relativePositioning gutter_space_1 bottom-lg bottom-md">
 		<?php elseif ( $reverse ): ?>
-		<div class="row gutter_1 reverse">
+		<div data-aos="fade-up" class="row relativePositioning gutter_space_1 reverse">
 		<?php else : ?>
-		<div class="row gutter_1">
+		<div data-aos="fade-up" class="row relativePositioning gutter_space_1">
 		<?php endif; ?>
 			
 			<?php if( have_rows('left_column') ):
 	 		while( have_rows('left_column') ): the_row();
 	 		$heading = get_sub_field('heading');
-			$content = get_sub_field('content'); ?>
-			<div class="col-lg-6 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col-container">
-				<?php if ( $heading ) {
+			$content = get_sub_field('content');
+			$contenttype = get_sub_field('content_type');
+	 		
+	 		if ( $colratio == 'three-fifth-two-fifth' ): ?>
+			<div class="col-lg-7 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php elseif ( $colratio == 'two-fifth-three-fifth' ): ?>
+			<div class="col-lg-5 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php elseif ( $colratio == 'two-third-one-third' ): ?>
+			<div class="col-lg-8 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php elseif ( $colratio == 'one-third-two-third' ): ?>
+			<div class="col-lg-4 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php elseif ( $colratio == 'three-quarter-one-quarter' ): ?>
+			<div class="col-lg-10 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php elseif ( $colratio == 'one-quarter-three-quarter' ): ?>
+			<div class="col-lg-2 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php else : ?>
+			<div class="col-lg-6 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php endif;
+			
+				if ( $contenttype == 'carousel' ): ?>
+				
+				<div class="carousel who_we_are">
+						
+						<?php
+						$images = get_sub_field('photo_gallery');
+						$size = 'large';
+						
+						if( $images ):
+						foreach( $images as $image ): ?>
+						
+						<div>
+							<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+						</div>
+						
+						<?php 
+						endforeach;
+						endif; ?>
+						
+					</div>
+				</div>
+				
+				<?php elseif ( $contenttype == 'image' ):
+				
+				$img = get_sub_field('image');
+				if( !empty( $img ) ): ?>
+				<img class="full-width" src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>">
+				<?php endif; ?>
+				
+				<?php else :
+				
+				if ( $heading ) {
 					echo '<h1>' . $heading . '</h1>';
 				}
 				if ( $content ) {
-					echo $content;
+					if ( $removeBulletSpacing ) {
+						echo '<div class="bullet-points removeSpacing">' . $content . '</div>';
+					} else {
+						echo '<div class="bullet-points">' . $content . '</div>';
+					}
+				}
+				if ( $furtherbox && $bgcolor == 'light' ) {
+					echo '<div class="boxed roundedCorners detailBox_light">' . $furtherbox . '</div>';
+				} elseif ( $furtherbox && $bgcolor == 'dark' ) {
+					echo '<div class="boxed roundedCorners detailBox_dark">' . $furtherbox . '</div>';
+				} elseif ( $furtherbox ) {
+					echo '<div class="boxed roundedCorners detailBox_light">' . $furtherbox . '</div>';
 				}
 				if ( have_rows('call_to_action') ) {
 					while ( have_rows('call_to_action') ) { 
@@ -106,45 +168,106 @@ if ( $blockanchor && $bgcolor == 'light' && $goldBorder ): ?>
 							echo '<a href="' . $link . '" class="button dark">Learn more</a>';
 						}
 					}
-				} ?>
+				} 
+				
+				endif; ?>
 			</div>
+			
 			<?php endwhile;
 			endif; ?>
 			
 			<?php if( have_rows('right_column') ):
 	 		while( have_rows('right_column') ): the_row();
-	 		$contenttype = get_sub_field('content_type'); ?>
+	 		$contenttype = get_sub_field('content_type');
 			
-			<?php if ( $contenttype == 'carousel' ): ?>
-			<div class="col-lg-6 col-md-6 col-md-12 col-sm-12 col-xs-12 col-container">
+			if ( $colratio == 'three-fifth-two-fifth' ): ?>
+			<div class="col-lg-5 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php elseif ( $colratio == 'two-fifth-three-fifth' ): ?>
+			<div class="col-lg-7 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php elseif ( $colratio == 'two-third-one-third' ): ?>
+			<div class="col-lg-4 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php elseif ( $colratio == 'one-third-two-third' ): ?>
+			<div class="col-lg-8 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php elseif ( $colratio == 'three-quarter-one-quarter' ): ?>
+			<div class="col-lg-2 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php elseif ( $colratio == 'one-quarter-three-quarter' ): ?>
+			<div class="col-lg-10 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php else : ?>
+			<div class="col-lg-6 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<?php endif;
+			
+				if ( $contenttype == 'carousel' ): ?>
+				
 				<div class="carousel who_we_are">
-					
-					<?php
-					$images = get_sub_field('photo_gallery');
-					$size = 'large';
-					
-					if( $images ):
-					foreach( $images as $image ): ?>
-					
-					<div>
-						<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+						
+						<?php
+						$images = get_sub_field('photo_gallery');
+						$size = 'large';
+						
+						if( $images ):
+						foreach( $images as $image ): ?>
+						
+						<div>
+							<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+						</div>
+						
+						<?php 
+						endforeach;
+						endif; ?>
+						
 					</div>
-					
-					<?php 
-					endforeach;
-					endif; ?>
-					
 				</div>
-			</div>
-			<?php elseif ( $contenttype == 'image' ): ?>
-			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col text-align-center">
-				<?php
+				
+				<?php elseif ( $contenttype == 'image' ):
+				
 				$img = get_sub_field('image');
 				if( !empty( $img ) ): ?>
-				<img src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>">
+				<img class="full-width" src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>">
 				<?php endif; ?>
+				
+				<?php else :
+				
+				if ( $heading ) {
+					echo '<h1>' . $heading . '</h1>';
+				}
+				if ( $content ) {
+					if ( $removeBulletSpacing ) {
+						echo '<div class="bullet-points removeSpacing">' . $content . '</div>';
+					} else {
+						echo '<div class="bullet-points">' . $content . '</div>';
+					}
+				}
+				if ( $furtherbox && $bgcolor == 'light' ) {
+					echo '<div class="boxed roundedCorners detailBox_light">' . $furtherbox . '</div>';
+				} elseif ( $furtherbox && $bgcolor == 'dark' ) {
+					echo '<div class="boxed roundedCorners detailBox_dark">' . $furtherbox . '</div>';
+				} elseif ( $furtherbox ) {
+					echo '<div class="boxed roundedCorners detailBox_light">' . $furtherbox . '</div>';
+				}
+				if ( have_rows('call_to_action') ) {
+					while ( have_rows('call_to_action') ) { 
+						the_row();
+						$link = get_sub_field('link');
+						$label = get_sub_field('label');
+						if ( $bgcolor == 'dark' && $link && $label ) {
+							echo '<a href="' . $link . '" class="button light">' . $label . '</a>';
+						} elseif ( $bgcolor == 'dark' && $link ) {
+							echo '<a href="' . $link . '" class="button light">Learn more</a>';
+						} elseif ( $bgcolor == 'light' && $link && $label ) {
+							echo '<a href="' . $link . '" class="button dark">' . $label . '</a>';
+						} elseif ( $bgcolor == 'light' && $link ) {
+							echo '<a href="' . $link . '" class="button dark">Learn more</a>';
+						} elseif ( $link && $label ) {
+							echo '<a href="' . $link . '" class="button dark">' . $label . '</a>';
+						} elseif ( $link ) {
+							echo '<a href="' . $link . '" class="button dark">Learn more</a>';
+						}
+					}
+				} 
+				
+				endif; ?>
 			</div>
-			<?php endif; ?>
+			
 			<?php endwhile;
 			endif; ?>
 			

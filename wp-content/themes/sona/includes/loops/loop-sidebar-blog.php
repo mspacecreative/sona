@@ -1,8 +1,8 @@
 <?php 
 $args = array( 
 	'category' => 'blog',
-	'posts_per_page'=> 5, 
-	'post__not_in' => array( $post->ID ) 
+	'posts_per_page'=> 3, 
+	'post__not_in' => array( get_the_ID() ) 
 );
 $arr_posts = new WP_Query( $args ); ?>
 	

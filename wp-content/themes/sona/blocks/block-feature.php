@@ -5,6 +5,8 @@ $txtposition = get_field('text_position');
 $colortheme = get_field('theme');
 $sectionheading = get_field('section_heading');
 $sectionheadingposition = get_field('heading_position');
+$removeBulletSpacing = get_field('remove_spacing_between_bullet_points');
+$furtherbox = get_field('detail_box');
 
 if ( $colortheme == 'dark' ):
 
@@ -56,17 +58,17 @@ endif;
 		<?php if ( $txtposition == 'left' ): ?>
 		<div class="inner no-left-padding">
 			
-			<div class="row no_col_padding reverse">
+			<div class="row relativePositioning no_col_padding reverse">
 			
 		<?php elseif ( $txtposition == 'right' ): ?>
-		<div class="inner no-right-padding">
+		<div class="inner no-right-padding no-left-padding">
 			
-			<div class="row no_col_padding">
+			<div class="row relativePositioning no_col_padding">
 			
 		<?php else : ?>
 		<div class="inner no-left-padding">
 			
-			<div class="row no_col_padding reverse">
+			<div class="row relativePositioning no_col_padding reverse">
 		<?php endif; ?>
 			
 				<div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12 col_with_img">
@@ -108,7 +110,18 @@ endif;
 									echo '<h1 class="gold_color">' . $heading . '</h1>';
 								}
 								if ( $body ) {
-									echo '<div class="bullet-points">' . $body . '</div>';
+									if ( $removeBulletSpacing ) {
+										echo '<div class="bullet-points removeSpacing">' . $body . '</div>';
+									} else {
+										echo '<div class="bullet-points">' . $body . '</div>';
+									}
+								}
+								if ( $furtherbox && $colortheme == 'light' ) {
+									echo '<div class="boxed roundedCorners detailBox_light">' . $furtherbox . '</div>';
+								} elseif ( $furtherbox && $colortheme == 'dark' ) {
+									echo '<div class="boxed roundedCorners detailBox_dark">' . $furtherbox . '</div>';
+								} elseif ( $furtherbox ) {
+									echo '<div class="boxed roundedCorners detailBox_light">' . $furtherbox . '</div>';
 								}
 								if ( have_rows('call_to_action') ) {
 									while ( have_rows('call_to_action') ) { 

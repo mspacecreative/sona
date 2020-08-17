@@ -1,9 +1,16 @@
 <?php
-if ( have_posts() ): ?>
+global $paged;
+$curpage = $paged ? $paged : 1;
+$args = array(
+'posts_per_page' => 12,
+'paged' => $paged
+);
+$wp_query = new WP_Query( $args );
+if ( $wp_query->have_posts() ): ?>
 
 	<div class="row gutter_space_1 gridContainer">
 	
-	<?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 	
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class('col col-lg-4 col-md-4 col-sm-6 col-xs-12'); ?>>
@@ -16,9 +23,9 @@ if ( have_posts() ): ?>
 						<?php the_post_thumbnail( 'card-feature', 600, 338, array('center', 'center') ); // Declare pixel size you need inside the array ?>
 					</a>
 					<?php else : ?>
-					<!--<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholders/sona-placeholder-wide.jpg">
-					</a>-->
+					</a>
 				<?php endif; ?>
 				<!-- /post thumbnail -->
 		

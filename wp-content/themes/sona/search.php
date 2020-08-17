@@ -1,19 +1,11 @@
-<?php get_header(); ?>
+<?php get_header();
 
-	<main role="main">
-		<!-- section -->
-		<section>
+ 	get_template_part('includes/templates/page-header-search'); ?>
 
-			<h1><?php echo sprintf( __( '%s Search Results for ', 'sona' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
-
-			<?php get_template_part('loop'); ?>
-
-			<?php get_template_part('pagination'); ?>
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
+	<section class="relativePositioning section">
+		<div class="inner">
+			<?php get_template_part('includes/loops/loop-search'); ?>
+		</div>
+	</section>
 
 <?php get_footer(); ?>

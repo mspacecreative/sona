@@ -16,6 +16,38 @@ function recentPosts() {
 }
 add_shortcode( 'sidebar_recent_posts', 'recentPosts' );
 
+// LOOP THROUGH TESTIMONIALS
+function testimonialsLoop() {
+	ob_start();
+		get_template_part('includes/loops/loop-testimonials');
+	return ob_get_clean();
+}
+add_shortcode( 'testimonials', 'testimonialsLoop' );
+
+// LOOP THROUGH PRODUCTS
+function productLoop() {
+	ob_start();
+		get_template_part('includes/loops/loop-products');
+	return ob_get_clean();
+}
+add_shortcode( 'products', 'productLoop' );
+
+// LOOP THROUGH PRODUCTS IN SIDEBAR
+function productSidebarLoop() {
+	ob_start();
+		get_template_part('includes/loops/loop-sidebar-products');
+	return ob_get_clean();
+}
+add_shortcode( 'products_sidebar', 'productSidebarLoop' );
+
+// LOOP THROUGH PARTNER BRANDS IN SIDEBAR
+function partnerSidebarLoop() {
+	ob_start();
+		get_template_part('includes/loops/loop-sidebar-partners');
+	return ob_get_clean();
+}
+add_shortcode( 'partners_sidebar', 'partnerSidebarLoop' );
+
 // BLOG SIDEBAR LOOP TEAM
 function loopTeam($atts) {
 	ob_start();
@@ -100,6 +132,8 @@ function teamMembers($atts) {
 		$loop = new WP_Query( $args );
 		if ( $loop->have_posts() ) : ?>
 		<div class="row gutter_space_2 team-container clear">
+			
+			<div class="bioContainerUnderlay"></div>
 			
 			<?php while ( $loop->have_posts() ) : $loop->the_post();
 			$position = get_field('position__title'); ?>

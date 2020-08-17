@@ -226,6 +226,46 @@ function my_acf_init() {
 			'mode'				=> 'edit',
 			'supports'			=> array( 'mode' => false ),
 		));
+		
+		// register product block
+		acf_register_block(array(
+			'name'				=> 'archive',
+			'title'				=> __('Archive Block'),
+			'description'		=> __('Displays selected post type results'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'images-alt',
+			'keywords'			=> array( 'layout', 'editor' ),
+			'mode'				=> 'edit',
+			'supports'			=> array( 'mode' => false ),
+		));
+		
+		// register accordion block
+		acf_register_block(array(
+			'name'				=> 'accordion',
+			'title'				=> __('Accordion Block'),
+			'description'		=> __('Displays collapsable tabs for titles and content'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'images-alt',
+			'keywords'			=> array( 'tabs', 'accordion' ),
+			'mode'				=> 'edit',
+			'supports'			=> array( 'mode' => false ),
+		));
+		
+		// register brand grid / carousel
+		acf_register_block(array(
+			'name'				=> 'brand',
+			'title'				=> __('Brands Block'),
+			'description'		=> __('Displays brands in either grid or carousel'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'images-alt',
+			'keywords'			=> array( 'image grid', 'carousel' ),
+			'mode'				=> 'edit',
+			'supports'			=> array( 'mode' => false ),
+		));
+
 	}
 }
 

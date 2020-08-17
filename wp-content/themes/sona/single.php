@@ -8,8 +8,8 @@
 		
 		<div class="inner">
 			<!-- post details -->
-			<span class="date-author"><?php the_time('F j, Y'); ?> &nbsp;|&nbsp;
-			<?php _e( 'By', 'sona' ); ?> <?php the_author_posts_link(); ?> &nbsp;|&nbsp; <?php _e( 'Categorized in: ', 'sona' ); the_category(', '); // Separated by commas ?></span>
+			<span class="date-author"><?php the_time('F j, Y'); ?> <!--&nbsp;|&nbsp;
+			<?php _e( 'By', 'sona' ); ?> <?php the_author_posts_link(); ?> -->&nbsp;|&nbsp; <?php _e( 'Categorized in: ', 'sona' ); the_category(', '); // Separated by commas ?></span>
 			<!-- /post details -->
 						
 			<!-- post title -->
@@ -25,7 +25,7 @@
 
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	
-	<section class="relativePositioning borderTopGoldGradient">
+	<section class="relativePositioning">
 		<div class="inner top-bottom-padding">
 			<div class="row gutter_space_3">
 				<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">

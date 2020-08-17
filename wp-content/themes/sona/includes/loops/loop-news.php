@@ -34,9 +34,9 @@ $query = new WP_Query( $args );
 					<!-- /post title -->
 			
 					<!-- post details -->
-					<span class="date-author"><?php the_time('F j, Y'); ?>&nbsp;|&nbsp;
+					<span class="date-author"><?php the_time('F j, Y'); ?><!--&nbsp;|&nbsp;
 					<?php _e( 'By', 'sona' ); ?> <?php the_author_posts_link(); ?></span>
-					<!-- /post details -->
+					 /post details -->
 			
 					<?php html5wp_excerpt('html5wp_index'); ?>
 			

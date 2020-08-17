@@ -27,4 +27,4 @@ if ( $loop->have_posts() ) : ?>
 		</li>
 	
 	<?php endwhile;
-endif; ?>
+endif; wp_reset_query(); ?>

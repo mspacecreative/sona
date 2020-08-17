@@ -18,11 +18,11 @@ $centerheading = get_field('align_heading');
 			echo '<h1 class="text-align-center">' . $rowheading . '</h1>';
 		} elseif ( $rowheading && $centerheading == 'right' ) {
 			echo '<h1 class="text-align-right">' . $rowheading . '</h1>';
-		} else {
+		} elseif ( $rowheading ) {
 			echo '<h1>' . $rowheading . '</h1>';
 		}
 		if ( have_rows('products') ): ?>
-		<div class="row middle-lg middle-md gutter_space_2 centeredList topBottomPaddingShort">
+		<div class="row gutter_space_2 centeredList topBottomPaddingShort">
 			
 			<?php while ( have_rows('products') ): the_row();
 			

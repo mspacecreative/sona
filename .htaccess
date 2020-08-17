@@ -1,3 +1,152 @@
+# BEGIN iThemes Security - Do not modify or remove this line
+# iThemes Security Config Details: 2
+	# Pass through Authorization header.
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
+		RewriteCond %{HTTP:Authorization} ^(.*)
+		RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+	</IfModule>
+
+	# Ban Hosts - Security > Settings > Banned Users
+	SetEnvIF REMOTE_ADDR "^132\.232\.31\.117$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^132\.232\.31\.117$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^132\.232\.31\.117$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^111\.231\.225\.87$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^111\.231\.225\.87$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^111\.231\.225\.87$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^132\.232\.21\.26$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^132\.232\.21\.26$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^132\.232\.21\.26$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^5\.188\.62\.25$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^5\.188\.62\.25$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^5\.188\.62\.25$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^132\.232\.46\.230$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^132\.232\.46\.230$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^132\.232\.46\.230$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^221\.235\.184\.101$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^221\.235\.184\.101$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^221\.235\.184\.101$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^42\.51\.12\.20$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^42\.51\.12\.20$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^42\.51\.12\.20$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^129\.28\.61\.66$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^129\.28\.61\.66$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^129\.28\.61\.66$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^148\.70\.212\.52$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^148\.70\.212\.52$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^148\.70\.212\.52$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^213\.217\.0\.7$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^213\.217\.0\.7$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^213\.217\.0\.7$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^195\.54\.167\.190$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^195\.54\.167\.190$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^195\.54\.167\.190$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^47\.105\.67\.205$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^47\.105\.67\.205$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^47\.105\.67\.205$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^47\.107\.186\.183$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^47\.107\.186\.183$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^47\.107\.186\.183$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^180\.76\.101\.165$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^180\.76\.101\.165$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^180\.76\.101\.165$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^42\.51\.34\.202$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^42\.51\.34\.202$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^42\.51\.34\.202$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^132\.232\.5\.28$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^132\.232\.5\.28$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^132\.232\.5\.28$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^132\.232\.96\.230$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^132\.232\.96\.230$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^132\.232\.96\.230$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^148\.70\.77\.116$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^148\.70\.77\.116$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^148\.70\.77\.116$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^132\.232\.35\.108$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^132\.232\.35\.108$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^132\.232\.35\.108$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^132\.232\.12\.42$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^132\.232\.12\.42$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^132\.232\.12\.42$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^139\.155\.1\.46$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^139\.155\.1\.46$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^139\.155\.1\.46$" DenyAccess
+
+	<IfModule mod_authz_core.c>
+		<RequireAll>
+			Require all granted
+			Require not env DenyAccess
+			Require not ip 132.232.31.117
+			Require not ip 111.231.225.87
+			Require not ip 132.232.21.26
+			Require not ip 5.188.62.25
+			Require not ip 132.232.46.230
+			Require not ip 221.235.184.101
+			Require not ip 42.51.12.20
+			Require not ip 129.28.61.66
+			Require not ip 148.70.212.52
+			Require not ip 213.217.0.7
+			Require not ip 195.54.167.190
+			Require not ip 47.105.67.205
+			Require not ip 47.107.186.183
+			Require not ip 180.76.101.165
+			Require not ip 42.51.34.202
+			Require not ip 132.232.5.28
+			Require not ip 132.232.96.230
+			Require not ip 148.70.77.116
+			Require not ip 132.232.35.108
+			Require not ip 132.232.12.42
+			Require not ip 139.155.1.46
+		</RequireAll>
+	</IfModule>
+	<IfModule !mod_authz_core.c>
+		Order allow,deny
+		Allow from all
+		Deny from env=DenyAccess
+		Deny from 132.232.31.117
+		Deny from 111.231.225.87
+		Deny from 132.232.21.26
+		Deny from 5.188.62.25
+		Deny from 132.232.46.230
+		Deny from 221.235.184.101
+		Deny from 42.51.12.20
+		Deny from 129.28.61.66
+		Deny from 148.70.212.52
+		Deny from 213.217.0.7
+		Deny from 195.54.167.190
+		Deny from 47.105.67.205
+		Deny from 47.107.186.183
+		Deny from 180.76.101.165
+		Deny from 42.51.34.202
+		Deny from 132.232.5.28
+		Deny from 132.232.96.230
+		Deny from 148.70.77.116
+		Deny from 132.232.35.108
+		Deny from 132.232.12.42
+		Deny from 139.155.1.46
+	</IfModule>
+# END iThemes Security - Do not modify or remove this line
+
 # BEGIN WordPress
 # The directives (lines) between `BEGIN WordPress` and `END WordPress` are
 # dynamically generated, and should only be modified via WordPress filters.
