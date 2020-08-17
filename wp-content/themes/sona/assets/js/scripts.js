@@ -95,7 +95,8 @@
 	});
 	
 	// ACCORDION FUNCTIONALITY
-	$('.tabRow a').click(function() {
+	$('.tabRow a').click(function(e) {
+		e.preventDefault();
 		$(this).next().slideToggle();
 		$(this).toggleClass('rotate');
 	});
