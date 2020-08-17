@@ -86,19 +86,19 @@ if ( $blockanchor && $bgcolor == 'light' && $goldBorder ): ?>
 			$contenttype = get_sub_field('content_type');
 	 		
 	 		if ( $colratio == 'three-fifth-two-fifth' ): ?>
-			<div class="col-lg-7 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-7 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php elseif ( $colratio == 'two-fifth-three-fifth' ): ?>
-			<div class="col-lg-5 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-5 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php elseif ( $colratio == 'two-third-one-third' ): ?>
-			<div class="col-lg-8 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-8 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php elseif ( $colratio == 'one-third-two-third' ): ?>
-			<div class="col-lg-4 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-4 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php elseif ( $colratio == 'three-quarter-one-quarter' ): ?>
-			<div class="col-lg-10 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-10 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php elseif ( $colratio == 'one-quarter-three-quarter' ): ?>
-			<div class="col-lg-2 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-2 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php else : ?>
-			<div class="col-lg-6 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php endif;
 			
 				if ( $contenttype == 'carousel' ): ?>
@@ -181,19 +181,19 @@ if ( $blockanchor && $bgcolor == 'light' && $goldBorder ): ?>
 	 		$contenttype = get_sub_field('content_type');
 			
 			if ( $colratio == 'three-fifth-two-fifth' ): ?>
-			<div class="col-lg-5 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-5 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php elseif ( $colratio == 'two-fifth-three-fifth' ): ?>
-			<div class="col-lg-7 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-7 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php elseif ( $colratio == 'two-third-one-third' ): ?>
-			<div class="col-lg-4 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-4 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php elseif ( $colratio == 'one-third-two-third' ): ?>
-			<div class="col-lg-8 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-8 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php elseif ( $colratio == 'three-quarter-one-quarter' ): ?>
-			<div class="col-lg-2 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-2 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php elseif ( $colratio == 'one-quarter-three-quarter' ): ?>
-			<div class="col-lg-10 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-10 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php else : ?>
-			<div class="col-lg-6 mobile-margin-bottom-md-25 col-md-6 col-sm-12 col-xs-12 col">
+			<div class="col-lg-6 bottomMarginMobile col-md-6 col-sm-12 col-xs-12 col">
 			<?php endif;
 			
 				if ( $contenttype == 'carousel' ): ?>
