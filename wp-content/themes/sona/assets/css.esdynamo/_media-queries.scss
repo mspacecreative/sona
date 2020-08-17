@@ -138,6 +138,9 @@
 	.featured-products .productAbsoluteImg {
 		display: none;
 	}
+	.boxed.relativePositioning .bullet-points {
+		max-width: 100%;
+	}
 	.absoluteHeading h3 {
 		min-width: 140px;
 		font-size: 17px;
