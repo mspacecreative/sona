@@ -3174,12 +3174,12 @@ footer .light h3 {
 	
 	.dark_gradient_img_overlay.bgImgRight:after {
 		background: linear-gradient(90deg, black, rgba(0, 0, 0, 0.75), transparent);
-		background: radial-gradient(circle at right 50%, transparent 65%, rgba(0, 0, 0, 0.75), black 95%);
+		background: radial-gradient(circle at right 50%, transparent, rgba(0, 0, 0, 0.25), black 95%);
 	}
 	
 	.light_gradient_img_overlay.bgImgRight:after {
 		background: linear-gradient(90deg, white, rgba(255, 255, 255, 0.75), transparent);
-		background: radial-gradient(circle at right 50%, transparent 65%, rgba(255, 255, 255, 0.75), white 95%);
+		background: radial-gradient(circle at right 50%, transparent, rgba(255, 255, 255, 0.25) 70%, white 95%);
 	}
 	
 	.bgImgLeft {
