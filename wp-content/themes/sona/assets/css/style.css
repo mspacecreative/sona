@@ -3280,14 +3280,7 @@ footer .light h3 {
 
 @media (max-width: 450px) {
 	.featured-products .productAbsoluteImg {
-		max-width: 45%;
-		bottom: -25%;
 		display: none;
-	}
-	
-	.boxed.relativePositioning .bullet-points {
-		max-width: 75%;
-		padding-bottom: 35%;
 	}
 	
 	.absoluteHeading h3 {
