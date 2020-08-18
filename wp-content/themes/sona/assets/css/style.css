@@ -2873,7 +2873,7 @@ footer .widget-container li {
 	text-indent: -10px;
 }
 
-footer .widget-container a {
+footer .widget-container li a {
 	position: relative;
 	text-decoration: none;
 	color: #fff;
