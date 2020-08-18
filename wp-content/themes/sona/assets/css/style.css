@@ -3808,6 +3808,7 @@ footer .light h3 {
 		left: auto;
 		right: auto;
 		bottom: auto;
+		transform: none;
 	}
 }
 
