@@ -14,7 +14,7 @@ if ( $loop->have_posts() ) : ?>
 		$title = get_the_title();
 		$position = get_field('author_positiontitle'); ?>
 			
-		<div class="testimonial col-lg-4 col-md-4 col-sm-6 col-xs-12 col">
+		<div class="testimonial col-lg-4 col-md-4 col-sm-6 col-xs-12 col bottomMarginMobile">
 		
 			<div class="boxed roundedCorners">
 			<?php 
