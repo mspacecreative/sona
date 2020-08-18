@@ -86,3 +86,18 @@
 		transform: none;
 	}
 }
+@media (max-width: 600px) and (orientation: landscape) {
+	.graphicCenter {
+		width: 400px;
+	    height: 400px;
+	}
+	.productOffering {
+		padding: 1em;
+	}
+	.title {
+		max-width: 200px;
+	}
+	.title h2 {
+		font-size: 18px;
+	}
+}
