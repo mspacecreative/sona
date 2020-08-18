@@ -10,6 +10,7 @@ $narrow = get_field('narrow');
 $centeredtext = get_field('center_align_text');
 $roundedcorners = get_field('rounded_corners');
 $centeredheading = get_field('centered_heading');
+$icon = get_sub_field('icon');
 
 if ( $columns == 'two' ):
 
@@ -51,10 +52,14 @@ if ( $blockanchor && $bgcolor == 'dark' ): ?>
 			echo '<h1 class="bottom-margin">' . $rowheading . '</h1>';
 		}
 		
-		if( have_rows('columns_grid') ): ?>
+		if( have_rows('columns_grid') ):
 		
-		<?php if ( $centeredtext ): ?>
+		if ( $centeredtext && $icon ): ?>
 		<div class="row gutter_space_2 center-lg center-md center-sm center-xs icons-visible bullet-points extra-col-spacing">
+		<?php elseif ( $centeredtext ): ?>
+		<div class="row gutter_space_2 center-lg center-md center-sm center-xs bullet-points extra-col-spacing">
+		<?php elseif ( $icon ): ?>
+		<div class="row gutter_space_2 icons-visible bullet-points extra-col-spacing">
 		<?php else : ?>
 		<div class="row gutter_space_2 bullet-points extra-col-spacing">
 		<?php endif; ?>
