@@ -58,9 +58,9 @@ $centerheading = get_field('align_heading');
 						}
 					}
 					if ( $productimg && $productimgposition ) {
-						echo '<img src=' . esc_url($productimg['url']) . '" alt="' . esc_attr($productimg['alt']) . '" class="productAbsoluteImg flushRight">';
+						echo '<img src="' . esc_url($productimg['url']) . '" alt="' . esc_attr($productimg['alt']) . '" class="productAbsoluteImg flushRight">';
 					} elseif ( $productimg ) {
-						echo '<img src=' . esc_url($productimg['url']) . '" alt="' . esc_attr($productimg['alt']) . '" class="productAbsoluteImg">';
+						echo '<img src="' . esc_url($productimg['url']) . '" alt="' . esc_attr($productimg['alt']) . '" class="productAbsoluteImg">';
 					} ?>
 				</div>
 			</div>
