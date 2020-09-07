@@ -3334,9 +3334,24 @@ footer .light h3 {
 	nav {
 		display: none;
 	}
-	  /*.bullet-points {
-			max-width: 100%;
-		}*/
+	
+	.social-window {
+		overflow: auto;
+	}
+	
+	.window-content {
+		top: auto;
+		transform: translateX(-50%);
+		position: absolute;
+	}
+	
+	.sub-menu {
+		display: none;
+	}
+	
+	.mobile-menu {
+		text-align: left;
+	}
 	
 	.splash {
 		/*margin-top: 56px;*/

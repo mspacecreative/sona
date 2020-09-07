@@ -1,5 +1,10 @@
 (function ($) {
 		
+	// CHANGE MOBILE NAV SETTINGS
+	if ( $('.sub-menu').css('display') == 'none' ) {
+		$('.mobile-menu').find('.menu-item-has-children').append('<span class="subMenuToggle"><i class="fa fa-angle-down></i></span>');
+	}
+	
 	// SMOOTH SCROLL
 	$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
