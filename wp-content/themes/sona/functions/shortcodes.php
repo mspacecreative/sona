@@ -1,5 +1,21 @@
 <?php
 
+// LOOP FINANCIAL STATEMENTS
+function loopFinancialStatements() {
+	ob_start();
+		get_template_part('includes/loops/loop-financial-statements');
+	return ob_get_clean();
+}
+add_shortcode( 'financial_statements', 'loopFinancialStatements' );
+
+// LOOP MD&As
+function loopMda() {
+	ob_start();
+		get_template_part('includes/loops/loop-mda');
+	return ob_get_clean();
+}
+add_shortcode( 'mda', 'loopMda' );
+
 // LOOP THROUGH NEWS POSTS
 function newsPosts() {
 	ob_start();
