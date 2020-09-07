@@ -80,6 +80,10 @@ if ( $loop->have_posts() ) : ?>
 			max-width: 100%;
 			padding-bottom: 1em;
 		}
+		.reportListBlock a {
+			color: #000;
+			text-decoration: none;
+		}
 		.reportListBlockInner {
 			padding: 1em;
 			border: 1px solid #000;
