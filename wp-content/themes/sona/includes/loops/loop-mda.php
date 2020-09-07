@@ -19,8 +19,8 @@ if ( $loop->have_posts() ) : ?>
 	<div class="reportList">
 			
 		<?php while ( $loop->have_posts() ) : $loop->the_post();
-		$date = get_field('date');
-		$report = get_field('report'); ?>
+		$date = get_field('date', get_the_ID());
+		$report = get_field('report', get_the_ID()); ?>
 	
 		<div class="reportListBlock">
 			<a href="<?php echo $report ?>" target="_blank">
