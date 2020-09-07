@@ -3347,6 +3347,9 @@ footer .light h3 {
 	
 	.sub-menu {
 		display: none;
+		opacity: 1;
+		visibility: visible;
+		position: relative;
 	}
 	
 	.mobile-menu {
