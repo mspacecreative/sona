@@ -7,6 +7,7 @@
 	
 	$('.subMenuToggle').click(function() {
 		$(this).siblings('.sub-menu').slideToggle();
+		$(this).toggleClass('rotate');
 	});
 	
 	// SMOOTH SCROLL

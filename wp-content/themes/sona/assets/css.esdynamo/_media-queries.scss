@@ -198,6 +198,8 @@
 		opacity: 1;
 		visibility: visible;
 		position: relative;
+		top: auto;
+		transition: none!important;
 	}
 	.mobile-menu {
 		text-align: left;

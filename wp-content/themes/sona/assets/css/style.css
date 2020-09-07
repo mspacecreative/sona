@@ -2809,6 +2809,12 @@ header {
 	text-align: center;
 	display: block;
 	line-height: 30px;
+	transition: 0.25s ease-in-out;
+}
+
+.subMenuToggle.rotate > .fa {
+	transition: 0.25s ease-in-out;
+	transform: rotate(180deg);
 }
 
 nav {
@@ -3372,6 +3378,8 @@ footer .light h3 {
 		opacity: 1;
 		visibility: visible;
 		position: relative;
+		top: auto;
+		transition: none !important;
 	}
 	
 	.mobile-menu {
