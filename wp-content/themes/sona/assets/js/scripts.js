@@ -2,8 +2,12 @@
 		
 	// CHANGE MOBILE NAV SETTINGS
 	if ( $('.sub-menu').css('display') == 'none' ) {
-		$('.mobile-menu').find('.menu-item-has-children').append('<span class="subMenuToggle"><i class="fa fa-angle-down"></i></span>');
+		$('.mobile-menu').find('.menu-item-has-children').prepend('<span class="subMenuToggle"><i class="fa fa-angle-down"></i></span>');
 	}
+	
+	$('.subMenuToggle').click(function() {
+		$(this).siblings('.sub-menu').slideToggle();
+	});
 	
 	// SMOOTH SCROLL
 	$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function() {

@@ -178,7 +178,7 @@
 }
 
 @media (max-width: 980px) {
-	nav {
+	nav, .menu-item-has-children::after {
 		display: none;
 	}
 	.subMenuToggle {
@@ -186,6 +186,7 @@
 	}
 	.social-window {
 		overflow: auto;
+		padding-top: 2em;
 	}
 	.window-content {
 		top: auto;
@@ -232,12 +233,6 @@
 }
 
 @media (min-width: 981px) {
-	/*.bgImgRight .col_with_img {
-		background: linear-gradient(90deg, black, transparent);
-	}
-	.light_gradient_img_overlay.bgImgRight .col_with_img {
-		background: linear-gradient(90deg, white, transparent);
-	}*/
 	.absolute_img {
 		position: absolute;
 		top: 50%;
