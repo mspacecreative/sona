@@ -12,40 +12,40 @@ if ( $colortheme == 'dark' ):
 
 if ( $txtposition == 'left' && $bgimg ): ?>
 <section class="darkbg">
-	<div class="light relativePositioning goldBorderTop dark_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
+	<div class="light relativePositioning dark_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php elseif ( $txtposition == 'right' && $bgimg ): ?>
 <section class="darkbg">
-	<div class="light relativePositioning goldBorderTop dark_gradient_img_overlay bgImgLeft" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
+	<div class="light relativePositioning dark_gradient_img_overlay bgImgLeft" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php else : ?>
 <section class="darkbg">
-	<div class="light relativePositioning goldBorderTop dark_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
+	<div class="light relativePositioning dark_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php endif; ?>
 
 <?php elseif ( $colortheme == 'light' ):
 
 if ( $txtposition == 'left' && $bgimg ): ?>
 <section>
-	<div class="relativePositioning goldBorderTop light_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
+	<div class="relativePositioning light_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php elseif ( $txtposition == 'right' && $bgimg ): ?>
 <section>
-	<div class="relativePositioning goldBorderTop light_gradient_img_overlay bgImgLeft" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
+	<div class="relativePositioning light_gradient_img_overlay bgImgLeft" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php else : ?>
 <section>
-	<div class="relativePositioning goldBorderTop light_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
+	<div class="relativePositioning light_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php endif; ?>
 
 <?php else :
 
 if ( $txtposition == 'left' && $bgimg ): ?>
 <section class="darkbg">
-	<div class="light relativePositioning goldBorderTop dark_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
+	<div class="light relativePositioning dark_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php elseif ( $txtposition == 'right' && $bgimg ): ?>
 <section class="darkbg">
-	<div class="light relativePositioning goldBorderTop dark_gradient_img_overlay bgImgLeft" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
+	<div class="light relativePositioning dark_gradient_img_overlay bgImgLeft" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 
 <?php else : ?>
 <section class="darkbg">
-	<div class="light relativePositioning goldBorderTop dark_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
+	<div class="light relativePositioning dark_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php endif;
 endif;
 		
