@@ -1522,9 +1522,9 @@ textarea {
 	color: #999;
 }
 
-.darkForm input[type=submit], .wpcf7-submit {
+/*.darkForm input[type=submit], .wpcf7-submit {
 	float: right;
-}
+}*/
 
 .darkForm ::-moz-placeholder {
 	/* Firefox 19+ */
