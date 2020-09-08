@@ -1475,6 +1475,8 @@ nav li a::focus {
 	margin-right: 4%;
 	width: 48%;
 	margin-bottom: 2%;
+	vertical-align: top;
+	font-size: 15px;
 }
 
 .wpcf7 input[type=text], .wpcf7 input[type=email], .wpcf7 input[type=tel], textarea {
@@ -1487,10 +1489,6 @@ nav li a::focus {
 .wpcf7 .wpcf7-form-control-wrap {
 	font-size: 15px;
 	line-height: inherit;
-}
-
-.wpcf7 p {
-	font-size: 15px;
 }
 
 .wpcf7 p:nth-child(odd) {
@@ -1554,7 +1552,9 @@ textarea:focus, input:focus {
 }
 
 span.wpcf7-list-item {
-	margin-bottom: 2em;
+	margin-bottom: 0.5em;
+	display: block;
+	margin-left: 0;
 }
 
 .light p, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6, .light ul, .light ol {
