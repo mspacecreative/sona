@@ -1480,13 +1480,17 @@ nav li a::focus {
 .wpcf7 input[type=text], .wpcf7 input[type=email], .wpcf7 input[type=tel], textarea {
 	font-size: 13px;
 	padding: 1em;
-	border: none;
+	border: 1px solid #e9e9e9;
 	width: 100%;
 }
 
 .wpcf7 .wpcf7-form-control-wrap {
-	font-size: 13px;
+	font-size: 15px;
 	line-height: inherit;
+}
+
+.wpcf7 p {
+	font-size: 15px;
 }
 
 .wpcf7 p:nth-child(odd) {
@@ -1547,6 +1551,10 @@ textarea {
 
 textarea:focus, input:focus {
 	outline: none;
+}
+
+span.wpcf7-list-item {
+	margin-bottom: 2em;
 }
 
 .light p, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6, .light ul, .light ol {
