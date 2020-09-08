@@ -1484,6 +1484,10 @@ nav li a::focus {
 	width: 100%;
 }
 
+.wpcf7 .wpcf7-form-control-wrap {
+	font-size: 13px;
+}
+
 .wpcf7 p:nth-child(odd) {
 	margin-right: 0;
 }
