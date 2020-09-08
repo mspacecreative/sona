@@ -1481,11 +1481,12 @@ nav li a::focus {
 	font-size: 13px;
 	padding: 1em;
 	border: none;
-	width: 100%;
+	  /*width: 100%;*/
 }
 
 .wpcf7 .wpcf7-form-control-wrap {
 	font-size: 13px;
+	line-height: inherit;
 }
 
 .wpcf7 p:nth-child(odd) {
