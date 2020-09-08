@@ -1510,7 +1510,6 @@ input[type=submit].button {
 textarea {
 	margin-bottom: 2%;
 	padding: 1em;
-	border: none;
 }
 
 .darkForm input, .darkForm textarea, .wpcf7 input, .wpcf7 textarea {
