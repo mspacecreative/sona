@@ -44,7 +44,7 @@
 				// post title
 			}
 			elseif ( has_post_thumbnail() ) { ?>
-			<div class="row gutter_space_1 middle-lg">
+			<div class="row gutter_space_1 middle-lg middle-md">
 				<div class="col-lg-3 col">
 					<?php echo the_post_thumbnail(); ?>
 				</div>
