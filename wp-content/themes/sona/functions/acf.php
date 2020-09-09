@@ -58,6 +58,19 @@ function my_acf_init() {
 			'supports'			=> array( 'mode' => false ),
 		));
 		
+		// register download boxes
+		acf_register_block(array(
+			'name'				=> 'download-boxes',
+			'title'				=> __('Download Boxes'),
+			'description'		=> __('Repeatable file download links in boxes'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'images-alt',
+			'keywords'			=> array( 'downloads', 'content', 'repeatable' ),
+			'mode'				=> 'edit',
+			'supports'			=> array( 'mode' => false ),
+		));
+		
 		// register full span img text left block
 		acf_register_block(array(
 			'name'				=> 'two-third-one-third',
