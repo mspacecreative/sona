@@ -2049,6 +2049,11 @@ img.alignright {
 		display: block;
 		margin: 0 0 15px;
 	}
+	
+	img.alignright.forceFloatRight {
+		width: 60px !important;
+		margin-left: 20px;
+	}
 }
 
 .lightOverlay:before, .video-container:before {
