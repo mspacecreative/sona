@@ -1,10 +1,17 @@
 <?php
 $rowheading = get_field('heading');
 $centerheading = get_field('align_heading');
+$narrow = get_field('narrow_row');
 ?>
 <!-- DOWNLOADS -->
 <section class="section relativePositioning">
+	
+	<?php if ( $narrow ): ?>
+	<div class="inner maxWidth980">
+	<?php else : ?>
 	<div class="inner">
+	<?php endif; ?>
+	
 		<?php if ( $rowheading && $centerheading == 'left' ) {
 			echo '<h1>' . $rowheading . '</h1>';
 		} elseif ( $rowheading && $centerheading == 'center' ) {
