@@ -38,7 +38,7 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							
 						<div class="row gutter_space_1 productImgCol" style="margin-bottom: 3em;">
-						    <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+						    <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-4 bottomMarginMobile" style="text-align: center;">
 								<h2 style="margin-bottom: 30px;">
 									<?php
 									global $post;
