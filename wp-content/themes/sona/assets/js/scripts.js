@@ -66,6 +66,11 @@
 	$('.close-button').click(function() {
 		$(this).parent().parent().parent().children('.bioContainerUnderlay').fadeOut();
 	});
+	$(document).keyup(function(e) {
+	     if (e.key === "Escape") { // escape key maps to keycode `27`
+	        $('.bioContainerUnderlay, .team-bio-container').fadeOut();
+	    }
+	});
 	$('.team-profile').click(function() {
 		if ( $(this).next('.team-bio-container').length ) {
 			$(this).parent().children('.bioContainerUnderlay').fadeIn();
