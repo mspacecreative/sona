@@ -127,7 +127,7 @@
 	
 	// BLOCK CLICKING ON NAV ITEMS WITH HASH
 	$('nav li a[href*="#"]').on("click", function(e) {
-		e.preventDefault() : '';
+		e.preventDefault();
 	});
 	
 	// REMOVE P TAG BOTTOM SPACING FROM BLOG / NEWS GRID
