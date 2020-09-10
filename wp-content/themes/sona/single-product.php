@@ -23,7 +23,9 @@
 		
 	</section>
 
-	<?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
+	<?php if ( have_posts() ): while ( have_posts() ): the_post();
+	
+	$summary = get_field('summary'); ?>
 	
 	<section class="relativePositioning">
 		<div class="inner top-bottom-padding">
@@ -32,13 +34,32 @@
 					<!-- article -->
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							
-						<!--post thumbnail -->
-						<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-						<!-- <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-							<?php the_post_thumbnail('large'); // Fullsize image for the single post ?>
-						</a>-->
-						<?php endif; ?>
-						<!-- /post thumbnail -->
+						<div class="row gutter_space_1">
+						    <div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
+								<h2>
+									<?php
+									global $post;
+									$terms = wp_get_post_terms( $post->ID, 'brand');
+									foreach ( $terms as $term ) : ?>
+										<?php echo $term->name ?><?php _e('&#8482'); ?> <?php echo the_title(); ?>
+									<?php endforeach; ?>
+								</h2>
+								
+								<!--post thumbnail -->
+								<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+									<?php the_post_thumbnail('large'); // Fullsize image for the single post ?>
+								</a>
+								<?php endif; ?>
+								<!-- /post thumbnail -->
+								
+							</div>
+								
+							<?php if ( $summary ) {
+								echo 'div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">' . $summary . '</div>';
+							} ?>
+								
+						</div>
 						
 						<?php the_content(); // Dynamic Content
 						
