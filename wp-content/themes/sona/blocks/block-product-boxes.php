@@ -2,6 +2,7 @@
 $hexheading = get_field('hex_heading');
 $rowheading = get_field('heading');
 $centerheading = get_field('align_heading');
+$colcount = get_field('column_count');
 ?>
 <!-- FEATURED PRODUCTS -->
 <section class="featured-products section relativePositioning goldBorderTop darkGreyBg light">
@@ -32,8 +33,18 @@ $centerheading = get_field('align_heading');
 			$productimgposition = get_sub_field('image_position');
 			$size = 'medium';
 			$content = get_sub_field('content');
-			$bulletspacing = get_sub_field('bullet_spacing'); ?>
+			$bulletspacing = get_sub_field('bullet_spacing');
+			
+			if ( $colcount == 'two' ): ?>
+			<div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12 bottomMarginMobile">
+			<?php elseif ( $colcount == 'three' ): ?>
 			<div class="col col-lg-4 col-md-6 col-sm-12 col-xs-12 bottomMarginMobile">
+			<?php elseif ( $colcount == 'four' ): ?>
+			<div class="col col-lg-3 col-md-4 col-sm-12 col-xs-12 bottomMarginMobile">
+			<?php else : ?>
+			<div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12 bottomMarginMobile">
+			<?php endif; ?>
+			
 				<div class="boxed relativePositioning dark roundedCorners">
 					<?php if ( $productheading && $productsuper ) {
 						echo '<h1 class="tachyon">' . $productheading . '<sup>' . $productsuper . '</sup></h1>';
