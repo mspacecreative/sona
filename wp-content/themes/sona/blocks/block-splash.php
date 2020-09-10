@@ -25,7 +25,7 @@
 		<!-- SPLASH INTRO -->
 		<?php 
 		if ( have_rows('splash_content') ): ?>
-		<div class="splash-content maxWidth800">
+		<div class="splash-content maxWidth980">
 			<?php while ( have_rows('splash_content') ): the_row();
 			$splashintro = get_sub_field('splash_intro');
 			
