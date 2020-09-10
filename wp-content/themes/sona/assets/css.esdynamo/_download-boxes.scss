@@ -63,6 +63,9 @@
 	flex-basis: 25%;
 	max-width: 25%;
 }
+.downloads .reportList p:first-of-type {
+	margin-bottom: 1em;
+}
 @media (max-width: 450px) {
 	.downloads .reportList > .reportListBlock {
 		flex-basis: 50%;
