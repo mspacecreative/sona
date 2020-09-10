@@ -26,7 +26,9 @@
 	<?php if ( have_posts() ): while ( have_posts() ): the_post();
 	
 	$summary = get_field('summary');
-	$product_image = get_field('product_image'); ?>
+	$product_image = get_field('product_image');
+	$link = get_field('link');
+	$label = get_field('label'); ?>
 	
 	<section class="relativePositioning">
 		<div class="inner top-bottom-padding">
@@ -51,6 +53,23 @@
 								<img src="<?php echo esc_url($product_image['url']); ?>" alt="<?php echo esc_attr($product_image['alt']); ?>" />
 								<?php endif; ?>
 								<!-- /post thumbnail -->
+								
+								<!-- CTA -->
+								<?php
+								if ( have_rows('cta_button') ) {
+									while ( have_rows('cta_button') ) {
+										the_row();
+										$link = get_sub_field('link');
+										$label = get_sub_field('label');
+										
+										if ( $link && $label ) {
+											echo '<a href="' . $link . '" class="button dark">' . $label . '</a>';
+										} elseif ( $link ) {
+											echo '<a href="' . $link . '" class="button dark">CONTACT SONA</a>';
+										}
+									}
+								} ?>
+								<!-- / CTA -->
 								
 							</div>
 								
