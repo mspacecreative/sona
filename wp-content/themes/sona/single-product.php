@@ -36,7 +36,7 @@
 							
 						<div class="row gutter_space_1">
 						    <div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
-								<h2>
+								<h2 style="margin-bottom: 30px;">
 									<?php
 									global $post;
 									$terms = wp_get_post_terms( $post->ID, 'brand');
@@ -47,17 +47,17 @@
 								
 								<!--post thumbnail -->
 								<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-									<?php the_post_thumbnail('large'); // Fullsize image for the single post ?>
-								</a>
+								<?php the_post_thumbnail('large'); // Fullsize image for the single post ?>
 								<?php endif; ?>
 								<!-- /post thumbnail -->
 								
 							</div>
 								
-							<?php if ( $summary ) {
-								echo 'div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">' . $summary . '</div>';
-							} ?>
+							<?php if ( $summary ) : ?>
+								<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
+									<?php echo $summary ?>
+								</div>
+							<?php endif; ?>
 								
 						</div>
 						
