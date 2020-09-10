@@ -15,6 +15,9 @@
 	text-decoration: none;
 	color: $gold;
 }
+.tabRow a p > a {
+	display: inline;
+}
 .tabRow a:after {
 	position: absolute;
 	content: "\f0d7";

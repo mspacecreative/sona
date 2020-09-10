@@ -3567,6 +3567,10 @@ footer .light h3 {
 	color: #cda85b;
 }
 
+.tabRow a p > a {
+	display: inline;
+}
+
 .tabRow a:after {
 	position: absolute;
 	content: "\f0d7";
