@@ -253,6 +253,11 @@
 		width: 100%;
 		height: 100%;
 	}
+	.menu-item-has-children > .sub-menu {
+		left: calc(100% + 30px);
+		top: calc(0px - 15px);
+		background-color: #222;
+	}
 	.sub-menu {
 		min-width: 175px;
 	}
