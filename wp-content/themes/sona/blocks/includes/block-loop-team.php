@@ -4,9 +4,15 @@ if ( $loop->have_posts() ) :
 
 $rowheading = get_field('row_heading');
 $rowsubheading = get_field('row_sub_heading');
-$centeredheading = get_field('row_heading_alignment'); ?>
+$centeredheading = get_field('row_heading_alignment');
+$anchor = get_field('block_anchor'); ?>
 
+<?php if ( $anchor ): ?>
+<section id="<?php echo $anchor ?>" class="section">
+<?php else : ?>
 <section class="section">
+<?php endif; ?>
+
 	<div class="inner">
 		
 		<?php if ( $rowheading && $rowsubheading && $centeredheading ) {
