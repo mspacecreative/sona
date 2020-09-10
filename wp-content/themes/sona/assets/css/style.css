@@ -1999,6 +1999,10 @@ footer .button {
 	max-width: 25%;
 }
 
+.featured-products .col:first-of-type .bullet-points {
+	max-width: 100%;
+}
+
 .absolute_img_container {
 	position: relative;
 	height: 100%;
