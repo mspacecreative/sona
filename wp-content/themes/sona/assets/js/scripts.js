@@ -130,6 +130,8 @@
 		e.preventDefault();
 	});
 	
+	$('nav li a[href^="#"]').css('cursor', 'default');
+	
 	// REMOVE P TAG BOTTOM SPACING FROM BLOG / NEWS GRID
 	$('.boxed-inner').each(function() {
 		$(this).find('.view-article-container').prev('p').css('margin-bottom', '0');
