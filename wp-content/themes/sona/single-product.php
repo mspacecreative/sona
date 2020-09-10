@@ -25,7 +25,8 @@
 
 	<?php if ( have_posts() ): while ( have_posts() ): the_post();
 	
-	$summary = get_field('summary'); ?>
+	$summary = get_field('summary');
+	$product_image = get_field('product_image') ?>
 	
 	<section class="relativePositioning">
 		<div class="inner top-bottom-padding">
@@ -46,17 +47,17 @@
 								</h2>
 								
 								<!--post thumbnail -->
-								<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-								<?php the_post_thumbnail('large'); // Fullsize image for the single post ?>
+								<?php if ( !empty( $product_image ) ) : ?>
+								<img src="<?php echo esc_url($product_image['url']); ?>" alt="<?php echo esc_attr($product_image['alt']); ?>" />
 								<?php endif; ?>
 								<!-- /post thumbnail -->
 								
 							</div>
 								
 							<?php if ( $summary ) : ?>
-								<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
-									<?php echo $summary ?>
-								</div>
+							<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
+								<?php echo $summary ?>
+							</div>
 							<?php endif; ?>
 								
 						</div>
