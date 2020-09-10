@@ -4,7 +4,7 @@ $centerheading = get_field('align_heading');
 $narrow = get_field('narrow_row');
 ?>
 <!-- DOWNLOADS -->
-<section class="section relativePositioning">
+<section class="section relativePositioning downloads">
 	
 	<?php if ( $narrow ): ?>
 	<div class="inner maxWidth980">

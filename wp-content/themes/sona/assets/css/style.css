@@ -3968,6 +3968,18 @@ footer .light h3 {
 	justify-content: flex-end;
 }
 
+.downloads .reportList > .reportListBlock {
+	flex-basis: 25%;
+	max-width: 25%;
+}
+
+@media (max-width: 450px) {
+	.downloads .reportList > .reportListBlock {
+		flex-basis: 50%;
+		max-width: 50%;
+	}
+}
+
 .wrap, body, html {
 	overflow-x: hidden;
 }
