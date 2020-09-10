@@ -126,7 +126,7 @@
 	});
 	
 	// BLOCK CLICKING ON NAV ITEMS WITH HASH
-	$('nav li a[href*="#"]').on("click", function(e) {
+	$('nav li a[href^="#"]').on("click", function(e) {
 		e.preventDefault();
 	});
 	
