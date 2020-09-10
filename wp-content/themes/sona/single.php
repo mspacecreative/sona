@@ -28,7 +28,7 @@
 	<section class="relativePositioning">
 		<div class="inner top-bottom-padding">
 			<div class="row gutter_space_3">
-				<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12 bottomMarginMobile">
 					<!-- article -->
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							
