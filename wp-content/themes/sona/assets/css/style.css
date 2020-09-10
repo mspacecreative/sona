@@ -1980,6 +1980,12 @@ footer .button {
 	border-bottom: 5px solid #cda85b;
 }
 
+@media (max-width: 450px) {
+	.productImgCol .col-xs-8, .productImgCol .col-xs-4 {
+		flex-basis: 100%;
+	}
+}
+
 .featured-products .productAbsoluteImg {
 	max-height: 100%;
 	max-width: 35%;

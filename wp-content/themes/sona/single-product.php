@@ -37,8 +37,8 @@
 					<!-- article -->
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							
-						<div class="row gutter_space_1" style="margin-bottom: 3em;">
-						    <div class="col col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
+						<div class="row gutter_space_1 productImgCol" style="margin-bottom: 3em;">
+						    <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
 								<h2 style="margin-bottom: 30px;">
 									<?php
 									global $post;
@@ -74,7 +74,7 @@
 							</div>
 								
 							<?php if ( $summary ) : ?>
-							<div class="col col-lg-8 col-md-8 col-sm-12 col-xs-12">
+							<div class="col col-lg-8 col-md-8 col-sm-8 col-xs-8">
 								<?php echo $summary ?>
 							</div>
 							<?php endif; ?>

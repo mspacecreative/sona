@@ -34,3 +34,8 @@
 .product table tr:last-child, .page table tr:last-child {
 	border-bottom: 5px solid $gold;
 }
+@media (max-width: 450px) {
+	.productImgCol .col-xs-8, .productImgCol .col-xs-4 {
+		flex-basis: 100%;
+	}
+}
