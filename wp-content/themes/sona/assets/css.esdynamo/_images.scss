@@ -5,7 +5,7 @@
     bottom: -80px;
     right: 2em;
 }
-.featured-products .boxed:first-child .productAbsoluteImg {
+.featured-products .productAbsoluteImg:first-of-type {
 	max-width: 25%;
 }
 // ABSOLUTE IMAGE
