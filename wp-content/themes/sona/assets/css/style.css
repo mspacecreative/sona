@@ -3567,8 +3567,12 @@ footer .light h3 {
 	color: #cda85b;
 }
 
-.tabRow a p a {
+.tabRow a ~ .tabAnswer a {
 	display: inline;
+}
+
+.tabRow a ~ .tabAnswer a:after {
+	display: none;
 }
 
 .tabRow a:after {
