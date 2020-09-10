@@ -126,9 +126,8 @@
 	});
 	
 	// BLOCK CLICKING ON NAV ITEMS WITH HASH
-	$('nav li a[href*="#"]').on("click", function(e){
-     var link = $.trim($(this).prop("href"));  
-     (link == "#") ?  e.preventDefault() : '';
+	$('nav li a[href*="#"]').on("click", function(e) {
+		e.preventDefault() : '';
 	});
 	
 	// REMOVE P TAG BOTTOM SPACING FROM BLOG / NEWS GRID
