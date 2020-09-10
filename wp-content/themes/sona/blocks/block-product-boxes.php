@@ -22,7 +22,7 @@ $centerheading = get_field('align_heading');
 			echo '<h1>' . $rowheading . '</h1>';
 		}
 		if ( have_rows('products') ): ?>
-		<div class="row gutter_space_2 centeredList topBottomPaddingShort">
+		<div class="row gutter_space_2 centeredList topBottomPaddingShort extra-col-spacing">
 			
 			<?php while ( have_rows('products') ): the_row();
 			
@@ -33,7 +33,7 @@ $centerheading = get_field('align_heading');
 			$size = 'medium';
 			$content = get_sub_field('content');
 			$bulletspacing = get_sub_field('bullet_spacing'); ?>
-			<div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12 bottomMarginMobile">
+			<div class="col col-lg-4 col-md-6 col-sm-12 col-xs-12 bottomMarginMobile">
 				<div class="boxed relativePositioning dark roundedCorners">
 					<?php if ( $productheading && $productsuper ) {
 						echo '<h1 class="tachyon">' . $productheading . '<sup>' . $productsuper . '</sup></h1>';
