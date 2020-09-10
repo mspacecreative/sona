@@ -1995,6 +1995,10 @@ footer .button {
 	right: 2em;
 }
 
+.featured-products .boxed:first-child .productAbsoluteImg {
+	max-width: 25%;
+}
+
 .absolute_img_container {
 	position: relative;
 	height: 100%;

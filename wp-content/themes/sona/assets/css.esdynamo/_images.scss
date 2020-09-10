@@ -5,6 +5,9 @@
     bottom: -80px;
     right: 2em;
 }
+.featured-products .boxed:first-child .productAbsoluteImg {
+	max-width: 25%;
+}
 // ABSOLUTE IMAGE
 .absolute_img_container {
 	position: relative;
