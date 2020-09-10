@@ -125,6 +125,12 @@
 		}
 	});
 	
+	// BLOCK CLICKING ON NAV ITEMS WITH HASH
+	$('nav li a').on("click", function(e){
+     var link = $.trim($(this).prop("href"));  
+     (link == "#") ?  e.preventDefault() : '';
+	});
+	
 	// REMOVE P TAG BOTTOM SPACING FROM BLOG / NEWS GRID
 	$('.boxed-inner').each(function() {
 		$(this).find('.view-article-container').prev('p').css('margin-bottom', '0');
