@@ -258,6 +258,9 @@
 		top: calc(0px - 15px);
 		background-color: #222;
 	}
+	.menu-item-has-children .menu-item-has-children:after {
+		content: "\f105";
+	}
 	.sub-menu {
 		min-width: 175px;
 	}
