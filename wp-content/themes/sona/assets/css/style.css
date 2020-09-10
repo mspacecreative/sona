@@ -1983,6 +1983,7 @@ footer .button {
 @media (max-width: 450px) {
 	.productImgCol .col-xs-8, .productImgCol .col-xs-4 {
 		flex-basis: 100%;
+		max-width: 100%;
 	}
 }
 
