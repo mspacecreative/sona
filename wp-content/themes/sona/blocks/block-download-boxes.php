@@ -2,9 +2,14 @@
 $rowheading = get_field('heading');
 $centerheading = get_field('align_heading');
 $narrow = get_field('narrow_row');
+$anchor = get_field('block_anchor');
 ?>
 <!-- DOWNLOADS -->
+<?php if ( $anchor ): ?>
+<section id="<?php echo $anchor ?>" class="section relativePositioning downloads">
+<?php else : ?>
 <section class="section relativePositioning downloads">
+<?php endif; ?>
 	
 	<?php if ( $narrow ): ?>
 	<div class="inner maxWidth980">
