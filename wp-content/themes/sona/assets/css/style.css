@@ -1995,7 +1995,7 @@ footer .button {
 	right: 2em;
 }
 
-.featured-products .productAbsoluteImg:first-of-type {
+.featured-products .col:first-of-type .productAbsoluteImg {
 	max-width: 25%;
 }
 
