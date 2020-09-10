@@ -26,7 +26,7 @@
 	<?php if ( have_posts() ): while ( have_posts() ): the_post();
 	
 	$summary = get_field('summary');
-	$product_image = get_field('product_image') ?>
+	$product_image = get_field('product_image'); ?>
 	
 	<section class="relativePositioning">
 		<div class="inner top-bottom-padding">
