@@ -3485,6 +3485,10 @@ footer .light h3 {
 		background-color: #222;
 	}
 	
+	.menu-item-has-children .menu-item-has-children > a {
+		cursor: default;
+	}
+	
 	.menu-item-has-children .menu-item-has-children:after {
 		content: "\f105";
 		right: 15px;
