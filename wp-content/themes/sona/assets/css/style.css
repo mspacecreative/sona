@@ -3479,7 +3479,7 @@ footer .light h3 {
 		height: 100%;
 	}
 	
-	.menu-item-has-children > .sub-menu {
+	.menu-item-has-children .menu-item-has-children > .sub-menu {
 		left: calc(100% + 30px);
 		top: calc(0px - 15px);
 		background-color: #222;
