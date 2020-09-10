@@ -4,10 +4,10 @@
 
 	<section class="relativePositioning header-container shorter lightOverlay" style="background-image: url(<?php echo $defaultimg ?>); background-position: bottom;">
 		
-		<?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
+		<!--<?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
 		
 		<div class="inner">
-			<!-- post title -->
+			post title
 			<h1 class="postTitle">
 				<?php
 				global $post;
@@ -16,10 +16,10 @@
 					<?php echo $term->name ?><?php _e('&#8482'); ?> <?php echo the_title(); ?>
 				<?php endforeach; ?>
 			</h1>
-			<!-- /post title -->
+			/post title
 		</div>
 		
-		<?php endwhile; endif; rewind_posts(); ?>
+		<?php endwhile; endif; rewind_posts(); ?>-->
 		
 	</section>
 
