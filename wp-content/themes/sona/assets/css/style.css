@@ -2003,6 +2003,10 @@ footer .button {
 	max-width: 100%;
 }
 
+.featured-products .col:first-of-type .button {
+	margin-top: auto;
+}
+
 .absolute_img_container {
 	position: relative;
 	height: 100%;
