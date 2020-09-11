@@ -45,10 +45,10 @@
 			}
 			elseif ( has_post_thumbnail() ) { ?>
 			<div class="row gutter_space_1 middle-lg middle-md middle-sm middle-xs">
-				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-4 col">
+				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 col">
 					<?php echo the_post_thumbnail(); ?>
 				</div>
-				<div class="col-lg-9 col-md-9 col-sm-8 col-xs-8 col">
+				<div class="col-lg-9 col-md-9 col-sm-8 col-xs-6 col">
 					<!-- post title -->
 					<h1 class="postTitle">
 						<?php the_title(); ?>

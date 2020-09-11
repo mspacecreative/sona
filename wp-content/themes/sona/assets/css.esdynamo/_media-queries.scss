@@ -131,7 +131,14 @@
 }
 
 @media (max-width: 850px) and (orientation: landscape) {
-	
+	.header-container h1.postTitle {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.single-team .header-container h4 {
+		margin-top: 0;
+		font-size: 14px;
+	}
 }
 
 @media (max-width: 450px) {
@@ -155,6 +162,14 @@
 		display: block;
 		margin-right: 0;
 		width: 100%;
+	}
+	.header-container h1.postTitle {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.single-team .header-container h4 {
+		margin-top: 0;
+		font-size: 14px;
 	}
 }
 

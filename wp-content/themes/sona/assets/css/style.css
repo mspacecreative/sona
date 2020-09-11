@@ -2441,7 +2441,6 @@ iframe {
 	max-width: 980px;
 	margin-right: auto;
 	margin-left: auto;
-	width: 100%;
 }
 
 .row.gutter_space_1 {
@@ -3338,6 +3337,18 @@ footer .light h3 {
 	}
 }
 
+@media (max-width: 850px) and (orientation: landscape) {
+	.header-container h1.postTitle {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	
+	.single-team .header-container h4 {
+		margin-top: 0;
+		font-size: 14px;
+	}
+}
+
 @media (max-width: 450px) {
 	.featured-products .productAbsoluteImg {
 		display: none;
@@ -3364,6 +3375,16 @@ footer .light h3 {
 		display: block;
 		margin-right: 0;
 		width: 100%;
+	}
+	
+	.header-container h1.postTitle {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	
+	.single-team .header-container h4 {
+		margin-top: 0;
+		font-size: 14px;
 	}
 }
 
