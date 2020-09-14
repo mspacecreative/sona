@@ -86,6 +86,7 @@
 	        $('.bioContainerUnderlay, .team-bio-container').fadeOut();
 			$('.hamburger').removeClass('is-active');
 			$('.social-window').fadeOut();
+			$('body').removeClass('showForm');
 	    }
 	});
 	$('.team-profile').click(function() {
