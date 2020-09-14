@@ -1,5 +1,20 @@
 (function ($) {
 		
+	// KEYBOARD ACCESSIBLE SUB MENU ITEMS
+	$(function() {
+	  $('.menu-item-has-children > a').focus( function () {
+	  	$(this).siblings('.sub-menu').addClass('focused');
+	  }).blur(function(){
+	  	$(this).siblings('li ul').removeClass('focused');
+	  });
+	// submenu
+	  $('.sub-menu a').focus( function () {
+	    $(this).parents('.sub-menu').addClass('focused');
+	  }).blur(function(){
+	    $(this).parents('.sub-menu').removeClass('focused');
+	  });
+	});
+	
 	// CHANGE MOBILE NAV SETTINGS
 	if ( $('.sub-menu').css('display') == 'none' ) {
 		$('.mobile-menu').find('.menu-item-has-children').prepend('<span class="subMenuToggle"><i class="fa fa-angle-down"></i></span>');
