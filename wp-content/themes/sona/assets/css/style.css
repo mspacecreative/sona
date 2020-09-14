@@ -2884,6 +2884,10 @@ nav a {
 	text-decoration: none;
 }
 
+.logo a:focus, .hamburger:focus {
+	outline: thin dotted #fff;
+}
+
 footer {
 	background-color: #000;
 }
