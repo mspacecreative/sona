@@ -137,6 +137,9 @@
 	nav li {
 		margin-left: 10px;
 	}
+	.splash-content.maxWidth980 {
+		max-width: 700px;
+	}
 }
 
 @media (max-width: 1199px) {
@@ -198,9 +201,6 @@
 	.video-container {
 		height: 100%;
 		padding-bottom: 0;
-	}
-	.splash-content {
-		width: 80%;
 	}
 	.splash h1 {
 		font-size: 1.75em;

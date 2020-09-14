@@ -2132,6 +2132,7 @@ img.alignright {
 
 .splash-content {
 	text-align: center;
+	width: 80%;
 }
 
 .lightOverlay:before {
@@ -3345,6 +3346,10 @@ footer .light h3 {
 	nav li {
 		margin-left: 10px;
 	}
+	
+	.splash-content.maxWidth980 {
+		max-width: 700px;
+	}
 }
 
 @media (max-width: 1199px) {
@@ -3418,10 +3423,6 @@ footer .light h3 {
 	.video-container {
 		height: 100%;
 		padding-bottom: 0;
-	}
-	
-	.splash-content {
-		width: 80%;
 	}
 	
 	.splash h1 {
