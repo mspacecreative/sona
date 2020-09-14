@@ -84,6 +84,8 @@
 	$(document).keyup(function(e) {
 	     if (e.key === "Escape") { // escape key maps to keycode `27`
 	        $('.bioContainerUnderlay, .team-bio-container').fadeOut();
+			$('.hamburger').removeClass('is-active');
+			$('.social-window').fadeOut();
 	    }
 	});
 	$('.team-profile').click(function() {
