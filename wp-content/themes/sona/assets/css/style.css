@@ -3337,22 +3337,6 @@ footer .light h3 {
 	}
 }
 
-@media (max-width: 850px) and (orientation: landscape) {
-	.header-container h1.postTitle {
-		font-size: 20px;
-		margin-bottom: 10px;
-	}
-	
-	.single-team .header-container h4 {
-		margin-top: 0;
-		font-size: 14px;
-	}
-	
-	.splash h1 {
-		font-size: 1.25em;
-	}
-}
-
 @media (min-width: 1200px) {
 	.logo {
 		width: 350px;
@@ -3505,6 +3489,22 @@ footer .light h3 {
 	
 	.mobile-menu {
 		display: none;
+	}
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+	.header-container h1.postTitle {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	
+	.single-team .header-container h4 {
+		margin-top: 0;
+		font-size: 14px;
+	}
+	
+	.splash h1 {
+		font-size: 1.25em;
 	}
 }
 
