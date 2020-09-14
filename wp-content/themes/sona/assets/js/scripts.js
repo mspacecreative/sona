@@ -45,7 +45,7 @@
 		$(this).parent().next().fadeToggle();
 		
 		// FIXED CONTENT WHEN SOCIAL WINDOW IS OPEN
-		$('body').toggleClass('fixed');
+		$('html').toggleClass('fixed');
 	});
 	
 	// CHECK IF ABSOLUTE HEADING IS VISIBLE
