@@ -2148,11 +2148,6 @@ img.alignright {
 	z-index: -1;
 }
 
-body.fixed {
-	position: fixed;
-	width: 100%;
-}
-
 .dark-overlay:before {
 	background-color: rgba(0, 0, 0, 0.75);
 }
