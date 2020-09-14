@@ -47,7 +47,7 @@
 		// FIXED CONTENT WHEN SOCIAL WINDOW IS OPEN
 		if ( $('.social-window').css('display') == 'block' ) {
 			$('.social-window').parent().parent().siblings('.wrap').css('position', 'fixed');
-		} else {
+		} else if ( $('.social-window').css('display') == 'none' ) {
 			$('.social-window').parent().parent().siblings('.wrap').css('position', 'relative');
 		}
 	});
