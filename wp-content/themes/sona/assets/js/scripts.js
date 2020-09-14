@@ -43,6 +43,9 @@
 	$('.hamburger').click(function() {
 		$(this).toggleClass('is-active');
 		$(this).parent().next().fadeToggle();
+		
+		// FIXED CONTENT WHEN SOCIAL WINDOW IS OPEN
+		$('body').toggleClass('fixed');
 	});
 	
 	// CHECK IF ABSOLUTE HEADING IS VISIBLE
