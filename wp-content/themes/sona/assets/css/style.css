@@ -2832,7 +2832,7 @@ header {
 
 .subMenuToggle {
 	position: absolute;
-	right: 0;
+	right: calc(1em - 2px);
 	top: 12px;
 	background-color: #cda85b;
 	width: 30px;
@@ -3377,6 +3377,10 @@ footer .light h3 {
 	
 	.subMenuToggle {
 		display: block;
+	}
+	
+	.menu-item-has-children {
+		margin-right: 0;
 	}
 	
 	.social-window {

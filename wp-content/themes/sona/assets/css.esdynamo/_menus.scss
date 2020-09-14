@@ -115,7 +115,7 @@ header {
 }
 .subMenuToggle {
 	position: absolute;
-    right: 0;
+    right: calc(1em - 2px);
     top: 12px;
     background-color: $gold;
     width: 30px;
