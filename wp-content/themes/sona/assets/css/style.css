@@ -3347,44 +3347,9 @@ footer .light h3 {
 		margin-top: 0;
 		font-size: 14px;
 	}
-}
-
-@media (max-width: 450px) {
-	.featured-products .productAbsoluteImg {
-		display: none;
-	}
 	
-	.boxed.relativePositioning .bullet-points {
-		max-width: 100%;
-	}
-	
-	.absoluteHeading h3 {
-		min-width: 140px;
-		font-size: 17px;
-	}
-	
-	.logo img {
-		width: 200px;
-	}
-	
-	.social-window .social-media .fa {
-		font-size: 20px;
-	}
-	
-	.wpcf7 p {
-		display: block;
-		margin-right: 0;
-		width: 100%;
-	}
-	
-	.header-container h1.postTitle {
-		font-size: 20px;
-		margin-bottom: 10px;
-	}
-	
-	.single-team .header-container h4 {
-		margin-top: 0;
-		font-size: 14px;
+	.splash h1 {
+		font-size: 1.25em;
 	}
 }
 
@@ -3540,6 +3505,49 @@ footer .light h3 {
 	
 	.mobile-menu {
 		display: none;
+	}
+}
+
+@media (max-width: 450px) {
+	.featured-products .productAbsoluteImg {
+		display: none;
+	}
+	
+	.boxed.relativePositioning .bullet-points {
+		max-width: 100%;
+	}
+	
+	.splash h1 {
+		font-size: 1.25em;
+	}
+	
+	.absoluteHeading h3 {
+		min-width: 140px;
+		font-size: 17px;
+	}
+	
+	.logo img {
+		width: 200px;
+	}
+	
+	.social-window .social-media .fa {
+		font-size: 20px;
+	}
+	
+	.wpcf7 p {
+		display: block;
+		margin-right: 0;
+		width: 100%;
+	}
+	
+	.header-container h1.postTitle {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	
+	.single-team .header-container h4 {
+		margin-top: 0;
+		font-size: 14px;
 	}
 }
 
