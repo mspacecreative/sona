@@ -45,11 +45,7 @@
 		$(this).parent().next().fadeToggle();
 		
 		// FIXED CONTENT WHEN SOCIAL WINDOW IS OPEN
-		if ( $('.social-window').css('display') == 'block' ) {
-			$('.social-window').parent().parent().siblings('.wrap').css('position', 'fixed');
-		} else if ( $('.social-window').css('display') == 'none' ) {
-			$('.social-window').parent().parent().siblings('.wrap').css('position', 'relative');
-		}
+		$('body').toggleClass('fixed');
 	});
 	
 	// CHECK IF ABSOLUTE HEADING IS VISIBLE
