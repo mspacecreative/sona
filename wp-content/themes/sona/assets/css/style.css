@@ -1398,6 +1398,11 @@ textarea {
 	padding: 15px;
 }
 
+.sub-menu.focused {
+	opacity: 1;
+	visibility: visible;
+}
+
 .sub-menu {
 	text-align: left;
 }
