@@ -45,6 +45,12 @@
 				</div>
 				<!-- /logo -->
 				
+				<!-- nav -->
+				<nav role="navigation">
+					<?php sona_nav(); ?>
+				</nav>
+				<!-- /nav -->
+				
 				<!-- social media / mobile nav -->
 				<div class="socialWindowToggle">
 					<button class="hamburger hamburger--spin" type="button">
@@ -73,12 +79,6 @@
 					</div>
 				</div>
 				<!-- / social media / mobile nav -->
-
-				<!-- nav -->
-				<nav role="navigation">
-					<?php sona_nav(); ?>
-				</nav>
-				<!-- /nav -->
 
 			</header>
 			<!-- /header -->
