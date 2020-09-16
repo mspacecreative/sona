@@ -102,6 +102,7 @@
 			$('.hamburger').removeClass('is-active');
 			$('.social-window').fadeOut();
 			$('body').removeClass('showForm');
+			$('html').removeClass('fixed');
 	    }
 	});
 	$('.team-profile').click(function() {
