@@ -59,7 +59,16 @@
 							</ul>
 						</div>
 						<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12">
-							<p>&copy; 2020 Sona Nanotech. All rights reserved.</p>
+							<p>&copy; 2020 Sona Nanotech. All rights reserved.
+							<?php if ( have_rows('privacy_policy', 'options') ) {
+								while ( have_rows('privacy_policy', 'options') ) {
+									the_row();
+									$label = get_sub_field('label', 'options');
+									$link = get_sub_field('link', 'options');
+									echo '<span class="privacyPolicy"><a href="' . $link . '" style="color: #cda85b;">&nbsp;' . $label . '</a></span>';
+								}
+							} ?>
+							</p>
 						</div>
 					</div>
 				</div>
