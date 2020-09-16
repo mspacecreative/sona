@@ -40,6 +40,12 @@
 					</a>
 				</div>
 				<!-- /logo -->
+
+				<!-- nav -->
+				<nav role="navigation">
+					<?php sona_nav(); ?>
+				</nav>
+				<!-- /nav -->
 				
 				<!-- social media / mobile nav -->
 				<div class="socialWindowToggle">
@@ -69,12 +75,6 @@
 					</div>
 				</div>
 				<!-- / social media / mobile nav -->
-
-				<!-- nav -->
-				<nav role="navigation">
-					<?php sona_nav(); ?>
-				</nav>
-				<!-- /nav -->
 
 			</header>
 			<!-- /header -->

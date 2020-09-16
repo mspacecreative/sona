@@ -2771,6 +2771,10 @@ iframe {
 	width: 30px;
 }
 
+body.using-mouse :focus {
+	outline: none !important;
+}
+
 .mobile-menu {
 	margin-bottom: 2em;
 }

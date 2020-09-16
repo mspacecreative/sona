@@ -45,6 +45,11 @@
 	width: 30px;;
 }
 
+// REMOVE OUTLINE WHEN USING MOUSE
+body.using-mouse :focus {
+  outline: none!important;
+} 
+
 // MOBILE MENU
 .mobile-menu {
 	margin-bottom: 2em;
