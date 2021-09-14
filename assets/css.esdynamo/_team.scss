@@ -1,0 +1,204 @@
+.team-profile {
+	transition: all 0.25s ease-in-out;
+	cursor: pointer;
+	text-align: center;
+	border: none;
+	background-color: transparent;
+	font-family: inherit;
+}
+.team-profile:nth-of-type(4) {
+	margin-right: 0;
+}
+.team-profile:hover, .team-profile:hover .plus-sign .fa {
+	transition: all 0.25s ease-in-out;
+}
+.team-profile:hover .profile-overlay, .team-profile:hover .plus-sign {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.25s ease-in-out;
+}
+.profile-img-wrap {
+	position: relative;
+	display: block;
+	border-radius: 200px;
+	background-color: #e9e9e9;
+	overflow: hidden;
+}
+.team-profile img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+.team-profile h4, .team-profile p {
+	padding: 0;
+}
+.team-profile h4 {
+	font-size: 20px;
+	margin: 10px 0 5px;
+}
+.team-profile p {
+	margin: 5px 0 10px;
+	line-height: 1.35em;
+}
+.team-profile a {
+	color: #000;
+	text-decoration: none;
+	transition: 0.25s ease-in-out;
+}
+.team-profile a:hover {
+	color: $gold;
+	transition: 0.25s ease-in-out;
+}
+.team-profile.col {
+	padding-bottom: 4em;
+}
+.team-bio-container {
+	position: fixed;
+	max-width: 600px;
+	width: 90%;
+	left: 50%;
+	top: 50%;
+	height: auto;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	background: rgba(0,0,0,.9);
+	display: none;
+	z-index: 9999;
+	text-align: left;
+}
+.investors .section:last-of-type .profile-img-wrap {
+	background-color: transparent;
+	border-radius: 0;
+}
+.close-button {
+	background-image: url(../../assets/img/icons/close-white.png);
+	width: 20px;
+	height: 20px;
+	position: fixed;
+	background-size: contain;
+	cursor: pointer;
+	z-index: 10;
+}
+.mobile {
+	right: 40px;
+	bottom: 40px;
+}
+.desktop {
+	right: 15px;
+	top: 15px;
+}
+.team-bio-container.show {
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.25s ease-in-out;
+}
+.team-bio-inner {
+	margin: auto;
+	box-sizing: border-box;
+}
+.team-bio-inner p {
+	margin: 0 0 15px;
+	color: #fff;
+}
+.team-bio-inner p:last-of-type {
+	margin-bottom: 0;
+}
+.team-bio-inner .fa {
+	position: absolute;
+	top: -30px;
+	right: -30px;
+	font-size: 30px;
+	color: #fff;
+	cursor: pointer;
+}
+.profile-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0, .8);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.25s ease-in-out;
+	border-radius: 200px;
+}
+.plus-sign {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	visibility: hidden;
+	opacity: 0;
+	z-index: 2;
+}
+.plus-sign .fa {
+	color: #fff;
+	font-size: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	transition: all 0.25s ease-in-out;
+}
+
+.bioContainerUnderlay {
+	position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,.75);
+    z-index: 3;
+	cursor: pointer;
+	display: none;
+}
+
+@media (min-width: 981px) {
+	.close-button {
+		width: 15px;
+		height: 15px;
+	}
+}
+
+@media (max-width: 450px) {
+	.team-profile {
+		width: 46%;
+	}
+	.team-profile:nth-child(even) {
+		margin-right: 0;
+	}
+	.team-profile h4 {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 812px) and (orientation: landscape) {
+	.team-profile h4 {
+		font-size: 16px;
+	}
+	.top-bottom-padding {
+	    padding-top: 2em;
+		padding-bottom: 2em;
+	}
+}
+
+@media (max-width: 812px) {
+	.team-bio-inner::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+		-webkit-overflow-scrolling: touch;
+    }
+    .team-bio-inner::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.25);
+        -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
+	.fa.fa-close.mobile {
+		display: block;
+		bottom: 30px;
+    	right: 30px;
+    	position: absolute;
+    	font-size: 30px;
+    	color: #fff;
+	}
+}

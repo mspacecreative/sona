@@ -1,0 +1,174 @@
+// COLOURS
+$black: #000;
+$gold: #cda85b;
+$darkGrey: #222;
+$lightGold: #fef7ac;
+$darkGold: #ae7726;
+
+@import "_normalize.min.scss";
+@import "_flexboxgrid.min.scss";
+@import "_main.scss";
+@import "_submenu.scss";
+@import "_enews.scss";
+@import "_typography.scss";
+@import "_footer.scss";
+@import "_products.scss";
+@import "_images.scss";
+@import "_pages.scss";
+@import "_spacing.scss";
+@import "_hamburgers.scss";
+@import "_menus.scss";
+@import "_team.scss";
+@import "_search.scss";
+@import "_media-queries.scss";
+@import "_sidebar.scss";
+@import "_accordion.scss";
+@import "_slider.scss";
+@import "_partners.scss";
+@import "_testimonials.scss";
+@import "_pagination.scss";
+@import "_newsletter.scss";
+@import "_product-graphic.scss";
+@import "_download-boxes.scss";
+@import "_error.scss";
+
+.wrap, body, html {
+	overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	margin: 0 0 15px;
+}
+
+// CLEARFIX
+.clear:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+// BODY
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body {
+	font-family: $lato;
+}
+
+p:last-of-type {
+	margin-bottom: 0;
+}
+
+.light h1.gold_color {
+	color: $gold;
+}
+
+// SECTIONS
+.section {
+	@extend %top-bottom-padding;
+}
+
+.darkbg {
+	background-color: $black;
+}
+.darkGreyBg {
+	background-color: $darkGrey;
+}
+.lightbg {
+	background-color: #fff;
+}
+
+// BORDERS
+.borderTopGoldGradient:before {
+	height: 6px;
+	background: linear-gradient(90deg, $gold, $lightGold, $darkGold, $lightGold, $darkGold);
+	width: 100%;
+	position: absolute;
+	top: -3px;
+	z-index: 10;
+	content: "";
+}
+.borderTopGoldGradient {
+	position: relative;
+}
+
+// HEADER STYLES
+header {
+	background-color: $black;
+	padding: 1em 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+}
+.home header {
+	background-color: transparent;
+}
+header.scroll {
+	background-color: $black;
+}
+.video-container::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	height: 50vh;
+	width: 100%;
+	background: linear-gradient(180deg, $black, transparent);
+	z-index: 2;
+}
+.logo {
+	display: table-cell;
+	vertical-align: middle;
+}
+header .inner {
+	display: table;
+	width: 100%;
+}
+
+// FLEXBOX
+.flex-column {
+	flex-direction: column;
+}
+.extra-col-spacing > .col {
+	padding-bottom: 4em;
+}
+.boxed {
+	padding: 2em;
+	border-width: 1px;
+	border-style: solid;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.light .boxed {
+	border-color: #fff;
+}
+
+// TESTIMONIALS
+body .testimonial_content {
+	color: $gold;
+	font-style: italic;
+	line-height: 1.5em;
+	font-size: 18px;
+}
+.testimonial_author_info {
+	font-size: 13px;
+}
+
+// ICONS
+.icon {
+	//width: 60px;
+	//height: 60px;
+	margin: 0 auto 15px;
+}
+.icon img {
+	margin-bottom: 15px;
+}
+.icon.larger {
+	width: 70px;
+}

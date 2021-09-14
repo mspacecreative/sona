@@ -1,0 +1,66 @@
+$gold: #cda85b;
+
+.sub-menu {
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.25s ease-in-out;
+	position: absolute;
+    top: calc(51px + 1em);
+    left: 0;
+    /*width: 100%;*/
+    background-color: #000;
+    /*padding: 40px;
+	border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;*/
+	padding: 15px 0;
+}
+.sub-menu.focused {
+	opacity: 1;
+	visibility: visible;
+}
+.sub-menu {
+	text-align: left;
+}
+.sub-menu ul {
+	margin-left: -15px;
+}
+nav .sub-menu li {
+	margin: 0;
+}
+.sub-menu.light h3 {
+	color: $gold;
+}
+.sub-menu li a {
+	color: #fff;
+	padding: 10px 25px;
+}
+.sub-menu .col:nth-child(2n) {
+	border-left: 1px solid $gold;
+}
+.menu-item-has-children, .menu-item-has-children a {
+	position: relative;
+}
+.menu-item-has-children:hover > .sub-menu {
+	opacity: 1;
+	visibility: visible;
+	transition: 0.25s ease-in-out;
+}
+.menu-item-has-children {
+	margin-right: 10px;
+}
+.menu-item-has-children > a {
+	
+}
+.sub-menu .col:last-of-type li {
+	display: block;
+}
+nav li li {
+	display: block;
+	white-space: nowrap;
+}
+nav li a::focus {
+	outline: 1px dotted #fff;
+}
+nav li a::focus {
+	outline: 1px dotted #fff;
+}

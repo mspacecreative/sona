@@ -1,0 +1,49 @@
+.copyright {
+	background-color: #222;
+}
+.copyright p {
+	font-size: 13px;
+}
+.social-media {
+	padding: 0;
+	margin: 0;
+}
+.social-media li {
+	list-style: none;
+	display: inline-block;
+}
+.social-media .fa {
+	color: #fff;
+	font-size: 20px;
+	transition: 0.25s ease-in-out;
+}
+.social-media .fa:hover {
+	transition: 0.25s ease-in-out;
+	color: $gold;
+}
+.social-media a:hover .fa {
+	color: $gold;
+}
+.copyright .inner {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+footer .button {
+	margin-top: 0;
+}
+@media (min-width: 768px) {
+	.social-media {
+		text-align: right;
+	}
+	.social-media li {
+		margin-left: 20px;
+	}
+}
+@media (max-width: 767px) {
+	.social-media {
+		margin-bottom: 20px;
+	}
+	.social-media li {
+		margin-right: 20px;
+	}
+}

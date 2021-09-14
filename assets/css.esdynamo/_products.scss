@@ -1,0 +1,42 @@
+.featured-products img {
+	max-height: 100px;
+	margin-bottom: 2em;
+}
+.boxed.dark {
+	background-color: #333;
+	background-image: url(../img/backgrounds/dark-honeycomb.png);
+    box-shadow: 0 0 15px #000;
+}
+.roundedCorners {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+.light .boxed.dark {
+	border-color: #444;
+}
+.product table {
+	/*border: 1px solid #e9e9e9;*/
+}
+.product table td, .page table td {
+	padding: 10px 15px;
+	width: 50%;
+}
+.product table h4, .page table h4 {
+	margin-bottom: 0;
+}
+.product table tr:first-of-type, .page table tr:first-of-type {
+	background-color: $gold;
+}
+.product table tr:nth-child(even), .page table tr:nth-child(even) {
+	background-color: #f5f5f5;
+}
+.product table tr:last-child, .page table tr:last-child {
+	border-bottom: 5px solid $gold;
+}
+@media (max-width: 450px) {
+	.productImgCol .col-xs-8, .productImgCol .col-xs-4 {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+}

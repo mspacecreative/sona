@@ -1,0 +1,47 @@
+.newsletterForm {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, .95);
+	top: 0;
+	left: 0;
+	overflow: auto;
+	opacity: 0;
+	transition: 0.25s ease-in-out;
+	visibility: hidden;
+	z-index: 999999;
+}
+.showForm .newsletterForm {
+	opacity: 1;
+	transition: 0.25s ease-in-out;
+	visibility: visible;
+}
+.newsletterFormInner {
+	height: 80vh;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 80%;
+	max-width: 600px;
+}
+.hs-form-144f6d66-79e7-4676-b02d-639412fa5839_064917a4-9fa8-4f81-aeff-fb87fc633d2a .legal-consent-container .hs-richtext {
+	color: #fff!important;
+}
+.newsletterForm .hamburger-inner, .newsletterForm .hamburger-inner:before, .newsletterForm .hamburger-inner:after, .newsletterForm .hamburger.is-active .hamburger-inner, .newsletterForm .hamburger.is-active .hamburger-inner::before, .newsletterForm .hamburger.is-active .hamburger-inner::after {
+	background-color: #000;
+}
+.newsletterFormClose {
+	right: 2em;
+    top: 2em;
+    position: fixed;
+	width: 20px;
+	height: 20px;
+	display: block;
+}
+.newsletterFormClose img {
+	display: block;
+}
+.newsletterForm .hs-form-iframe {
+	width: 100%!important;
+}

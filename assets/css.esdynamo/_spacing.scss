@@ -1,0 +1,463 @@
+// SPACING
+.inner {
+  @extend %inner;
+}
+.bottom-margin {
+  @extend %bottom-margin;
+}
+.bottom-padding {
+  @extend %bottom-padding;
+}
+.top-bottom-margin {
+  @extend %top-bottom-margin;
+}
+.top-margin {
+  @extend %top-margin;
+}
+
+.shortBio {
+	padding: 3em;
+}
+
+.gridContainer .boxed > .featureImgLink ~ .boxed-inner {
+	height: 100%;
+}
+
+.light .button.dark {
+	border-color: #fff;
+}
+.light .button.dark:hover {
+	border-color: $gold;
+}
+
+// GRID CONTAINER
+.gridContainer > .col {
+  padding-bottom: 2em;
+}
+.gridContainer .boxed {
+	padding: 0;
+	box-shadow: 0 0 15px #c9c9c9;
+	border: none;
+}
+.gridContainer .boxed .boxed-inner {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.gridContainer h2 {
+  font-size: 20px;
+}
+.gridContainer h2 a {
+  text-decoration: none;
+  color: $black;
+}
+.view-article-container {
+  display: block;
+  margin: auto 0 0;
+}
+.date-author {
+  display: inline-block;
+  margin-bottom: 1em;
+  font-size: 13px;
+}
+.date-author a {
+  text-decoration: none;
+  color: $gold;
+}
+.pagination {
+  @extend %bottom-padding;
+  text-align: center;
+}
+.pagination .page {
+  padding: 0 5px;
+  text-decoration: none;
+  color: #999;
+}
+.active.page {
+  color: $black;
+}
+
+// ICONS
+.iconContainer {
+	width: 70px;
+	height: 70px;
+	margin-bottom: 10px;
+}
+.sona-vs-ctab .iconContainer {
+    width: 200px;
+    height: 200px;
+}
+.iconContainer.alt {
+	width: 90px;
+}
+.iconContainer img {
+	width: 100%;
+	height: 100%;
+}
+
+// IFRAME ASPECT RATIO
+iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+// PRODUCT GRID
+.product {
+	padding-bottom: 4em;
+}
+
+// WORDPRESS IMAGE BLOCK	
+.wp-block-image img {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+// PADDING
+%top-padding {
+  padding-top: 4em;
+}
+.topPadding {
+  @extend %top-padding;
+}
+%topBottomPaddingShort {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+.para-block-wrap.topBottomPaddingShort {
+	padding-bottom: .5em;
+	padding-top: .5em;
+}
+.para-block-wrap {
+	padding-top: 4em;
+    padding-bottom: 4em;
+}
+.para-block-wrap > p {
+	@extend %inner;
+}
+%extraTopBottomPadding {
+	padding-bottom: 6em;
+	padding-top: 6em;
+}
+%bottom-padding {
+  padding-bottom: 4em;
+}
+%top-bottom-padding {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+.top-bottom-padding {
+  @extend %top-bottom-padding;
+}
+.topBottomPaddingShort {
+  @extend %topBottomPaddingShort;
+}
+%no-top-padding {
+  padding-top: 0;
+}
+%no-bottom-padding {
+  padding-bottom: 0;
+}
+.no-left-padding,
+.inner.no-left-padding {
+  padding-left: 0;
+}
+.no-top-padding {
+	@extend %no-top-padding;
+}
+.no-right-padding,
+.inner.no-right-padding {
+  padding-right: 0;
+}
+.extra-top-bottom-padding {
+	@extend %extraTopBottomPadding;
+}
+
+.single-team .event-container {
+	align-items: center;
+}
+
+.single .content-section .inner {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.icons-visible {
+  align-items: baseline;
+  margin-top: 50px;
+}
+.icons-visible > .col {
+  padding-bottom: 2em;
+}
+
+// MARGIN
+%top-margin {
+  margin-top: 30px;
+}
+.topMargin {
+  @extend %top-margin;
+}
+%bottom-margin {
+  margin-bottom: 30px;
+}
+%top-bottom-margin {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+%no-top-margin {
+  margin-top: 0;
+}
+%no-bottom-margin {
+  margin-bottom: 0;
+}
+%bottomMarginMobile {
+  margin-bottom: 30px;
+}
+
+// FULL WIDTH
+.col_padding {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// ABSOLUTE POSITIONED PSEUDO
+%pseudo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+}
+
+// DEFINITIONS PAGE CONTENT SECTION SPACING
+.definitions .content-section {
+	padding-top: 4em;
+}
+.definitions .content-section > .inner > div {
+	border-bottom: 1px solid #e9e9e9;
+}
+
+// BLOG SIDEBAR
+.related-posts {
+  padding: 0;
+}
+.widget-container {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #c9c9c9;
+}
+.widget-container:last-of-type {
+	border-bottom: none;
+}
+.event-container {
+  margin-bottom: 2em;
+}
+.event-container h4 {
+	margin-bottom: 10px;
+}
+.event-container h4 a {
+	text-decoration: none;
+	color: #666;
+}
+/*.event-thumb img {
+  margin-top: 5px;
+}*/
+.team .event-thumb img {
+  box-shadow: 0 0 15px #c9c9c9;
+  background-color: $gold;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.event-container:last-of-type {
+  margin-bottom: 0;
+}
+
+// ABSOLUTE VERTICAL ALIGN CENTER
+%aligncenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+// SIZING
+.maxWidth800,
+.inner.maxWidth800 {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.maxWidth980,
+.inner.maxWidth980 {
+  max-width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// ROWS & COLUMNS
+.row.gutter_space_1 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.row.gutter_space_1 > .col {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.row.gutter_space_2 {
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+.row.gutter_space_2 > .col {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.row.gutter_space_3 {
+  margin-left: -3rem;
+  margin-right: -3rem;
+}
+.row.gutter_space_3 > .col {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.dark_gradient_img_overlay .absolute_img_container:before,
+.light_gradient_img_overlay .absolute_img_container:before {
+  position: absolute;
+  width: 100%;
+  content: "";
+  bottom: -1px;
+  right: 0;
+  height: 100%;
+  z-index: 1;
+}
+.dark_gradient_img_overlay .absolute_img_container:before {
+  background: linear-gradient(-90deg, black, transparent);
+}
+.reverse.dark_gradient_img_overlay .absolute_img_container:before {
+  right: auto;
+  left: -1px;
+  background: linear-gradient(90deg, black, transparent);
+}
+.dark_gradient_img_overlay.bgImgRight:before,
+.light_gradient_img_overlay.bgImgRight:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+.dark_gradient_img_overlay.bgImgLeft:before,
+.light_gradient_img_overlay.bgImgLeft:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+}
+.dark_gradient_img_overlay.bgImgRight:before,
+.dark_gradient_img_overlay.bgImgLeft:before {
+  background-color: $black;
+}
+.light_gradient_img_overlay.bgImgRight:before,
+.light_gradient_img_overlay.bgImgLeft:before {
+  background-color: #fff;
+}
+
+// POSITIONING
+.relativePositioning {
+  position: relative;
+}
+$lightGold: gold;
+.goldBorderTop {
+  border-top: 3px solid $gold;
+}
+.header-container {
+	border-bottom: 6px solid $gold;
+}
+.header-container::after {
+	position: absolute;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.15), transparent);
+    bottom: 0;
+	content: "";
+}
+
+// HEADINGS
+.absoluteHeading {
+  position: absolute;
+  /*box-shadow: 0px 0px 15px #444;
+	border-radius: 1000px;
+	border: 3px solid $lightGold;
+	background-color: #333;*/
+  top: -2em;
+  z-index: 2;
+  margin-bottom: 0;
+  padding: 10px 50px 13px;
+  @extend %horizontalCenter;
+  background-image: url(../img/backgrounds/beveled-bg.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+}
+
+.absoluteHeading > * {
+  margin-bottom: 0;
+  line-height: 2.15em;
+}
+
+// HORIZONTALLY CENTER ELEMENT
+%horizontalCenter {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+}
+
+// INNER CONTAINER
+%inner {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2em;
+  padding-left: 2em;
+  width: 100%;
+}
+
+// TARGET LAST ROW
+.imgGrid .col:nth-child(4n+1):nth-last-child(-n+4),
+  .imgGrid .col:nth-child(4n+1):nth-last-child(-n+4) ~ .col {
+    padding-bottom: 0;
+}
+
+// BREAKING NEWS BANNER SHOWING
+.cookieBanner ~ .wrap {
+	padding-top: 36px;
+}
+.cookieBanner ~ header {
+	top: 36px;
+}
+.hideBanner .cookieBanner ~ .wrap {
+	padding-top: 83px;
+}
+.hideBanner.home .cookieBanner ~ .wrap {
+	padding-top: 0;
+}
+.hideBanner .cookieBanner ~ header {
+	top: 0;
+}
+
+// SINGLE TEMPLATE
+.single .maxWidth980 > div {
+	padding-left: 2em;
+	padding-right: 2em;
+}

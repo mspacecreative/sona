@@ -1,0 +1,52 @@
+.carousel {
+	margin-top: 50px;
+}
+.carousel .slick-next:before, .carousel .slick-prev:before {
+    display: block;
+    background-image: url(../img/icons/arrow.svg);
+    position: absolute;
+    top: 0;
+    content: "";
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+.carousel .slick-next, .carousel .slick-prev {
+    z-index: 10;
+    height: 24px;
+    width: 10px;
+}
+.carousel .slick-prev {
+    
+}
+.carousel .slick-prev:before {
+    transform: rotate(180deg);
+}
+.carousel .slick-next {
+    
+}
+.carousel .slick-dots {
+	position: relative;
+}
+.carousel.slick-initialized .slick-slide {
+	float: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+.slick-slide img {
+	margin: auto;
+}
+.logo-cell {
+	max-width: 200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.logo-cell img {
+	padding: 0 1em;
+}
+.shrink-logo {
+	display: block;
+}
+.shrink-logo > img {
+	max-width: 120px;
+}

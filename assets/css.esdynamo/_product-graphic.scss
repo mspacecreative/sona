@@ -1,0 +1,103 @@
+.graphicCenter {
+	height: 500px;
+	width: 500px;
+	text-align: center;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 500px;
+	border: 2px solid #cda85b;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255,255,255,.5);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.title {
+	max-width: 280px;
+}
+.title h2 {
+    line-height: 1.75em;
+}
+.productOffering {
+	position: absolute;
+	max-width: 100px;
+	background-color: #fff;
+	border: 2px solid #cda85b;
+	border-radius: 500px;
+	height: 100px;
+	width: 100px;
+	display: table;
+	padding: 2em;
+	box-sizing: content-box;
+}
+.productOffering span {
+	display: table-cell;
+	vertical-align: middle;
+}
+.first {
+	top: -45px;
+	right: 9%;
+}
+.second {
+	right: -15%;
+	top: 50%;
+    transform: translateY(-50%);
+}
+.third {
+	bottom: -45px;
+	right: 9%;
+}
+.fourth {
+	bottom: -45px;
+	left: 9%;
+}
+.fifth {
+    left: -15%;
+	top: 50%;
+    transform: translateY(-50%);
+}
+.sixth {
+	top: -45px;
+	left: 9%;
+}
+@media (max-width: 450px) {
+	.graphicCenter {
+		width: 100%;
+	    height: auto;
+	    flex-direction: column;
+	    padding: 2em;
+	    border-radius: 10px;
+	}
+	.productOffering {
+		position: relative;
+	    border-radius: 100px;
+	    height: auto;
+	    width: 100%;
+	    padding: 1em;
+	    max-width: 200px;
+	}
+	.first, .second, .third, .fourth, .fifth, .sixth {
+		top: auto;
+		left: auto;
+		right: auto;
+		bottom: auto;
+		transform: none;
+	}
+}
+@media (max-width: 600px) and (orientation: landscape) {
+	.graphicCenter {
+		width: 400px;
+	    height: 400px;
+	}
+	.productOffering {
+		padding: 1em;
+	}
+	.title {
+		max-width: 200px;
+	}
+	.title h2 {
+		font-size: 18px;
+	}
+}
