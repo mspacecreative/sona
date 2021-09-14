@@ -32,8 +32,12 @@
 // SPLASH SECTION VIDEO
 .video-container {
 	position: relative;
-	height: 0;
-	padding-bottom: 56.25%;
+	//height: 0;
+	//padding-bottom: 56.25%;
+	overflow: hidden;
+    display: flex;
+    align-items: center;
+	justify-content: center;
 }
 .video-container:before {
 	@extend %pseudo;
@@ -45,15 +49,16 @@
 }
 .splash video {
 	position: absolute;
-	min-height: 100%;
-	min-width: 100%;
-	top: 0;
-	left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .splash-content {
-	@extend %aligncenter;
-	text-align: center;
-	width: 80%;
+	//@extend %aligncenter;
+    z-index: 10;
+    padding: 10em 0 4em;
 }
 
 .lightOverlay:before {
