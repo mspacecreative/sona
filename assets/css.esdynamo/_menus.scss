@@ -90,11 +90,21 @@ header {
     height: 100%;
     left: 0;
     background-color: rgba(0,0,0,.95);
-	display: none;
+	//display: none;
 	z-index: 99;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.25s ease-in-out;
+}
+.search-is-visible .social-window {
+	opacity: 1;
+	transition: 0.25s ease-in-out;
+	visibility: visible;
 }
 .socialWindowToggle {
-	float: right;
+	flex: auto;
+    display: flex;
+    justify-content: flex-end;
 	top: 50%;
 	margin-top: -10px;
 	right: 2em;
@@ -140,11 +150,10 @@ header {
 }
 
 nav {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: right;
-	float: right;
-	margin-right: calc(40px + 2em);
+	flex: auto;
+    display: flex;
+    justify-content: flex-end;
+	margin-right: calc(30px + 2em);
 }
 nav ul {
 	font-size: 0;
@@ -229,4 +238,28 @@ footer .widget-container li a {
 }
 footer .light h3 {
 	color: $gold;
+}
+.magnifying-glass-container {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.magnifying-glass-container > .close-icon {
+	height: 20px;
+	width: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.close-icon > svg {
+	height: 100%;
+	width: 100%;
+	padding: 4px;
+}
+.magnifying-glass-container.is-active > svg,
+.magnifying-glass-container > .close-icon {
+	display: none;
+}
+.magnifying-glass-container.is-active > .close-icon {
+	display: block;
 }

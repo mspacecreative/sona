@@ -7,11 +7,7 @@ $rowsubheading = get_field('row_sub_heading');
 $centeredheading = get_field('row_heading_alignment');
 $anchor = get_field('block_anchor'); ?>
 
-<?php if ( $anchor ): ?>
-<section id="<?php echo $anchor ?>" class="section">
-<?php else : ?>
-<section class="section">
-<?php endif; ?>
+<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="archive-block<?php if ($sectionpadding): echo $sectionpadding; endif; if ( $className ): echo esc_attr($className); endif; ?>">
 
 	<div class="inner">
 		
@@ -45,23 +41,26 @@ $anchor = get_field('block_anchor'); ?>
 			$displaybio = get_field('display_short_bio', get_the_ID());
 			$link = get_permalink();
 			
-			if ( $colCount == 'two' ): ?>
-			<div class="team-profile col col-lg-6 col-md-6 col-sm-6 col-xs-12 text-align-center">
+			switch ($colCount) {
+				case 'two':
+					$colCount = ' col col-lg-6 col-md-6 col-sm-6 col-xs-6';
+					break;
+				case 'three':
+					$colCount = ' col col-lg-4 col-md-4 col-sm-6 col-xs-6';
+					break;
+				case 'four':
+					$colCount = ' col col-lg-3 col-md-3 col-sm-6 col-xs-6';
+					break;
+				case 'five':
+					$colCount = ' col col-lg-1_5 col-md-1_5 col-sm-1_5 col-xs-6';
+					break;
+				default:
+					$colCount = ' col col-lg-4 col-md-4 col-sm-6 col-xs-6';
+			} ?>
 			
-			<?php elseif ( $colCount == 'three' ): ?>
-			<div class="team-profile col col-lg-4 col-md-4 col-sm-6 col-xs-12 text-align-center">
+			<div class="team-profile text-align-center<?php if ($colCount): echo $colCount; endif; ?>">
 			
-			<?php elseif ( $colCount == 'four' ): ?>
-			<div class="team-profile col col-lg-3 col-md-3 col-sm-6 col-xs-12 text-align-center">
-			
-			<?php elseif ( $colCount == 'five' ): ?>
-			<div class="team-profile col col-lg-1_5 col-md-1_5 col-sm-1_5 col-xs-12 text-align-center">
-			
-			<?php else : ?>
-			<div class="team-profile col col-lg-4 col-md-4 col-sm-6 col-xs-12 text-align-center">
-			<?php endif;
-			
-				if ( $shortbio ) : ?>				
+				<?php if ( $shortbio ) : ?>				
 				<a href="#" class="profile-img-wrap">
 					<div class="plus-sign">
 						<i class="fa fa-plus"></i>

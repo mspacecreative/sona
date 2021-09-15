@@ -20,7 +20,6 @@ $darkGold: #ae7726;
 @import "_menus.scss";
 @import "_team.scss";
 @import "_search.scss";
-@import "_media-queries.scss";
 @import "_sidebar.scss";
 @import "_accordion.scss";
 @import "_slider.scss";
@@ -120,12 +119,13 @@ header.scroll {
 	z-index: 2;
 }
 .logo {
-	display: table-cell;
-	vertical-align: middle;
+	flex: 0 0 350px;
+	max-width: 350px;
 }
 header .inner {
-	display: table;
-	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 // FLEXBOX
@@ -172,3 +172,6 @@ body .testimonial_content {
 .icon.larger {
 	width: 70px;
 }
+
+
+@import "_media-queries.scss";

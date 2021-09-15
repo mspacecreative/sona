@@ -1,7 +1,8 @@
 <?php
 $loop = new WP_Query( $args );
 if ( $loop->have_posts() ) : ?>
-<section class="section">
+
+<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="archive-block<?php if ($sectionpadding): echo $sectionpadding; endif; if ( $className ): echo esc_attr($className); endif; ?>">
 	<div class="inner">
 		<?php
 		$rowheading = get_field('row_heading');

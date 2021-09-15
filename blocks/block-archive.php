@@ -3,6 +3,32 @@ $posttype = get_field('post_type');
 $membertype = get_field('membership_type');
 $brandtype = get_field('brand_type');
 $format = get_field('display_format');
+$sectionpadding = get_field('section_padding');
+
+// CUSTOM ID
+$id = '' . $block['id'];
+if ( !empty($block['anchor']) ) {
+	$id = $block['anchor'];
+}
+// CUSTOM CLASS	
+$className = '';
+if( !empty($block['className']) ) {
+	$className .= ' ' . $block['className'];
+}
+
+switch ($sectionpadding) {
+	case 'top':
+		$sectionpadding = ' topPadding';
+		break;
+	case 'bottom':
+		$sectionpadding = ' bottom-padding';
+		break;
+	case 'both':
+		$sectionpadding = ' top-bottom-padding';
+		break;
+	default:
+		$sectionpadding = '';
+}
 
 if ( $posttype == 'product' ) {
 	

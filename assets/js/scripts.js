@@ -54,10 +54,10 @@
 	// SOCIAL MEDIA WINDOW
 	$('.hamburger').click(function() {
 		$(this).toggleClass('is-active');
-		$(this).parent().next().fadeToggle();
+		//$(this).parent().next().fadeToggle();
 		
 		// FIXED CONTENT WHEN SOCIAL WINDOW IS OPEN
-		$('html').toggleClass('fixed');
+		$('html').toggleClass('fixed search-is-visible');
 	});
 	
 	// CHECK IF ABSOLUTE HEADING IS VISIBLE
@@ -100,9 +100,9 @@
 	     if (e.key === "Escape") { // escape key maps to keycode `27`
 	        $('.bioContainerUnderlay, .team-bio-container').fadeOut();
 			$('.hamburger').removeClass('is-active');
-			$('.social-window').fadeOut();
+			//$('.social-window').fadeOut();
 			$('body').removeClass('showForm');
-			$('html').removeClass('fixed');
+			$('html').removeClass('fixed search-is-visible');
 	    }
 	});
 	$('.team-profile').each(function() {
