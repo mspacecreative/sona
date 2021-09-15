@@ -16,7 +16,13 @@
   	.team-container > div:nth-child(6n+1):nth-last-child(-n+6),
   	.team-container > div:nth-child(6n+1):nth-last-child(-n+6) ~ div,
   	.team-container > div:nth-child(5n+1):nth-last-child(-n+5),
-  	.team-container > div:nth-child(5n+1):nth-last-child(-n+5) ~ div {
+  	.team-container > div:nth-child(5n+1):nth-last-child(-n+5) ~ div,
+  	.extra-col-spacing > .col:nth-child(2n+1):nth-last-child(-n+2),
+  	.extra-col-spacing > .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col,
+  	.extra-col-spacing > .col:nth-child(3n+1):nth-last-child(-n+3),
+  	.extra-col-spacing > .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col,
+  	.extra-col-spacing > .col:nth-child(4n+1):nth-last-child(-n+4),
+  	.extra-col-spacing > .col:nth-child(4n+1):nth-last-child(-n+4) ~ .col {
 	    padding-bottom: 0;
 	}
 	.no_col_padding > .col-sm-12 {
@@ -159,7 +165,7 @@
 		padding: 10px 15px 10px 10px;
 	}
 	nav {
-		margin-right: calc(40px + 1em);
+		margin-right: 20px;
 	}
 	.bgImgRight {
 		background-size: cover;
@@ -173,6 +179,9 @@
 	.subMenuToggle {
 		display: block;
 		z-index: 1;
+	}
+	.socialWindowToggle {
+		flex: 1 0 30px;
 	}
 	.menu-item-has-children {
 		margin-right: 0;
@@ -273,7 +282,7 @@
 		padding: 1em;
 	    background: rgba(0,0,0,.75);
 	}
-	.socialWindowToggle button {
+	.socialWindowToggle .hamburger-icon {
 		display: none;
 	}
 	.menu-item-has-children > a:after {
@@ -415,7 +424,8 @@
 	}
 	.row.gutter_space_1 > .col:last-of-type,
 	.row.gutter_space_2 > .col:last-of-type,
-	.row.gutter_space_3 > .col:last-of-type {
+	.row.gutter_space_3 > .col:last-of-type,
+	.extra-col-spacing > .col:last-of-type {
 		padding-bottom: 0;
 	}
 }

@@ -53,13 +53,13 @@
 				
 				<!-- social media / mobile nav -->
 				<div class="socialWindowToggle">
-					<button class="hamburger hamburger--spin" type="button">
+					<button class="hamburger hamburger--spin hamburger-icon" type="button">
 					  <span class="hamburger-box">
 					    <span class="hamburger-inner"></span>
 					  </span>
 					</button>
 					
-					<div class="magnifying-glass-container hamburger" style="width: 20px; height: 20px; cursor: pointer;">
+					<button class="magnifying-glass-container hamburger" tabindex="0" style="width: 20px; height: 20px; cursor: pointer;">
 						<?php include 'assets/img/icons/magnifying-glass.php'; ?>
 						<div class="close-icon">
 							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" overflow="visible" xml:space="preserve">
@@ -67,7 +67,7 @@
 								<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="0.604" y1="15.396" x2="15.396" y2="0.604"/>
 							</svg>
 						</div>
-					</div>
+					</button>
 				</div>
 				<div class="social-window">
 					<div class="window-content light">

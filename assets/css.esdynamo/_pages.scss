@@ -107,6 +107,21 @@ html.fixed {
 	position: relative;
 }
 
+// SECTIONS
+.section {
+	@extend %top-bottom-padding;
+}
+
+.darkbg {
+	background-color: $black;
+}
+.darkGreyBg {
+	background-color: $darkGrey;
+}
+.lightbg {
+	background-color: #fff;
+}
+
 @media (max-width: 980px) {
 	.wrap {
 		padding-top: 56px;

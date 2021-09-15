@@ -21,15 +21,17 @@
 						</div>-->
 						<div class="col col-lg-8 col-md-6 col-sm-12 col-xs-12 bottomMarginMobile">
 							<div class="row between-lg">
-								<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+								<div class="col <?php if ( is_active_sidebar('footer-area-2') ): echo 'col-lg-6'; else: echo 'col-lg-4'; endif; ?> col-md-6 col-sm-6 col-xs-12">
 									<h3>Products &amp; Services</h3>
 									<div class="row">
-										<div class="col col-lg-6 col-md-12 col-sm-12 col-xs-6">
+										<div class="col <?php if ( is_active_sidebar('footer-area-2') ): echo 'col-lg-6'; else: echo 'col-lg-12'; endif; ?> col-md-12 col-sm-12 col-xs-6">
 											<?php dynamic_sidebar('footer-area-1'); ?>
 										</div>
+										<?php if ( is_active_sidebar('footer-area-2') ): ?>
 										<div class="col col-lg-6 col-md-12 col-sm-12 col-xs-6">
 											<?php dynamic_sidebar('footer-area-2'); ?>
 										</div>
+										<?php endif; ?>
 									</div>
 								</div>
 								<div class="col col-lg-2 col-md-3 col-sm-3 col-xs-6">
@@ -59,8 +61,8 @@
 							</ul>
 						</div>
 						<div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12">
-							<p>&copy; <?php echo date('Y'); ?> Sona Nanotech. All rights reserved.
-							<?php if ( have_rows('privacy_policy', 'options') ) {
+							<p>&copy; <?php echo date('Y '); echo get_bloginfo('name'); echo __('. All rights reserved.');
+							if ( have_rows('privacy_policy', 'options') ) {
 								while ( have_rows('privacy_policy', 'options') ) {
 									the_row();
 									$label = get_sub_field('policy_label', 'options');
