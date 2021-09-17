@@ -3,8 +3,6 @@
 	.extra-col-spacing > .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col,
 	.icons-visible > .col:nth-child(2n+1):nth-last-child(-n+2),
 	.icons-visible > .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col,
-	.icons-visible > .col:nth-child(4n+1):nth-last-child(-n+4),
-	.icons-visible > .col:nth-child(4n+1):nth-last-child(-n+4) ~ .col,
 	.icons-visible > .col:nth-child(3n+1):nth-last-child(-n+3),
 	.icons-visible > .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col,
 	.team-profile.col:nth-child(2n+1):nth-last-child(-n+2),
@@ -20,9 +18,7 @@
   	.extra-col-spacing > .col:nth-child(2n+1):nth-last-child(-n+2),
   	.extra-col-spacing > .col:nth-child(2n+1):nth-last-child(-n+2) ~ .col,
   	.extra-col-spacing > .col:nth-child(3n+1):nth-last-child(-n+3),
-  	.extra-col-spacing > .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col,
-  	.extra-col-spacing > .col:nth-child(4n+1):nth-last-child(-n+4),
-  	.extra-col-spacing > .col:nth-child(4n+1):nth-last-child(-n+4) ~ .col {
+  	.extra-col-spacing > .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col {
 	    padding-bottom: 0;
 	}
 	.no_col_padding > .col-sm-12 {
@@ -117,8 +113,12 @@
 }
 
 @media (min-width: 64em) {
-	.extra-col-spacing > .col:nth-child(3n+1):nth-last-child(-n+3),
-	.extra-col-spacing > .col:nth-child(3n+1):nth-last-child(-n+3) ~ .col {
+	/*.col:nth-child(3n+1):nth-last-child(-n+3),
+  	.col:nth-child(3n+1):nth-last-child(-n+3) ~ .col,
+  	.col:nth-child(4n+1):nth-last-child(-n+4),
+  	.col:nth-child(4n+1):nth-last-child(-n+4) ~ .col*/
+  	.col:nth-child(3n):nth-last-child(-n+4) ~ .col,
+  	.col:nth-child(4n):nth-last-child(-n+5) ~ .col {
 		padding-bottom: 0;
 	}
 	.postTitle {

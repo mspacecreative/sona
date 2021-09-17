@@ -33,6 +33,8 @@
 				<?php echo do_shortcode('[hubspot type=form portal=4750145 id=144f6d66-79e7-4676-b02d-639412fa5839]'); ?>
 			</div>
 		</div>
+		
+		<div class="skip-links" aria-label="Skip to main content"><a href="#main-content" class="skip-to-link" tabindex="1">Skip to main content</a></div>
 
 		<header>
 			<div class="inner clear">

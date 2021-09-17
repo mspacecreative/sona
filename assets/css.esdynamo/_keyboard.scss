@@ -1,0 +1,62 @@
+// SKIP NAV LINKS BUTTON
+.skip-links {
+	position: absolute;
+	top: 0;
+    z-index: 999999;
+	left: 50%;
+    margin-left: -67.5px;
+}
+.skip-to-link:focus {
+	outline: 3px solid goldenrod;
+}
+.skip-to-link {
+	padding: 15px;
+    background-color: #fff;
+	display: block;
+}
+
+.using-mouse .skip-links, .skip-links, .using-keyboard .skip-links {
+	display: none;
+}
+
+.using-keyboard .skip-links {
+	display: block;
+}
+
+.using-keyboard .contentPortal, .using-keyboard .container {
+	overflow: visible;
+}
+
+.contentPortal a:focus, 
+.button:focus, li a:focus, 
+.searchIcon a:focus, 
+li a:focus, 
+.using-keyboard .footerLogos a:focus,
+.using-keyboard p a:focus,
+.using-keyboard .photoGrid a:focus,
+.using-keyboard .cosLogo a:focus,
+.using-keyboard .logo a:focus,
+.using-keyboard .medPortrait a:focus,
+.using-keyboard .event-container a:focus,
+.using-keyboard #main-content a:focus {
+	outline: 3px solid goldenrod;
+}
+
+.using-keyboard p a:focus, 
+.using-keyboard .tabRow a:focus,
+.using-keyboard .mediumContent a:focus {
+	outline: 1px solid goldenrod;
+}
+
+.using-keyboard .footerLogos a:focus, 
+.using-keyboard .photoGrid a:focus, 
+.using-keyboard .cosLogo a:focus,
+.using-keyboard .logo a:focus,
+.using-keyboard .display-medium-item .col > a:focus,
+.using-keyboard .medPortrait a:focus, {
+	display: block;
+}
+
+body.using-mouse *:focus {
+	outline: none;
+}

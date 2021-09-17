@@ -23,7 +23,10 @@
 		
 	</section>
 
-	<?php if ( have_posts() ): while ( have_posts() ): the_post();
+	<?php if ( have_posts() ): 
+	echo 
+	'<div id="main-content">';
+	while ( have_posts() ): the_post();
 	
 	$summary = get_field('summary');
 	$product_image = get_field('product_image');
@@ -157,9 +160,11 @@
 		</div>
 	</section>
 
-	<?php endwhile; ?>
-
-	<?php else: ?>
+	<?php endwhile;
+	
+	echo 
+	'<div id="main-content">';
+	else: ?>
 
 		<!-- article -->
 		<article>

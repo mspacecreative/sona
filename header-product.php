@@ -39,6 +39,8 @@
 
 	</head>
 	<body <?php body_class(); ?>>
+		
+		<div class="skip-links" aria-label="Skip to main content"><a href="#main-content" class="skip-to-link" tabindex="1">Skip to main content</a></div>
 
 		<header>
 			<div class="inner clear">
@@ -50,7 +52,7 @@
 					</a>
 				</div>
 				<!-- /logo -->
-
+				
 				<!-- nav -->
 				<nav class="desktop-nav-menu" role="navigation">
 					<?php sona_nav(); ?>
@@ -59,18 +61,25 @@
 				
 				<!-- social media / mobile nav -->
 				<div class="socialWindowToggle">
-					<button class="hamburger hamburger--spin" type="button">
+					<button class="hamburger hamburger--spin hamburger-icon" type="button">
 					  <span class="hamburger-box">
 					    <span class="hamburger-inner"></span>
 					  </span>
 					</button>
+					
+					<button class="magnifying-glass-container hamburger" tabindex="0" style="width: 20px; height: 20px; cursor: pointer;">
+						<?php include 'assets/img/icons/magnifying-glass.php'; ?>
+						<div class="close-icon">
+							<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" overflow="visible" xml:space="preserve">
+								<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="0.604" y1="0.604" x2="15.396" y2="15.396"/>
+								<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="0.604" y1="15.396" x2="15.396" y2="0.604"/>
+							</svg>
+						</div>
+					</button>
 				</div>
 				<div class="social-window">
 					<div class="window-content light">
-						<div class="mobile-menu">
-							<?php sona_nav(); ?>
-						</div>
-						<h2>Connect with Sona</h2>
+						<!--<h2>Connect with Sona</h2>
 						<ul class="social-media">
 							<li><a href="https://ca.linkedin.com/company/sona-nanotech-ltd" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 							<li><a href="https://twitter.com/sonananotech" target="_blank"><i class="fa fa-twitter"></i></a></li>
@@ -79,8 +88,12 @@
 							<li><a href="https://www.facebook.com/SonaNanotechInc" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						</ul>
 						<a class="button light" href="mailto:info@sonanano.com">info@sonanano.com</a>
+						-->
 						<div class="siteSearch">
 							<?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+						</div>
+						<div class="mobile-menu">
+							<?php sona_nav(); ?>
 						</div>
 					</div>
 				</div>

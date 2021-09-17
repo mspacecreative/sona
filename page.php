@@ -2,6 +2,8 @@
 	$hidetitle = get_field('hide_page_title');
 	if ( $hidetitle ) {
 		if ( have_posts() ) {
+			echo 
+			'<div id="main-content">';
 			while ( have_posts() ) {
 				echo '<div class="topPadding">';
 				the_post();
@@ -10,6 +12,8 @@
 				
 				'</div>';
 			}
+			echo 
+			'</div>';
 		}
 	}
 	
@@ -18,11 +22,15 @@
 		get_template_part('includes/templates/page-header');
 	
 		if ( have_posts() ) {
+			echo 
+			'<div id="main-content">';
 			while ( have_posts() ) {
 				the_post();
 				
 				the_content();
 			}
+			echo 
+			'</div>';
 		}
 	}
 

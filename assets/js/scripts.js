@@ -41,14 +41,40 @@
 	
 	// REMOVE OUTLINE ON CLICKABLE ITEMS WHEN USING MOUSE
 	document.body.addEventListener('mousedown', function() {
-	  document.body.classList.add('using-mouse');
+		document.body.classList.add('using-mouse');
+			document.body.classList.remove('using-keyboard');
 	});
 	
 	// Re-enable focus styling when Tab is pressed
 	document.body.addEventListener('keydown', function(event) {
-	  if (event.keyCode === 9) {
-	    document.body.classList.remove('using-mouse');
-	  }
+		if (event.keyCode === 9) {
+			document.body.classList.remove('using-mouse');
+			document.body.classList.add('using-keyboard');
+		}
+	});
+	
+	var hasFocus = $(':focus');
+	
+	function headerHeightCalc() {
+		var headerHeight = $('header').outerHeight();
+		$('.skip-links').css('top', headerHeight);
+	}
+	
+	// bind a click event to the 'skip' link
+    $(".skip-to-link").click(function(event) {
+
+        // strip the leading hash and declare
+        // the content we're skipping to
+        var skipTo = "#" + this.href.split('#')[1];
+
+        // Setting 'tabindex' to -1 takes an element out of normal 
+        // tab flow but allows it to be focused via javascript
+        $(skipTo).attr('tabindex',  -1).on('blur focusout', function() {
+
+            // when focus leaves this element, 
+            // remove the tabindex attribute
+            $(this).removeAttr('tabindex');
+		}).focus(); // focus on the content container
 	});
 		
 	// SOCIAL MEDIA WINDOW

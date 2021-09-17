@@ -41,16 +41,16 @@ switch ($columns) {
 }
 switch ($bgcolor) {
 	case 'dark':
-		$bgcolor = ' darkbg light';
+		$bgcolour = ' darkbg light';
 		break;
 	case 'light':
-		$bgcolor = ' lightbg';
+		$bgcolour = ' lightbg';
 		break;
 	default:
-		$bgcolor = ' lightbg';
+		$bgcolour = ' lightbg';
 } ?>
 
-<div<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="section<?php if ( $className ): echo esc_attr($className); endif; if ($bgcolor): echo $bgcolor; endif; ?>">
+<div<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="section<?php if ( $className ): echo esc_attr($className); endif; if ($bgcolour): echo $bgcolour; endif; ?>">
 
 	<div class="inner no-top-bottom-padding<?php if ($narrow): echo ' maxWidth980'; endif; ?>">
 		
@@ -71,7 +71,7 @@ switch ($bgcolor) {
 			<div class="col bottomMarginMobile<?php if ($columns): echo $columns; endif; ?>">
 				
 				<?php if ($boxedcontent): ?>
-				<div class="boxed<?php if ($bgcolor): echo $bgcolor; endif; if ($roundedcorners): echo ' roundedCorners'; endif; ?>">
+				<div class="boxed<?php if ($bgcolor == 'dark'): echo ' dark'; endif; if ($roundedcorners): echo ' roundedCorners'; endif; ?>">
 				<?php endif;
 				
 				if ($inlinelinks) {
