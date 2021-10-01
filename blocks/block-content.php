@@ -10,8 +10,8 @@ $hide = get_field('hide_block');
 $overlayopacity = get_field('overlay_opacity');
 $bgposition = get_field('background_position');
 $blockvisibility = get_field('block_visibility');
-$rowtopmargin = get_field('row_top_margin');
-$rowbottommargin = get_field('row_bottom_margin');
+$rowtoppadding = get_field('row_top_padding');
+$rowbottompadding = get_field('row_bottom_padding');
 
 // CUSTOM ID
 $id = '' . $block['id'];
