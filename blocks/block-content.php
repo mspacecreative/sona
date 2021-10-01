@@ -71,10 +71,10 @@ switch ( $textcolour ) {
 		$text = '';
 }
 switch ( $bgcolor ) {
-	case 'light':
+	case 'dark':
 		$bgcolor = ' darkbg';
 		break;
-	case 'grey':
+	case 'light':
 		$bgcolor = ' lightbg';
 		break;
 	default:
