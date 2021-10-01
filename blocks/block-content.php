@@ -10,8 +10,8 @@ $hide = get_field('hide_block');
 $overlayopacity = get_field('overlay_opacity');
 $bgposition = get_field('background_position');
 $blockvisibility = get_field('block_visibility');
-$rowtopmargin = get_sub_field('top_margin');
-$rowbottommargin = get_sub_field('bottom_margin');
+$rowtopmargin = get_sub_field('row_top_margin');
+$rowbottommargin = get_sub_field('row_bottom_margin');
 
 // CUSTOM ID
 $id = '' . $block['id'];
@@ -100,7 +100,7 @@ switch ( $txtalign ) {
 	<div class="<?php if ( $overlay ): echo $overlay; endif; ?>" style="position: absolute; height: 100%; width: 100%; top: 0; left: 0; opacity: <?php if ( $overlayopacity ): echo $overlayopacity; else: echo '.75'; echo ';'; endif; ?>"></div>
 	<?php endif; ?>
 	
-	<div class="bullet-points inner<?php if ( $rowwidth ): echo $rowwidth; endif; if ( $text ): echo ' '; echo $text; endif; ?>"<?php if ($topmargin || $bottommargin): echo ' style="margin: '; if ($topmargin): echo $topmargin; echo ' '; else: echo '0 '; endif; echo '0 '; if ($bottommargin): echo $bottommargin; echo ' '; else: echo '0'; endif; echo ';"'; endif; ?>>
+	<div class="bullet-points inner<?php if ( $rowwidth ): echo $rowwidth; endif; if ( $text ): echo ' '; echo $text; endif; ?>"<?php if ($topmargin || $bottommargin): echo ' style="margin-top: '; echo $topmargin; echo '; '; echo 'margin-bottom:'; echo $bottommargin; echo ';"'; endif; ?>>
 		<?php include('includes/section-content-loop.php'); ?>
 	</div>
 	
