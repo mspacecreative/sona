@@ -1886,6 +1886,14 @@ body h1 {
 	color: #cda85b;
 }
 
+.bullet-points .actions li {
+	padding: 0;
+}
+
+.bullet-points .actions li:before {
+	display: none;
+}
+
 .copyright {
 	background-color: #222;
 }

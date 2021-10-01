@@ -72,13 +72,13 @@ switch ( $textcolour ) {
 }
 switch ( $bgcolor ) {
 	case 'light':
-		$bg = ' darkbg';
+		$bgcolor = ' darkbg';
 		break;
 	case 'grey':
-		$bg = ' lightbg';
+		$bgcolor = ' lightbg';
 		break;
 	default:
-		$bg = '';
+		$bgcolor = '';
 }
 switch ( $txtalign ) {
 	case 'center':
@@ -94,7 +94,7 @@ switch ( $txtalign ) {
 		$align = '';
 } ?>
 
-<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="content-section<?php if ( $className ): echo esc_attr($className); endif; if ( $align ): echo $align; endif; if ( $bg ): echo $bg; endif; if ( $bgimg ): echo ' section_has_bg_img'; endif; ?>"<?php if ( $bgimg ): echo ' style="background-image: url('; echo $bgimg; echo ');'; if ( $bgposition ): echo ' background-position: '; echo $bgposition; else: echo ' background-position: center'; endif; echo '"'; endif; if ( $blockvisibility == 1 ): echo 'style="display:none; opacity: 0.25;"'; endif; ?>>
+<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="content-section<?php if ( $className ): echo esc_attr($className); endif; if ( $align ): echo $align; endif; if ( $bgcolor ): echo $bgcolor; endif; if ( $bgimg ): echo ' section_has_bg_img'; endif; ?>"<?php if ( $bgimg ): echo ' style="background-image: url('; echo $bgimg; echo ');'; if ( $bgposition ): echo ' background-position: '; echo $bgposition; else: echo ' background-position: center'; endif; echo '"'; endif; if ( $blockvisibility == 1 ): echo 'style="display:none; opacity: 0.25;"'; endif; ?>>
 	
 	<?php if ( $overlay ): ?>
 	<div class="<?php if ( $overlay ): echo $overlay; endif; ?>" style="position: absolute; height: 100%; width: 100%; top: 0; left: 0; opacity: <?php if ( $overlayopacity ): echo $overlayopacity; else: echo '.75'; echo ';'; endif; ?>"></div>
