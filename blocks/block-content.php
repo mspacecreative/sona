@@ -69,11 +69,11 @@ switch ( $textcolour ) {
 		$text = '';
 }
 switch ( $bgcolor ) {
-	case 'blue':
-		$bg = ' brandbluebg light';
+	case 'light':
+		$bg = ' darkbg';
 		break;
 	case 'grey':
-		$bg = ' brandlightgreybg';
+		$bg = ' lightbg';
 		break;
 	default:
 		$bg = '';
@@ -90,19 +90,6 @@ switch ( $txtalign ) {
 		break;
 	default:
 		$align = '';
-}
-switch ( $bgcolor ) {
-	case 'blue':
-		$shade = ' brandbluebg light';
-		break;
-	case 'green':
-		$shade = ' brandgreenbg';
-		break;
-	case 'grey':
-		$shade = ' brandlightgreybg';
-		break;
-	default:
-		$shade = '';
 } ?>
 
 <section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="content-section<?php if ( $className ): echo esc_attr($className); endif; if ( $align ): echo $align; endif; if ( $bg ): echo $bg; endif; if ( $bgimg ): echo ' section_has_bg_img'; endif; ?>"<?php if ( $bgimg ): echo ' style="background-image: url('; echo $bgimg; echo ');'; if ( $bgposition ): echo ' background-position: '; echo $bgposition; else: echo ' background-position: center'; endif; echo '"'; endif; if ( $blockvisibility == 1 ): echo 'style="display:none; opacity: 0.25;"'; endif; ?>>
