@@ -31,7 +31,7 @@ switch ( $txtalign ) {
 		$text = '';
 } ?>
 	
-<div class="<?php if ( $space && $text ): echo $space; echo ' '; echo $text; echo ' '; elseif ( $space ): echo $space; echo ' '; elseif ( $text ): echo $text; echo ' '; endif; ?>clear">
+<div class="<?php if ( $space && $text ): echo $space; echo ' '; echo $text; echo ' '; elseif ( $space ): echo $space; echo ' '; elseif ( $text ): echo $text; echo ' '; endif; ?>clear"<?php if ($rowtopmargin || $rowbottommargin): echo ' style="margin-top: '; echo $rowtopmargin; echo '; '; echo 'margin-bottom:'; echo $rowbottommargin; echo ';"'; endif; ?>>
 	
 	<?php if ( $content ) {
 		if ( $maxwidth ) {
