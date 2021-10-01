@@ -137,7 +137,7 @@ iframe {
 %top-padding {
   padding-top: 4em;
 }
-.topPadding {
+.topPadding, .top-padding {
   @extend %top-padding;
 }
 %topBottomPaddingShort {
