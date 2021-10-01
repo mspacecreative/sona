@@ -8,43 +8,54 @@ $sectionheadingposition = get_field('heading_position');
 $removeBulletSpacing = get_field('remove_spacing_between_bullet_points');
 $furtherbox = get_field('detail_box');
 
+// CUSTOM ID
+$id = '' . $block['id'];
+if ( !empty($block['anchor']) ) {
+	$id = $block['anchor'];
+}
+// CUSTOM CLASS	
+$className = '';
+if( !empty($block['className']) ) {
+	$className .= ' ' . $block['className'];
+}
+
 if ( $colortheme == 'dark' ):
 
 if ( $txtposition == 'left' && $bgimg ): ?>
-<section class="darkbg">
+<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="darkbg">
 	<div class="light relativePositioning dark_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php elseif ( $txtposition == 'right' && $bgimg ): ?>
-<section class="darkbg">
+<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="darkbg">
 	<div class="light relativePositioning dark_gradient_img_overlay bgImgLeft" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php else : ?>
-<section class="darkbg">
+<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="darkbg">
 	<div class="light relativePositioning dark_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php endif; ?>
 
 <?php elseif ( $colortheme == 'light' ):
 
 if ( $txtposition == 'left' && $bgimg ): ?>
-<section>
+<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?>>
 	<div class="relativePositioning light_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php elseif ( $txtposition == 'right' && $bgimg ): ?>
-<section>
+<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?>>
 	<div class="relativePositioning light_gradient_img_overlay bgImgLeft" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php else : ?>
-<section>
+<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?>>
 	<div class="relativePositioning light_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php endif; ?>
 
 <?php else :
 
 if ( $txtposition == 'left' && $bgimg ): ?>
-<section class="darkbg">
+<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="darkbg">
 	<div class="light relativePositioning dark_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php elseif ( $txtposition == 'right' && $bgimg ): ?>
-<section class="darkbg">
+<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="darkbg">
 	<div class="light relativePositioning dark_gradient_img_overlay bgImgLeft" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 
 <?php else : ?>
-<section class="darkbg">
+<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="darkbg">
 	<div class="light relativePositioning dark_gradient_img_overlay bgImgRight" style="background-image: url(<?php echo esc_url($bgimg['url']); ?>);">
 <?php endif;
 endif;
