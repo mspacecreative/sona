@@ -79,7 +79,7 @@ switch ($bgcolor) {
 
 <div<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="variable-columns-block<?php if ($sectionpadding): echo $sectionpadding; endif; if ( $className ): echo esc_attr($className); endif; if ($bgcolour): echo $bgcolour; endif; ?>">
 
-	<div class="inner no-top-bottom-padding<?php if ($narrow): echo ' maxWidth980'; endif; ?>">
+	<div class="inner no-top-bottom-padding<?php if ($rowwidth): echo $rowwidth; endif; ?>">
 		
 		<?php if ($rowheading): ?>
 		<h1 class="<?php if ($rowsubheading): echo 'bottom-margin-1'; else: echo 'bottom-margin-2'; endif; if ($centeredheading): echo ' text-align-center'; endif; ?>"><?php echo $rowheading ?></h1>
@@ -90,7 +90,7 @@ switch ($bgcolor) {
 		<?php endif;
 		
 		if( have_rows('columns_grid') ): ?>
-		<div class="row gutter_space_2 bullet-points extra-col-spacing<?php if ($centeredtext): echo ' center-lg center-md center-sm center-xs'; endif; if ($icon): echo ' icons-visible'; endif; if ($rowwidth): echo $rowwidth; endif; ?>">
+		<div class="row gutter_space_2 bullet-points extra-col-spacing<?php if ($centeredtext): echo ' center-lg center-md center-sm center-xs'; endif; if ($icon): echo ' icons-visible'; endif; ?>">
 			
 			<?php while( have_rows('columns_grid') ): the_row();
 			$inlinelinks = get_sub_field('inline_links'); ?>
