@@ -36,7 +36,7 @@ switch ( $txtalign ) {
 	<?php
 	if ( $maxwidth ) {
 		echo '
-		<div style="max-width:' . $maxwidth . 'px;">' .
+		<div style="max-width:' . $maxwidth . 'px;">';
 			if ($content) {
 			echo $content;
 			}
