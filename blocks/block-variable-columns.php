@@ -11,6 +11,7 @@ $centeredtext = get_field('center_align_text');
 $roundedcorners = get_field('rounded_corners');
 $centeredheading = get_field('centered_heading');
 $icon = get_sub_field('icon');
+$sectionpadding = get_field('section_padding');
 
 // CUSTOM ID
 $id = '' . $block['id'];
@@ -21,6 +22,20 @@ if ( !empty($block['anchor']) ) {
 $className = '';
 if( !empty($block['className']) ) {
 	$className .= ' ' . $block['className'];
+}
+
+switch ( $sectionpadding ) {
+	case 'top':
+		$sectionpadding = 'top-padding';
+		break;
+	case 'bottom':
+		$sectionpadding = 'bottom-padding';
+		break;
+	case 'both':
+		$sectionpadding = 'top-bottom-padding';
+		break;
+	default:
+		$sectionpadding = '';
 }
 
 switch ($columns) {
@@ -50,7 +65,7 @@ switch ($bgcolor) {
 		$bgcolour = ' lightbg';
 } ?>
 
-<div<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="section<?php if ( $className ): echo esc_attr($className); endif; if ($bgcolour): echo $bgcolour; endif; ?>">
+<div<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="variable-columns-block<?php if ($sectionpadding): echo $sectionpadding; endif; if ( $className ): echo esc_attr($className); endif; if ($bgcolour): echo $bgcolour; endif; ?>">
 
 	<div class="inner no-top-bottom-padding<?php if ($narrow): echo ' maxWidth980'; endif; ?>">
 		
