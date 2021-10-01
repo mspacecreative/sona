@@ -52,7 +52,7 @@ switch ( $overlay ) {
 	case 'dark':
 		$overlay = 'dark-overlay';
 		break;
-	case 'white':
+	case 'light':
 		$overlay = 'light-overlay';
 		break;
 	default:
