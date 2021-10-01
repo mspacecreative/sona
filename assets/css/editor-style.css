@@ -2354,7 +2354,7 @@ iframe {
 	margin-bottom: 1em;
 }
 
-.topPadding {
+.topPadding, .top-padding {
 	padding-top: 4em;
 }
 

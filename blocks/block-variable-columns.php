@@ -6,7 +6,7 @@ $bgcolor = get_field('background_colour');
 $textcolor = get_field('text_colour');
 $boxedcontent = get_field('boxed_content');
 $blockanchor = get_field('block_anchor');
-$narrow = get_field('narrow');
+$rowwidth = get_field('row_width');
 $centeredtext = get_field('center_align_text');
 $roundedcorners = get_field('rounded_corners');
 $centeredheading = get_field('centered_heading');
@@ -24,6 +24,19 @@ if( !empty($block['className']) ) {
 	$className .= ' ' . $block['className'];
 }
 
+switch ($rowwidth) {
+	case '800':
+		$rowwidth = ' max-width-800';
+		break;
+	case '1080':
+		$rowwidth = ' max-width-1080';
+		break;
+	case '1280':
+		$rowwidth = ' max-width-1280';
+		break;
+	default:
+		$rowwidth = '';
+}
 switch ( $sectionpadding ) {
 	case 'top':
 		$sectionpadding = ' top-padding';
@@ -37,7 +50,6 @@ switch ( $sectionpadding ) {
 	default:
 		$sectionpadding = '';
 }
-
 switch ($columns) {
 	case 'two':
 		$columns = ' col-lg-6 col-md-6 col-sm-6 col-xs-6';
@@ -78,7 +90,7 @@ switch ($bgcolor) {
 		<?php endif;
 		
 		if( have_rows('columns_grid') ): ?>
-		<div class="row gutter_space_2 bullet-points extra-col-spacing<?php if ($centeredtext): echo ' center-lg center-md center-sm center-xs'; endif; if ($icon): echo ' icons-visible'; endif; ?>">
+		<div class="row gutter_space_2 bullet-points extra-col-spacing<?php if ($centeredtext): echo ' center-lg center-md center-sm center-xs'; endif; if ($icon): echo ' icons-visible'; endif; if ($rowwidth): echo $rowwidth; endif; ?>">
 			
 			<?php while( have_rows('columns_grid') ): the_row();
 			$inlinelinks = get_sub_field('inline_links'); ?>
