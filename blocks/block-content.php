@@ -100,7 +100,7 @@ switch ( $txtalign ) {
 	<div class="<?php if ( $overlay ): echo $overlay; endif; ?>" style="position: absolute; height: 100%; width: 100%; top: 0; left: 0; opacity: <?php if ( $overlayopacity ): echo $overlayopacity; else: echo '.75'; echo ';'; endif; ?>"></div>
 	<?php endif; ?>
 	
-	<div class="bullet-points inner<?php if ( $rowwidth ): echo $rowwidth; endif; if ( $text ): echo $text; endif; ?>"<?php if ($topmargin || $bottommargin): echo ' style="margin-top: '; echo $topmargin; echo '; '; echo 'margin-bottom:'; echo $bottommargin; echo ';"'; endif; ?>>
+	<div class="bullet-points inner<?php if ( $rowwidth ): echo $rowwidth; endif; if ( $text ): echo $text; endif; ?>"<?php if ($rowtopmargin || $rowbottommargin): echo ' style="margin-top: '; echo $rowtopmargin; echo '; '; echo 'margin-bottom:'; echo $rowbottommargin; echo ';"'; endif; ?>>
 		<?php include('includes/section-content-loop.php'); ?>
 	</div>
 	
