@@ -2217,15 +2217,6 @@ html.fixed {
 	}
 }
 
-html {
-	min-height: 100%;
-	background-color: #222;
-}
-
-body {
-	background-color: #fff;
-}
-
 .bottom-margin-1 {
 	margin-bottom: 1em;
 }
@@ -2580,7 +2571,7 @@ iframe {
 	border-top: 3px solid #cda85b;
 }
 
-.header-container {
+.header-container, .gold-bottom-border {
 	border-bottom: 6px solid #cda85b;
 }
 
@@ -3606,9 +3597,11 @@ footer .light h3 {
 	border-radius: 500px;
 	height: 100px;
 	width: 100px;
-	display: table;
 	padding: 2em;
 	box-sizing: content-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .productOffering span {
@@ -3773,6 +3766,23 @@ footer .light h3 {
 		flex-basis: 50%;
 		max-width: 50%;
 	}
+}
+
+.light-overlay {
+	background-color: #fff;
+}
+
+.dark-overlay {
+	background-color: #000;
+}
+
+.section_has_bg_img {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+section, section .inner {
+	position: relative;
 }
 
 .error404 .wpdreams_asl_container {

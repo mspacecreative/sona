@@ -1,0 +1,28 @@
+.underlined-heading {
+	border-bottom: 1px solid #333;
+	padding-bottom: 5px;
+}
+.mce-content-body a.button.dark,
+.mce-content-body a.button.light,
+.mce-content-body a[data-mce-selected] {
+	display: inline-block;
+	margin-top: 15px;
+	padding: 12px 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 100px;
+	border-width: 2px;
+	border-style: solid;
+	font-size: 14px;
+	border-color: #000;
+	margin-right: 0;
+	margin-left: 0;
+}
+.mce-content-body a.button.light {
+	color: #000;
+	border-color: #000;
+}
+.mce-content-body a.button.dark {
+	color: #fff;
+	background-color: #000;
+}

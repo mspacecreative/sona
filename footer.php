@@ -79,8 +79,10 @@
 
 		</div>
 		<!-- /wrapper -->
-
-		<?php wp_footer(); ?>
+		
+		<?php echo do_shortcode('[modal]');
+		
+		wp_footer(); ?>
 
 		<!-- LINKEDIN INSIGHTS -->
 		<script type="text/javascript">

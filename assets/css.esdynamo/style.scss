@@ -1,5 +1,6 @@
 @import "_combine.scss";
 @import "_keyboard.scss";
+@import "_modal.scss";
 
 .wrap, body, html {
 	overflow-x: hidden;
@@ -17,12 +18,19 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 // BODY
+
+// HTML STYLES
+html {
+	min-height: 100%;
+	background-color: #222;
+}
+body {
+	background-color: #fff;
+	font-family: $lato;
+}
 * {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-}
-body {
-	font-family: $lato;
 }
 
 p:last-of-type {

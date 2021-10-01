@@ -1,0 +1,14 @@
+.light-overlay {
+	background-color: #fff;
+}
+.dark-overlay {
+	background-color: #000;
+}
+
+.section_has_bg_img {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+section, section .inner {
+	position: relative;
+}

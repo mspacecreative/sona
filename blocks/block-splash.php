@@ -7,7 +7,7 @@
 	$videoposter = get_sub_field('video_poster');
 	
 	if ( $bgvideo ): ?>
-	<div class="video-container">
+	<div class="row video-container">
 		<video poster="<?php echo $videoposter ?>" src="<?php echo $bgvideo ?>" autoplay muted loop>
 			<source src="<?php echo $bgvideo ?>" type="video/mp4" />
 		</video>
@@ -25,7 +25,7 @@
 		<!-- SPLASH INTRO -->
 		<?php 
 		if ( have_rows('splash_content') ): ?>
-		<div class="splash-content maxWidth980">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 splash-content maxWidth980">
 			<?php while ( have_rows('splash_content') ): the_row();
 			$splashintro = get_sub_field('splash_intro');
 			
