@@ -31,20 +31,23 @@ switch ( $txtalign ) {
 		$text = '';
 } ?>
 	
-<div class="<?php if ( $space && $text ): echo $space; echo ' '; echo $text; echo ' '; elseif ( $space ): echo $space; echo ' '; elseif ( $text ): echo $text; echo ' '; endif; ?>clear"<?php if ($rowtoppadding || $rowbottompadding): echo ' style="padding-top: '; echo $rowtoppadding; echo '; '; echo 'padding-bottom:'; echo $rowbottompadding; echo ';"'; endif; ?>>
+<div class="<?php if ( $space && $text ): echo $space; echo ' '; echo $text; echo ' '; elseif ( $space ): echo $space; echo ' '; elseif ( $text ): echo $text; echo ' '; endif; ?>clear"<?php if ($rowtoppadding || $rowbottompadding): echo ' style="padding-top: '; echo $rowtoppadding; echo '; '; echo 'padding-bottom: '; echo $rowbottompadding; echo ';"'; endif; ?>>
 	
-	<?php if ( $content ) {
-		if ( $maxwidth ) {
-			echo '
-			<div style="max-width:' . $maxwidth . 'px;">' .
-				$content;
-				include 'content-cta-button.php';
-			echo '
-			</div>';
-		} else {
+	<?php
+	if ( $maxwidth ) {
+		echo '
+		<div style="max-width:' . $maxwidth . 'px;">' .
+			if ($content) {
 			echo $content;
+			}
 			include 'content-cta-button.php';
+		echo '
+		</div>';
+	} else {
+		if ($content) {
+		echo $content;
 		}
+		include 'content-cta-button.php';
 	} ?>
 			
 </div>
