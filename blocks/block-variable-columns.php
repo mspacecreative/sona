@@ -26,13 +26,13 @@ if( !empty($block['className']) ) {
 
 switch ( $sectionpadding ) {
 	case 'top':
-		$sectionpadding = 'top-padding';
+		$sectionpadding = ' top-padding';
 		break;
 	case 'bottom':
-		$sectionpadding = 'bottom-padding';
+		$sectionpadding = ' bottom-padding';
 		break;
 	case 'both':
-		$sectionpadding = 'top-bottom-padding';
+		$sectionpadding = ' top-bottom-padding';
 		break;
 	default:
 		$sectionpadding = '';
