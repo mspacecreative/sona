@@ -26,7 +26,7 @@ $defaultimg = get_template_directory_uri() . '/assets/img/placeholders/page-head
 		<div class="maxWidth800 text-align-center">
 			<h1><?php the_title(); ?></h1>
 			<?php if ( $subheading ) {
-				echo '<h3>' . $subheading . '</h3>';
+				echo '<h3 style="margin-top: 1em;">' . $subheading . '</h3>';
 			} ?>
 		</div>
 	</div>
