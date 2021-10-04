@@ -19,7 +19,7 @@
 								<input type="submit" name="Subscribe" value="Subscribe" class="button light" />
 							</form>
 						</div>-->
-						<div class="col col-lg-8 col-md-6 col-sm-12 col-xs-12 bottomMarginMobile">
+						<div class="col col-lg-9 col-md-6 col-sm-12 col-xs-12 bottomMarginMobile">
 							<div class="row between-lg">
 								<div class="col <?php if ( is_active_sidebar('footer-area-2') ): echo 'col-lg-6'; else: echo 'col-lg-4'; endif; ?> col-md-6 col-sm-6 col-xs-12">
 									<h3>Products &amp; Services</h3>
@@ -34,7 +34,7 @@
 										<?php endif; ?>
 									</div>
 								</div>
-								<div class="col col-lg-2 col-md-3 col-sm-3 col-xs-6">
+								<div class="col col-lg-3 col-md-3 col-sm-3 col-xs-6">
 									<?php dynamic_sidebar('footer-area-3'); ?>
 								</div>
 								<div class="col col-lg-3 col-md-3 col-sm-3 col-xs-6">
@@ -42,7 +42,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<div class="col col-lg-3 col-md-6 col-sm-12 col-xs-12">
 							<?php dynamic_sidebar('footer-area-5'); ?>
 						</div>
 					</div>
