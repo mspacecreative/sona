@@ -84,7 +84,7 @@
 								
 						</div>
 						
-						<?php the_content(); // Dynamic Content
+						<?php
 						
 						if ( have_rows('product_specs') ):
 							while ( have_rows('product_specs') ):
@@ -146,9 +146,11 @@
 									<?php endwhile;
 								endif;
 							endwhile;
-						endif; ?>
-			
-						<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+						endif;
+						
+						the_content(); // Dynamic Content
+						
+						edit_post_link(); // Always handy to have Edit Post Links available ?>
 			
 					</article>
 					<!-- /article -->
