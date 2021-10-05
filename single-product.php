@@ -4,10 +4,10 @@
 
 	<section class="relativePositioning header-container shorter lightOverlay" style="background-image: url(<?php echo $defaultimg ?>); background-position: bottom;">
 		
-		<!--<?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
+		<?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
 		
 		<div class="inner">
-			post title
+			
 			<h1 class="postTitle">
 				<?php
 				global $post;
@@ -16,10 +16,10 @@
 					<?php echo $term->name ?><?php _e('&#8482'); ?> <?php echo the_title(); ?>
 				<?php endforeach; ?>
 			</h1>
-			/post title
+			
 		</div>
 		
-		<?php endwhile; endif; rewind_posts(); ?>-->
+		<?php endwhile; endif; rewind_posts(); ?>
 		
 	</section>
 
@@ -42,7 +42,7 @@
 							
 						<div class="row gutter_space_1 productImgCol" style="margin-bottom: 3em;">
 						    <div class="col col-lg-4 col-md-4 col-sm-4 col-xs-4 bottomMarginMobile" style="text-align: center;">
-								<h2 style="margin-bottom: 30px;">
+								<!--<h2 style="margin-bottom: 30px;">
 									<?php
 									global $post;
 									$terms = wp_get_post_terms( $post->ID, 'brand');
@@ -50,6 +50,7 @@
 										<?php echo $term->name ?><?php _e('&#8482'); ?> <?php echo the_title(); ?>
 									<?php endforeach; ?>
 								</h2>
+								-->
 								
 								<!--post thumbnail -->
 								<?php if ( !empty( $product_image ) ) : ?>
