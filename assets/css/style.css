@@ -4634,6 +4634,12 @@ body .testimonial_content {
 		padding-bottom: 2em;
 	}
 	
+	.productsContainer.row.gutter_space_2 > .col, .productsContainer.row.gutter_space_3 > .col, .productsContainer.row.gutter_space_1 > .col {
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding-bottom: 2em;
+	}
+	
 	.row.gutter_space_1 > .col:last-of-type, .row.gutter_space_2 > .col:last-of-type, .row.gutter_space_3 > .col:last-of-type, .extra-col-spacing > .col:last-of-type {
 		padding-bottom: 0;
 	}
