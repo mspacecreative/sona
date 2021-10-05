@@ -4281,7 +4281,7 @@ body .testimonial_content {
 	}
 	
 	.post:nth-child(3n):nth-last-child(-n+4) ~ .col, .post:nth-child(4n):nth-last-child(-n+5) ~ .col {
-		padding-bottom: 1rem;
+		padding-bottom: 2rem;
 	}
 	
 	.postTitle {
