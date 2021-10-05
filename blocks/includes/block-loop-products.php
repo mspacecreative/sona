@@ -12,7 +12,7 @@ if ( $loop->have_posts() ) :
 		echo '<h1 class="tachyon">' . $productheading . '</h1>';
 	} ?>
 	
-	<div class="inner<?php if ($sectionpadding): echo $sectionpadding; endif; ?>">	
+	<div class="inner<?php if ($sectionpadding): echo $sectionpadding; endif; if ($rowwidth): echo $rowwidth; endif; ?>">	
 		<div class="productsContainer row gutter_space_1 center-lg center-md center-sm center-xs">
 				
 			<?php while ( $loop->have_posts() ) : $loop->the_post();
