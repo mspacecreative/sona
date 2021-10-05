@@ -24,7 +24,9 @@ if ( $loop->have_posts() ) :
 			
 				<?php 
 				if( !empty( $productImg ) ): ?>
-					<img src="<?php echo esc_url($productImg['url']); ?>" alt="<?php echo esc_attr($productImg['alt']); ?>" />
+					<a href="<?php the_permalink(); ?>">
+						<img src="<?php echo esc_url($productImg['url']); ?>" alt="<?php echo esc_attr($productImg['alt']); ?>" />
+					</a>
 				<?php endif;
 				
 				global $post;
