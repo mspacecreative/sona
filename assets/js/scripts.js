@@ -86,7 +86,7 @@
 		$('html').toggleClass('fixed search-is-visible');
 	});
 	
-	$('.social-window > .menu-item').click(function() {
+	$('.social-window .menu-item > a').click(function() {
 		$('html').toggleClass('fixed search-is-visible');
 	});
 	
