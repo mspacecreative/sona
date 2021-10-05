@@ -88,6 +88,7 @@
 	
 	$('.social-window .menu-item > a').click(function() {
 		$('html').toggleClass('fixed search-is-visible');
+		$('.hamburger').toggleClass('is-active');
 	});
 	
 	// CHECK IF ABSOLUTE HEADING IS VISIBLE
