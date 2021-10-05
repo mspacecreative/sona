@@ -5,7 +5,18 @@ $brandtype = get_field('brand_type');
 $format = get_field('display_format');
 $sectionpadding = get_field('section_padding');
 $colcount = get_field('column_count');
-			
+
+// CUSTOM ID
+$id = '' . $block['id'];
+if ( !empty($block['anchor']) ) {
+	$id = $block['anchor'];
+}
+// CUSTOM CLASS	
+$className = '';
+if( !empty($block['className']) ) {
+	$className .= ' ' . $block['className'];
+}
+
 switch ($colcount) {
 	case 'two':
 		$colcount = ' col-lg-6 col-md-6 col-sm-6 col-xs-6';
@@ -21,22 +32,11 @@ switch ($colcount) {
 		break;
 	default:
 		$colcount = ' col-lg-6 col-md-6 col-sm-6 col-xs-6';
-} 
-
-// CUSTOM ID
-$id = '' . $block['id'];
-if ( !empty($block['anchor']) ) {
-	$id = $block['anchor'];
-}
-// CUSTOM CLASS	
-$className = '';
-if( !empty($block['className']) ) {
-	$className .= ' ' . $block['className'];
 }
 
 switch ($sectionpadding) {
 	case 'top':
-		$sectionpadding = ' topPadding';
+		$sectionpadding = ' top-padding';
 		break;
 	case 'bottom':
 		$sectionpadding = ' bottom-padding';
