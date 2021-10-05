@@ -23,10 +23,12 @@ function load_post_by_ajax_callback() {
  
             $posts->the_post();
             $title = get_the_title();
+            $excerpt = get_field('excerpt');
             $modal_content = apply_filters( 'the_content', get_the_content() );
  
             $arr_response = array(
                 'title' => $title,
+                'excerpt' => $excerpt,
                 'content' => $modal_content,
             );
         }

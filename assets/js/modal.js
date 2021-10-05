@@ -25,12 +25,12 @@
 			$.post(sona.ajaxurl, data, function(response) {
 		        response = JSON.parse(response);
 		        
-				if ( response.title && response.content ) {
+				if ( response.title && response.excerpt ) {
 					$('#postModal .modal-body').html(
 						'<h2 class="modal-title">' 
 							+ response.title + 
 						'</h2>'
-						+ response.content
+						+ response.excerpt
 					);
 				}
 		 
