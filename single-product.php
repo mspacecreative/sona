@@ -76,80 +76,78 @@
 								
 							</div>
 								
-							<?php if ( $summary ) : ?>
+							<?php if ( have_rows('product_specs') ): ?>
 							<div class="col col-lg-8 col-md-8 col-sm-8 col-xs-8">
-								<?php echo $summary ?>
+								<?php 
+								while ( have_rows('product_specs') ):
+									the_row();
+									if ( have_rows('range') ):
+										while ( have_rows('range') ):
+											the_row();?>
+											
+											<h2>Product Specs</h2>
+											<table cellspacing="0" cellpadding="0" border="0" width="100%">
+												<tr>
+													<td><h4>Parameters</h4></td>
+													<td><h4>Range</h4></td>
+												</tr>
+												<tr>
+													<td>Nanorod length (nm)</td>
+													<td><?php the_sub_field('value_1'); ?></td>
+												</tr>
+												<tr>
+													<td>Nanorod width (nm)</td>
+													<td><?php the_sub_field('value_2'); ?></td>
+												</tr>
+												<tr>
+													<td>Aspect ratio (TEM)</td>
+													<td><?php the_sub_field('value_3'); ?></td>
+												</tr>
+												<tr>
+													<td>Optical density (cm-1)</td>
+													<td><?php the_sub_field('value_4'); ?></td>
+												</tr>
+												<tr>
+													<td>LSPR Maximum (nm)</td>
+													<td><?php the_sub_field('value_5'); ?></td>
+												</tr>
+												<tr>
+													<td>LSPR/TSPR Ratio</td>
+													<td><?php the_sub_field('value_6'); ?></td>
+												</tr>
+												<tr>
+													<td>Zeta Potential (mV)</td>
+													<td><?php the_sub_field('value_7'); ?></td>
+												</tr>
+													<td>pH</td>
+													<td><?php the_sub_field('value_8'); ?></td>
+												</tr>
+												<tr>
+													<td>Colour</td>
+													<td><?php the_sub_field('value_9'); ?></td>
+												</tr>
+												<tr>
+													<td>Particle Concentration</td>
+													<td><?php the_sub_field('value_10'); ?></td>
+												</tr>
+												<tr>
+													<td>Solvent</td>
+													<td><?php the_sub_field('value_11'); ?></td>
+												</tr>
+											</table>
+										<?php endwhile;
+									endif;
+								endwhile; ?>
 							</div>
 							<?php endif; ?>
 								
 						</div>
 						
 						<?php
-						
-						if ( have_rows('product_specs') ):
-							while ( have_rows('product_specs') ):
-								the_row();
-								if ( have_rows('range') ):
-									while ( have_rows('range') ):
-										the_row();?>
-										
-										<h2>Product Specs</h2>
-										<table cellspacing="0" cellpadding="0" border="0" width="100%">
-											<tr>
-												<td><h4>Parameters</h4></td>
-												<td><h4>Range</h4></td>
-											</tr>
-											<tr>
-												<td>Nanorod length (nm)</td>
-												<td><?php the_sub_field('value_1'); ?></td>
-											</tr>
-											<tr>
-												<td>Nanorod width (nm)</td>
-												<td><?php the_sub_field('value_2'); ?></td>
-											</tr>
-											<tr>
-												<td>Aspect ratio (TEM)</td>
-												<td><?php the_sub_field('value_3'); ?></td>
-											</tr>
-											<tr>
-												<td>Optical density (cm-1)</td>
-												<td><?php the_sub_field('value_4'); ?></td>
-											</tr>
-											<tr>
-												<td>LSPR Maximum (nm)</td>
-												<td><?php the_sub_field('value_5'); ?></td>
-											</tr>
-											<tr>
-												<td>LSPR/TSPR Ratio</td>
-												<td><?php the_sub_field('value_6'); ?></td>
-											</tr>
-											<tr>
-												<td>Zeta Potential (mV)</td>
-												<td><?php the_sub_field('value_7'); ?></td>
-											</tr>
-												<td>pH</td>
-												<td><?php the_sub_field('value_8'); ?></td>
-											</tr>
-											<tr>
-												<td>Colour</td>
-												<td><?php the_sub_field('value_9'); ?></td>
-											</tr>
-											<tr>
-												<td>Particle Concentration</td>
-												<td><?php the_sub_field('value_10'); ?></td>
-											</tr>
-											<tr>
-												<td>Solvent</td>
-												<td><?php the_sub_field('value_11'); ?></td>
-											</tr>
-										</table>
-									<?php endwhile;
-								endif;
-							endwhile;
-						endif;
-						
+						if ( $summary ) {
+						echo $summary;
+						}
 						the_content(); // Dynamic Content
-						
 						edit_post_link(); // Always handy to have Edit Post Links available ?>
 			
 					</article>
