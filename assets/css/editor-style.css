@@ -3975,6 +3975,10 @@ body .editor-styles-wrapper .button.light {
 		padding-bottom: 0;
 	}
 	
+	.post:nth-child(3n):nth-last-child(-n+4) ~ .col, .post:nth-child(4n):nth-last-child(-n+5) ~ .col {
+		padding-bottom: 1rem;
+	}
+	
 	.postTitle {
 		max-width: 66.66666667%;
 		margin-bottom: 0;
