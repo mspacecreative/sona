@@ -4275,6 +4275,11 @@ body .editor-styles-wrapper .button.light {
 	.splash-content {
 		padding: 7em 2em 2em;
 	}
+	
+	.productsContainer.row.gutter_space_2 > .col, .productsContainer.row.gutter_space_3 > .col, .productsContainer.row.gutter_space_1 > .col {
+		flex: 0 0 33.33333333%;
+		max-width: 33.33333333;
+	}
 }
 
 @media (max-width: 480px) {
