@@ -4,6 +4,24 @@ $membertype = get_field('membership_type');
 $brandtype = get_field('brand_type');
 $format = get_field('display_format');
 $sectionpadding = get_field('section_padding');
+$colcount = get_field('column_count');
+			
+switch ($colcount) {
+	case 'two':
+		$colcount = ' col-lg-6 col-md-6 col-sm-6 col-xs-6';
+		break;
+	case 'three':
+		$colcount = ' col-lg-4 col-md-4 col-sm-6 col-xs-6';
+		break;
+	case 'four':
+		$colcount = ' col-lg-3 col-md-3 col-sm-6 col-xs-6';
+		break;
+	case 'five':
+		$colcount = ' col-lg-1_5 col-md-1_5 col-sm-1_5 col-xs-6';
+		break;
+	default:
+		$colcount = ' col-lg-6 col-md-6 col-sm-6 col-xs-6';
+} 
 
 // CUSTOM ID
 $id = '' . $block['id'];

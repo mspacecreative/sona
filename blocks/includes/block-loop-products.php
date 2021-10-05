@@ -18,25 +18,7 @@ if ( $loop->have_posts() ) :
 			<?php while ( $loop->have_posts() ) : $loop->the_post();
 			$title = get_the_title();
 			//$featuredImg = get_the_post_thumbnail( $post_id, 'medium' );
-			$productImg = get_field('product_image', get_the_ID());
-			$colcount = get_field('column_count', get_the_ID());
-			
-			switch ($colcount) {
-				case 'two':
-					$colcount = ' col-lg-6 col-md-6 col-sm-6 col-xs-6';
-					break;
-				case 'three':
-					$colcount = ' col-lg-4 col-md-4 col-sm-6 col-xs-6';
-					break;
-				case 'four':
-					$colcount = ' col-lg-3 col-md-3 col-sm-6 col-xs-6';
-					break;
-				case 'five':
-					$colcount = ' col-lg-1_5 col-md-1_5 col-sm-1_5 col-xs-6';
-					break;
-				default:
-					$colcount = ' col-lg-6 col-md-6 col-sm-6 col-xs-6';
-			} ?>
+			$productImg = get_field('product_image', get_the_ID()); ?>
 				
 			<div class="product col center<?php if ($colcount): echo $colcount; endif; ?>">
 			
