@@ -86,6 +86,10 @@
 		$('html').toggleClass('fixed search-is-visible');
 	});
 	
+	$('.social-window > a[href*="#"]').click(function() {
+		$('html').toggleClass('fixed search-is-visible');
+	});
+	
 	// CHECK IF ABSOLUTE HEADING IS VISIBLE
 	var absoluteHeading = $('.absoluteHeading');
 	if ( absoluteHeading.length ) {
