@@ -16,6 +16,12 @@ function my_custom_styles( $init_array ) {
             'inline' => 'a',  
             'classes' => 'button light',
             'wrapper' => true,
+        ),  
+        array(  
+            'title' => 'Gold text',  
+            'block' => 'span',  
+            'classes' => 'gold-text',
+            'wrapper' => true,
         )
     );  
     // Insert the array, JSON ENCODED, into 'style_formats'

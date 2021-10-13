@@ -1561,6 +1561,10 @@ h1, h2, h4, h5, h6 {
 	line-height: 1.5em;
 }
 
+.gold-text {
+	color: #cda85b;
+}
+
 .bulletSpacing.bullet-points li {
 	margin-bottom: 0;
 }
