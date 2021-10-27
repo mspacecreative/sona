@@ -1,5 +1,5 @@
 			<!-- FOOTER -->
-			<footer class="topPadding">
+			<footer class="topPadding borderTopGoldGradient">
 				<div class="inner light">
 					<!--<ul class="footer-nav top-margin">
 						<li><a href="/products-and-services">Products &amp; Services</a></li>
