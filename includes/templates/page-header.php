@@ -6,19 +6,19 @@ $defaultimg = get_template_directory_uri() . '/assets/img/placeholders/page-head
 	
 <!-- SPLASH SECTION -->
 <?php if ( $featuredimg && $imgposition == 'top' ): ?>
-<section class="relativePositioning header-container lightOverlay" style="background-image: url(<?php echo $featuredimg ?>); background-position: top center;">
+<section class="relativePositioning header-container borderBottomGoldGradient lightOverlay" style="background-image: url(<?php echo $featuredimg ?>); background-position: top center;">
 	
 <?php elseif ( $featuredimg && $imgposition == 'center' ): ?>
 <section class="relativePositioning header-container lightOverlay" style="background-image: url(<?php echo $featuredimg ?>); background-position: center;">
 					
 <?php elseif ( $featuredimg && $imgposition == 'bottom' ): ?>
-<section class="relativePositioning header-container lightOverlay" style="background-image: url(<?php echo $featuredimg ?>); background-position: bottom;">
+<section class="relativePositioning header-container borderBottomGoldGradient lightOverlay" style="background-image: url(<?php echo $featuredimg ?>); background-position: bottom;">
 					
 <?php elseif ( $featuredimg ): ?>
-<section class="relativePositioning header-container lightOverlay" style="background-image: url(<?php echo $featuredimg ?>); background-position: center;">
+<section class="relativePositioning header-container borderBottomGoldGradient lightOverlay" style="background-image: url(<?php echo $featuredimg ?>); background-position: center;">
 					
 <?php else : ?>
-<section class="relativePositioning header-container shorter lightOverlay" style="background-image: url(<?php echo $defaultimg ?>); background-position: bottom;">
+<section class="relativePositioning header-container borderBottomGoldGradient shorter lightOverlay" style="background-image: url(<?php echo $defaultimg ?>); background-position: bottom;">
 <?php endif; ?>
 					
 	<!-- HEADER INTRO -->
