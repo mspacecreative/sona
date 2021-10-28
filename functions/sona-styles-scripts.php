@@ -2,6 +2,8 @@
 
 function sona_styles()
 {
+    global $ver_num;
+  	$ver_num = mt_rand();
     wp_register_script('conditionizr', get_template_directory_uri() . '/assets/js/lib/conditionizr-4.3.0.min.js', array('jquery'), '4.3.0'); // Conditionizr
     wp_enqueue_script('conditionizr');
 
@@ -13,7 +15,7 @@ function sona_styles()
     wp_register_script('sona-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), $ver_num, true); // Custom scripts
     wp_enqueue_script('sona-scripts');
     
-    wp_register_style('sona-styles', get_template_directory_uri() . '/assets/css/style.css', array(), null, 'all');
+    wp_register_style('sona-styles', get_template_directory_uri() . '/assets/css/style.css', array(), $ver_num, 'all');
     wp_enqueue_style('sona-styles');
     
     wp_register_style('typekit', 'https://use.typekit.net/nqa2hgd.css', array(), null, 'all');
