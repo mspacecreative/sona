@@ -3918,6 +3918,11 @@ body.using-mouse *:focus {
 	overflow: auto;
 }
 
+.view-modal {
+	text-decoration: none;
+	color: #000;
+}
+
 .modal-content-inner {
 	height: 100%;
 	padding: 2em;
@@ -3953,7 +3958,6 @@ body.using-mouse *:focus {
 .modal-title {
 	font-size: 30px;
 	line-height: 1.25em;
-	font-family: 'Dosis', sans-serif;
 }
 
 .modal-content-inner .close {

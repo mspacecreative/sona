@@ -11,6 +11,10 @@
 	padding: 2em;
 	overflow: auto;
 }
+.view-modal {
+	text-decoration: none;
+	color: #000;
+}
 .modal-content-inner {
 	height: 100%;
 	padding: 2em;
@@ -41,7 +45,6 @@
 .modal-title {
 	font-size: 30px;
 	line-height: 1.25em;
-	font-family: 'Dosis', sans-serif;
 }
 .modal-content-inner .close {
 	margin: 0;
