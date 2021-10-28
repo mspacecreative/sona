@@ -3918,7 +3918,7 @@ body.using-mouse *:focus {
 	overflow: auto;
 }
 
-.view-modal {
+.wrap .view-modal {
 	text-decoration: none;
 	color: #000;
 }
