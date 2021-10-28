@@ -22,7 +22,7 @@
 						<div class="col col-lg-9 col-md-6 col-sm-12 col-xs-12 bottomMarginMobile">
 							<div class="row between-lg">
 								<div class="col <?php if ( is_active_sidebar('footer-area-2') ): echo 'col-lg-6'; else: echo 'col-lg-4'; endif; ?> col-md-6 col-sm-6 col-xs-12">
-									<h3>Products &amp; Services</h3>
+									<!--<h3>Products &amp; Services</h3>-->
 									<div class="row">
 										<div class="col <?php if ( is_active_sidebar('footer-area-2') ): echo 'col-lg-6'; else: echo 'col-lg-12'; endif; ?> col-md-12 col-sm-12 col-xs-6">
 											<?php dynamic_sidebar('footer-area-1'); ?>
