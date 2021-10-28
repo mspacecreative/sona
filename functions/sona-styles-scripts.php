@@ -10,8 +10,6 @@ function sona_styles()
     wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/lib/modernizr-2.7.1.min.js', array('jquery'), '2.7.1'); // Modernizr
     wp_enqueue_script('modernizr');
 
-    global $ver_num;
-  	$ver_num = mt_rand();
     wp_register_script('sona-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), $ver_num, true); // Custom scripts
     wp_enqueue_script('sona-scripts');
     
