@@ -4100,17 +4100,24 @@ p:last-of-type {
 	color: #cda85b;
 }
 
-.borderTopGoldGradient:before {
+.borderTopGoldGradient:before, .borderBottomGoldGradient:before {
 	height: 6px;
 	background: linear-gradient(90deg, #cda85b, gold, #ae7726, gold, #ae7726);
 	width: 100%;
 	position: absolute;
-	top: -3px;
 	z-index: 10;
 	content: "";
 }
 
-.borderTopGoldGradient {
+.borderTopGoldGradient:before {
+	top: -3px;
+}
+
+.borderBottomGoldGradient:before {
+	bottom: -3px;
+}
+
+.borderTopGoldGradient, .borderBottomGoldGradient {
 	position: relative;
 }
 

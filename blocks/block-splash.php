@@ -1,5 +1,5 @@
 <!-- SPLASH SECTION -->
-<section class="splash gold-bottom-border">
+<section class="splash borderBottomGoldGradient">
 	<?php
 	if ( have_rows('background_graphics') ):
 	while ( have_rows('background_graphics') ): the_row();
