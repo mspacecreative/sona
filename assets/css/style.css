@@ -2636,14 +2636,15 @@ iframe {
 	border-bottom: 6px solid #cda85b;
 }
 
-.header-container::after {
+/*.header-container::after {
 	position: absolute;
-	width: 100%;
-	height: 30px;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), transparent);
-	bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.15), transparent);
+    bottom: 0;
 	content: "";
 }
+*/
 
 .absoluteHeading {
 	position: absolute;
@@ -4100,7 +4101,7 @@ p:last-of-type {
 	color: #cda85b;
 }
 
-.borderTopGoldGradient:before, .borderBottomGoldGradient:before {
+.borderTopGoldGradient:before, .borderBottomGoldGradient:before, .header-container.borderBottomGoldGradient:after {
 	height: 6px;
 	background: linear-gradient(90deg, #cda85b, gold, #ae7726, gold, #ae7726);
 	width: 100%;
@@ -4113,7 +4114,7 @@ p:last-of-type {
 	top: -3px;
 }
 
-.borderBottomGoldGradient:before {
+.borderBottomGoldGradient:before, .header-container.borderBottomGoldGradient:after {
 	bottom: -3px;
 }
 

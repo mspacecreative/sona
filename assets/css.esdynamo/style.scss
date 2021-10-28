@@ -43,7 +43,8 @@ p:last-of-type {
 
 // BORDERS
 .borderTopGoldGradient:before,
-.borderBottomGoldGradient:before {
+.borderBottomGoldGradient:before,
+.header-container.borderBottomGoldGradient:after {
 	height: 6px;
 	background: linear-gradient(90deg, $gold, $lightGold, $darkGold, $lightGold, $darkGold);
 	width: 100%;
@@ -54,7 +55,8 @@ p:last-of-type {
 .borderTopGoldGradient:before {
 	top: -3px;
 }
-.borderBottomGoldGradient:before {
+.borderBottomGoldGradient:before,
+.header-container.borderBottomGoldGradient:after {
 	bottom: -3px;
 }
 .borderTopGoldGradient,
