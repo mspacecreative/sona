@@ -2147,6 +2147,10 @@ img.alignright {
 	content: "";
 }
 
+#block_617993bb13c1c .smw-single.smw-horizontal .smw-change-indicator {
+	align-items: center;
+}
+
 .wrap {
 	padding-top: 83px;
 }
