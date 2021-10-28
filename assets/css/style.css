@@ -3971,6 +3971,7 @@ body.using-mouse *:focus {
 	opacity: 1;
 	padding: 0;
 	z-index: 99;
+	background-color: transparent;
 	border: none;
 }
 

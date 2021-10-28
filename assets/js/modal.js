@@ -77,8 +77,8 @@
 			modalOverlay.fadeOut();
 		});
 		
-		$('.modal-content').click(function() {
-			stopPropagation();
+		$('.modal-content').click(function(e) {
+			e.stopPropagation();
 		});
 		
 		// ESCAPE KEY CLICK TO ESCAPE
