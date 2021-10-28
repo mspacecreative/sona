@@ -237,7 +237,7 @@
 		background: linear-gradient(0deg, black, transparent);
 	}
 	.light_gradient_img_overlay .absolute_img_container:before {
-		background: linear-gradient(0deg, white, transparent);
+		background: linear-gradient(0deg, white 5%, rgba(255,255,255,.65),transparent);
 	}
 	.no-left-padding {
 		padding-right: 0;

@@ -31,6 +31,36 @@
 footer .button {
 	margin-top: 0;
 }
+// STOCK WIDGET
+.smw-single.smw-horizontal .smw-change-indicator {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+}
+.smw-single.smw-horizontal .smw-change-indicator.smw-rise .smw-field-symbolprice,
+.smw-single.smw-horizontal .smw-change-indicator.smw-rise .smw-field-change {
+	flex: 0 0 100%;
+	max-width: 400px;
+	width: 100%;
+}
+.smw-single.smw-horizontal .smw-change-indicator.smw-rise .smw-field-symbolprice {
+	border-radius: 10px 10px 0 0;
+	background-color: $gold;
+	border-color: $gold;
+}
+body .smw-single.smw-horizontal .smw-change-indicator.smw-rise .smw-field-change {
+	border-radius: 0 0 10px 10px;
+	padding: 0.6rem;
+	display: flex;
+	justify-content: center;
+	border-color: $gold;
+}
+.smw-single.smw-horizontal .smw-change-indicator.smw-rise .smw-field-change > .smw-rise {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 5px;
+}
 @media (min-width: 768px) {
 	.social-media {
 		text-align: right;

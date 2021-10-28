@@ -1940,6 +1940,39 @@ footer .button {
 	margin-top: 0;
 }
 
+.smw-single.smw-horizontal .smw-change-indicator {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+}
+
+.smw-single.smw-horizontal .smw-change-indicator.smw-rise .smw-field-symbolprice, .smw-single.smw-horizontal .smw-change-indicator.smw-rise .smw-field-change {
+	flex: 0 0 100%;
+	max-width: 400px;
+	width: 100%;
+}
+
+.smw-single.smw-horizontal .smw-change-indicator.smw-rise .smw-field-symbolprice {
+	border-radius: 10px 10px 0 0;
+	background-color: #cda85b;
+	border-color: #cda85b;
+}
+
+body .smw-single.smw-horizontal .smw-change-indicator.smw-rise .smw-field-change {
+	border-radius: 0 0 10px 10px;
+	padding: 0.6rem;
+	display: flex;
+	justify-content: center;
+	border-color: #cda85b;
+}
+
+.smw-single.smw-horizontal .smw-change-indicator.smw-rise .smw-field-change > .smw-rise {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 5px;
+}
+
 @media (min-width: 768px) {
 	.social-media {
 		text-align: right;
@@ -4115,7 +4148,7 @@ body .editor-styles-wrapper .button.light {
 	}
 	
 	.light_gradient_img_overlay .absolute_img_container:before {
-		background: linear-gradient(0deg, white, transparent);
+		background: linear-gradient(0deg, white 5%, rgba(255, 255, 255, 0.65), transparent);
 	}
 	
 	.no-left-padding {
