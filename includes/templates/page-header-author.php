@@ -6,7 +6,8 @@ $defaultimg = get_template_directory_uri() . '/assets/img/placeholders/page-head
 	
 <!-- SPLASH SECTION -->
 <?php if ( $featuredimg && $imgposition == 'top' ): ?>
-<section class="relativePositioning header-container lightOverlay" style="background-image: url(<?php echo $featuredimg ?>); background-position: top center;">
+<section class="relativePositioning header-container borderBottomGoldGradient
+lightOverlay" style="background-image: url(<?php echo $featuredimg ?>); background-position: top center;">
 	
 <?php elseif ( $featuredimg && $imgposition == 'center' ): ?>
 <section class="relativePositioning header-container lightOverlay" style="background-image: url(<?php echo $featuredimg ?>); background-position: center;">
