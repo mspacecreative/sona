@@ -9,6 +9,7 @@
 	background-color: rgba(0, 0, 0, 0.9);
 	cursor: pointer;
 	padding: 2em;
+	overflow: auto;
 }
 .modal-content-inner {
 	height: 100%;
@@ -16,16 +17,15 @@
 }
 .modal .modal-dialog {
 	z-index: 999999;
-	//background-color: #fff;
 	cursor: auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: table;
 	height: 100%;
 	width: 100%;
 }
 .modal-table-cell {
 	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
 }
 .modal .modal-content {
 	position: relative;
@@ -33,7 +33,6 @@
 	z-index: 1;
 	border-radius: 0;
 	border: none;
-	//padding-bottom: 25px;
 }
 .modal .modal-dialog, body #modal-content {
     max-width: 800px;
@@ -43,13 +42,11 @@
 	font-size: 30px;
 	line-height: 1.25em;
 	font-family: 'Dosis', sans-serif;
-	//color: $divertgreen;
 }
 .modal-content-inner .close {
 	margin: 0;
 	width: 30px;
     height: 30px;
-    //background-color: $divertmint;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,7 +86,6 @@ body .modal-content .close span {
 .modal-dialog::after {
     position: absolute;
     content: "";
-    //background-image: url(../img/graphics/gradient-ellipse.svg);
     height: 80%;
     background-position: top right;
     width: 100%;
@@ -117,7 +113,6 @@ body .modal-content .close span {
 	left: 50%;
 	margin-left: -50px;
 	padding: 5px 20px 10px;
-    //background-color: $brandLightGrey;
 }
 .close.close_bottom span {
 	font-size: 15px;

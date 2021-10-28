@@ -3915,6 +3915,7 @@ body.using-mouse *:focus {
 	background-color: rgba(0, 0, 0, 0.9);
 	cursor: pointer;
 	padding: 2em;
+	overflow: auto;
 }
 
 .modal-content-inner {
@@ -3925,15 +3926,15 @@ body.using-mouse *:focus {
 .modal .modal-dialog {
 	z-index: 999999;
 	cursor: auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: table;
 	height: 100%;
 	width: 100%;
 }
 
 .modal-table-cell {
 	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .modal .modal-content {
