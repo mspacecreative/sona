@@ -72,9 +72,13 @@
 			$feedModal.on('show.bs.modal', onModalShow);
 		});
 		
-		closeButton.click(function() {
+		exitModal.click(function() {
 			body.removeClass('modal-is-open');
 			modalOverlay.fadeOut();
+		});
+		
+		$('.modal-content').click(function() {
+			stopPropagation();
 		});
 		
 		// ESCAPE KEY CLICK TO ESCAPE

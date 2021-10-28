@@ -3914,6 +3914,7 @@ body.using-mouse *:focus {
 	z-index: 999999;
 	background-color: rgba(0, 0, 0, 0.9);
 	cursor: pointer;
+	padding: 2em;
 }
 
 .modal-content-inner {
@@ -3963,20 +3964,14 @@ body.using-mouse *:focus {
 	justify-content: center;
 	border-radius: 100%;
 	position: absolute;
-	top: -15px;
-	right: -15px;
+	top: 5px;
+	right: 5px;
 	color: #fff;
 	text-shadow: none;
 	opacity: 1;
 	padding: 0;
 	z-index: 99;
-	background-color: #fff;
 	border: none;
-}
-
-body .modal-content-inner .close > svg {
-	width: 10px;
-	height: 10px;
 }
 
 body .modal-content .close span {
