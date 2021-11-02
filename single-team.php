@@ -4,11 +4,11 @@
 	$hidefeaturedimg = get_field('hide_featured_image_in_title_area');
 
 	if ( has_post_thumbnail() && $hidefeaturedimg ) : ?>
-	<section class="relativePositioning header-container shorter lightOverlay" style="background-image: url(<?php echo $defaultimg ?>); background-position: bottom;">
+	<section class="relativePositioning header-container borderBottomGoldGradient shorter lightOverlay" style="background-image: url(<?php echo $defaultimg ?>); background-position: bottom;">
 	<?php elseif ( has_post_thumbnail() ) : ?>
-	<section class="relativePositioning header-container shorter lightOverlay" style="background-image: url(<?php echo $defaultimg ?>); background-position: bottom; padding-bottom: 0; padding-top: 1%;">
+	<section class="relativePositioning header-container shorter borderBottomGoldGradient lightOverlay" style="background-image: url(<?php echo $defaultimg ?>); background-position: bottom; padding-bottom: 0; padding-top: 1%;">
 	<?php else : ?>
-	<section class="relativePositioning header-container shorter lightOverlay" style="background-image: url(<?php echo $defaultimg ?>); background-position: bottom;">
+	<section class="relativePositioning header-container shorter borderBottomGoldGradient lightOverlay" style="background-image: url(<?php echo $defaultimg ?>); background-position: bottom;">
 	<?php endif; ?>
 		
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>

@@ -2,7 +2,7 @@
 
 	$defaultimg = get_template_directory_uri() . '/assets/img/placeholders/page-header.jpg'; ?>
 
-	<section class="relativePositioning header-container shorter lightOverlay" style="background-image: url(<?php echo $defaultimg ?>); background-position: bottom;">
+	<section class="relativePositioning header-container borderBottomGoldGradient shorter lightOverlay" style="background-image: url(<?php echo $defaultimg ?>); background-position: bottom;">
 		
 		<?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
 		
