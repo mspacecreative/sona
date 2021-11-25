@@ -2286,8 +2286,15 @@ html.fixed {
 	max-width: 1080px;
 }
 
-.inner.max-width-1280 {
+.inner.max-width-1280, .wp-block-columns {
 	max-width: 1280px;
+}
+
+.wp-block-columns {
+	padding-left: 2em;
+	padding-right: 2em;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .shortBio {
@@ -2427,7 +2434,7 @@ iframe {
 	padding-bottom: 4em;
 }
 
-.top-bottom-padding, .section {
+.top-bottom-padding, .section, .wp-block-columns {
 	padding-top: 4em;
 	padding-bottom: 4em;
 }
