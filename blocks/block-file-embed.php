@@ -20,7 +20,7 @@ if( !empty($block['className']) ) {
 	$className .= ' ' . $block['className'];
 } ?>
 
-<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="pdf-embed-block<?php if ( $className ): echo esc_attr($className); endif; ?>">
+<section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="pdf-embed-block text-align-center bottom-padding<?php if ( $className ): echo esc_attr($className); endif; ?>">
 	<?php if ( !empty($thumb) ): ?>
 	<div class="embed-thumbnail-container">
 		<img src="<?php echo $thumb['url'] ?>" alt="<?php if ($alt): echo $alt; else: echo 'Sona Nanotech'; endif; ?>">
