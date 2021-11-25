@@ -1,7 +1,7 @@
 .embed-thumbnail-container {
 	display: none;
 	margin: auto;
-	margin: 2em;
+	margin: 2em 2em 0;
 	box-shadow: 0 5px 10px #999;
 }
 

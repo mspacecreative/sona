@@ -23,7 +23,9 @@ if( !empty($block['className']) ) {
 <section<?php if ( $id ): echo ' id="'; echo $id; echo '"'; endif; ?> class="pdf-embed-block text-align-center<?php if ( $className ): echo esc_attr($className); endif; ?>">
 	<?php if ( !empty($thumb) ): ?>
 	<div class="embed-thumbnail-container">
-		<img src="<?php echo $thumb['url'] ?>" alt="<?php if ($alt): echo $alt; else: echo 'Sona Nanotech'; endif; ?>">
+		<a href="<?php echo $file['url'] ?>" target="_blank">
+			<img src="<?php echo $thumb['url'] ?>" alt="<?php if ($alt): echo $alt; else: echo 'Sona Nanotech'; endif; ?>">
+		</a>
 	</div>
 	<?php endif; ?>
 	<object class="wp-block-file__embed" data="<?php echo $file['url'] ?>" type="application/pdf" style="width:100%; height:<?php if ($height): echo $height; else: echo '600'; echo 'px;'; endif; ?>" aria-label="PDF embed"></object>
