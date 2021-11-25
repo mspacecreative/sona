@@ -76,6 +76,13 @@ h1 ~ div ~ .button {
 	margin-bottom: 0;
 	margin-top: 0;
 }
+.bullet-points ul:last-of-type ~ h4,
+.bullet-points ul:last-of-type ~ h3,
+.bullet-points ul:last-of-type ~ h2,
+.bullet-points ul:last-of-type ~ h1,
+.bullet-points ul:last-of-type ~ p {
+	margin-top: 1em;
+}
 .bullet-points li > ul:last-of-type, .bullet-points ul ~ p {
 	margin-top: 15px;
 }
