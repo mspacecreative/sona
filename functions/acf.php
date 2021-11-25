@@ -22,6 +22,23 @@ function my_acf_init() {
 			]
 		));
 		
+		// register pdf embed block
+		// register splash block
+		acf_register_block(array(
+			'name'				=> 'file-embed',
+			'title'				=> __('PDF File Embed Block'),
+			'description'		=> __('Embeds uploaded PDFs in iframe with display options'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'formatting',
+			'icon'				=> 'images-alt',
+			'keywords'			=> array( 'PDF embed', 'File upload', 'iframe' ),
+			'supports'			=> [
+				'align' => false,
+				'anchor' => true,
+				'customClassName' => true,
+			]
+		));
+		
 		// register splash block
 		acf_register_block(array(
 			'name'				=> 'splash',
