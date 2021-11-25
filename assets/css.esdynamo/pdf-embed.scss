@@ -2,6 +2,9 @@
 	display: none;
 	margin: auto;
 }
+.pdf-embed-block .button {
+	margin-top: 0;
+}
 @media (max-device-width: 1024px) {
 	.embed-thumbnail-container {
 		display: block;
