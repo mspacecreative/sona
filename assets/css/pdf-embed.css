@@ -1,6 +1,8 @@
 .embed-thumbnail-container {
 	display: none;
 	margin: auto;
+	margin: 2em;
+	box-shadow: 0 5px 10px #999;
 }
 
 .pdf-embed-block .button {
@@ -10,5 +12,9 @@
 @media (max-device-width: 1024px) {
 	.embed-thumbnail-container {
 		display: block;
+	}
+	
+	.pdf-embed-block .wp-block-file__embed {
+		display: none;
 	}
 }
