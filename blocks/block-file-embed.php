@@ -5,6 +5,10 @@ $label = get_field('label');
 $height = get_field('iframe_height');
 $alt = $thumb['alt'];
 
+// ENQUEUE STYLESHEET
+wp_register_style('pdf-embed', get_template_directory_uri() . '/assets/css/pdf-embed.css', array(), $ver_num, 'all');
+wp_enqueue_style('pdf-embed');
+
 // CUSTOM ID
 $id = '' . $block['id'];
 if ( !empty($block['anchor']) ) {

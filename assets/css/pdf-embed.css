@@ -1,0 +1,10 @@
+.embed-thumbnail-container {
+	display: none;
+	margin: auto;
+}
+
+@media (max-device-width: 1024px) {
+	.embed-thumbnail-container {
+		display: block;
+	}
+}
