@@ -4392,6 +4392,12 @@ body .editor-styles-wrapper .button.light {
 		padding-bottom: 2em;
 	}
 	
+	.single-team .header-container .row.gutter_space_2 > .col, .single-team .header-container .row.gutter_space_3 > .col, .single-team .header-container .row.gutter_space_1 > .col {
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding-bottom: 0;
+	}
+	
 	.productsContainer.row.gutter_space_2 > .col, .productsContainer.row.gutter_space_3 > .col, .productsContainer.row.gutter_space_1 > .col {
 		flex: 0 0 50%;
 		max-width: 50%;
