@@ -23,7 +23,7 @@
 	
 		if ( have_posts() ) {
 			echo 
-			'<div id="main-content">';
+			'<div'; if (!is_page(376)): echo ' id="main-content"'; endif; echo '>';
 			while ( have_posts() ) {
 				the_post();
 				
