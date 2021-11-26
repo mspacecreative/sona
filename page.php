@@ -3,7 +3,7 @@
 	if ( $hidetitle ) {
 		if ( have_posts() ) {
 			echo 
-			'<div'; if (!is_page('376')): echo ' id="main-content"'; endif; echo '>';
+			'<div'; if (!is_front_page()): echo ' id="main-content"'; endif; echo '>';
 			while ( have_posts() ) {
 				echo '<div class="topPadding">';
 				the_post();
@@ -23,7 +23,7 @@
 	
 		if ( have_posts() ) {
 			echo 
-			'<div'; if (!is_page('376')): echo ' id="main-content"'; endif; echo '>';
+			'<div'; if (!is_front_page()): echo ' id="main-content"'; endif; echo '>';
 			while ( have_posts() ) {
 				the_post();
 				
